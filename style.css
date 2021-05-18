@@ -46,3 +46,65 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+.nav-bar{
+    border-color: #ecac3e;
+    height: 10px;
+    background-color: #ecac3e;
+}
+
+.logo{
+    float: left;
+    /* background-color: brown; */
+    width: 30%;
+    /* clear: both; */
+}
+
+.menu{
+    margin-top: 50px;
+    margin-left: 35px;
+}
+
+.ul-menu{
+    display: flex;
+    /* background-color: aqua; */
+}
+
+.menu-slogan{
+    background-color:#000;
+    /* margin-top: -8px; */
+    float: right;
+    width: 70%;
+    height: 90px;
+    color: #fff;
+    padding-left: 20px;
+    box-sizing: border-box;
+    padding-top: 5px;
+}
+
+.btn-rentacar{
+    padding: 10px;
+    text-decoration: none;
+    background-color: #ecac3e;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    color: #000;
+    margin-left: 205px;
+    width: 220px;
+}
+
+.ul-menu > li{
+    margin-right: 60px;
+}
+
+.clear{
+    clear: both;
+}
+
+.banner{
+    background-color:rgb(71, 71, 179);
+    height: 578px;
+    clear: both;
+    background-image: url('images/car.jpg');
+    padding-top: -1550px;
+}
