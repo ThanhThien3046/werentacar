@@ -55,8 +55,9 @@ table {
 
 .logo{
     float: left;
-    /* background-color: brown; */
+    position: absolute;
     width: 30%;
+    margin-left: 90px;
     /* clear: both; */
 }
 
@@ -103,8 +104,251 @@ table {
 
 .banner{
     background-color:rgb(71, 71, 179);
-    height: 578px;
+    height: 478px;
     clear: both;
     background-image: url('images/car.jpg');
-    padding-top: -1550px;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+.nav-top{
+    position: relative;
+}
+
+.banner-slogan{
+    color: #fff;
+    font-weight: 500px;
+    position:absolute;
+    top: 75%;
+    left: 70%;
+    height: 100px;
+    text-align: center;
+    line-height: 30px;
+}
+
+.banner > .banner-slogan > .banner-werent{
+    line-height: 45px;
+}
+
+.banner-form-search{
+    width: 410px;
+    height: auto;
+    background-color: #fff;
+    top: 60px;
+    left: 70px;
+    position: absolute;
+    padding: 30px 20px;
+    
+}
+
+.banner-form-search-title{
+    text-align: center;
+    border-bottom: 1px solid #000;
+    line-height: 0.1em;
+    margin: 10px 0 20px;
+}
+
+.banner-form-search-title >span{
+    background: #fff;
+    padding: 0 10px;
+}
+
+.form-search{
+    position: relative;
+}
+
+.banner-form-search-input{
+    text-align: center;
+    margin: 0 auto;
+}
+
+.banner-form-search-input > tr > td > input{
+    width: 300px;
+}
+
+.search-submit{
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    background: #000;
+    color: #fff;
+    margin-top: 20px;
+    width: 200px;
+    padding: 5px 10px;
+}
+
+.banner-form-search-input-content + .banner-form-search-input-content{
+    padding-left: 40px;
+    padding-bottom: 10px;
+}
+
+.span-banner-form-search-title{
+    padding-top: 30px;
+}
+
+
+.introtouse > hr
+{
+    width: 80px;
+    background-color: #ecac3e;
+}
+
+.introtouse{
+    text-align: center;
+    margin: 0 auto;
+    margin-top:35px;
+}
+
+.ul-introtouse
+{
+    display: flex;
+    margin: 0 auto;
+    margin-top:35px;
+    margin-bottom: 40px;
+    /* display: block; */
+}
+
+.ul-introtouse > .li-ul-introtouse
+{
+    margin-right: 100px;
+    text-align:center;
+    background: #eee6da;
+    padding-bottom: 30px;
+}
+
+.ul-introtouse > .li-ul-introtouse:nth-child(1)
+{
+    margin-left: 70px;
+}
+.li-ul-introtouse-link
+{
+    text-decoration: none;
+    color: #fff;
+    background: #ecac3e;
+    padding: 10px 25px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.campain-background{
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
+    height: 550px;
+    padding-top: 30px;
+
+}
+.campain-background::before{
+    background-image: url('images/car.jpg');
+    z-index: -1;
+    display: block;
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+
+}
+.campain-background::after{
+    z-index: -1;
+    display: block;
+    content: "";
+    position: absolute;
+    background-color: #000;
+    opacity: 0.65;
+    background-attachment: fixed;
+    height: 100%;
+    width: 100%;
+    /* padding-top: 45px; */
+    top: 0;
+    left: 0;
+}
+/* .campain{
+    background-color: #000;
+    opacity: 0.7;
+    background-attachment: fixed;
+    height: 500px;
+    padding-top: 45px;
+} */
+
+.campain > hr{
+    width: 80px;
+    background-color: #ecac3e;
+}
+
+.campain > span{
+    color: #fff;
+}
+
+.li-campain{
+    margin-right: 30px;
+    text-align:center;
+    background: #eee6da;
+    padding-bottom: 30px;
+    width: 25%;
+}
+
+.li-span-campain{
+    background-color: #ecac3e;
+    padding: 10px 50px;
+    width: 100%;
+    box-sizing: border-box;
+    display: block;
+}
+
+.li-campain > img{
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.li-campain > hr{
+    width: 80px;
+    background-color: #ecac3e;
+}
+
+.ul-campain
+{   width: 95%;
+    max-width: 1024px;
+    margin: auto;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.campain-img-list{
+    
+    margin: 0 auto;
+    z-index: 10;
+}
+
+.list-car{
+    
+}
+.span-list-car{
+    background-color: #fff;
+    color: #000;
+    border-left: 10px solid #ecac3e;
+    width: 1000px;
+    display: block;
+    padding: 15px 0px;
+}
+
+.ul-list-car{
+    display: flex;
+}
+
+.ul-list-car + .li-list-car
+{
+    margin-right: 150px;
+}
+
+.li-list-car{
+    display: flex;
+}
+
+.li-list-car > img{
+    width: 250px;
 }
