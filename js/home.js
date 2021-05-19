@@ -1,0 +1,1 @@
+console.log("home js là file js được viết cho vui")

@@ -97,6 +97,15 @@ table {
 .ul-menu > li{
     margin-right: 60px;
 }
+.ul-menu > li a{
+    display: block;
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff
+}
+.ul-menu > li a:hover{
+    color: #333
+}
 
 .clear{
     clear: both;
@@ -106,13 +115,22 @@ table {
     background-color:rgb(71, 71, 179);
     height: 478px;
     clear: both;
-    background-image: url('images/car.jpg');
+    background-image: url('/images/car.jpg');
     position: relative;
     top: 0;
     left: 0;
 }
 .nav-top{
     position: relative;
+}
+.nav-top:after{
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    line-height: 0;
+    visibility: hidden;
+    overflow: hidden;
 }
 
 .banner-slogan{
@@ -240,7 +258,7 @@ table {
 
 }
 .campain-background::before{
-    background-image: url('images/car.jpg');
+    background-image: url('/images/car.jpg');
     z-index: -1;
     display: block;
     content: "";
