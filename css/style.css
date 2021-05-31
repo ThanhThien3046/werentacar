@@ -31,6 +31,10 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
 }
+body a{
+    text-decoration: none;
+    color: black;
+}
 ol, ul {
 	list-style: none;
 }
@@ -58,60 +62,77 @@ table {
     height: 10px;
     background-color: #ecac3e;
 }
-
-.logo{
+.nav-top{
+    position: relative;
+    width: 100%;
+    margin: auto;
+}
+.nav-top .logo{
     float: left;
+    position:relative;
+    right: 0;
+    width: 15%;
+    padding-left: 20px;
+}
+.nav-top .logo img{
+    width: 100px;
     position: absolute;
-    width: 30%;
-    margin-left: 90px;
-    /* clear: both; */
+    right: 20px;
+    top: 10px;
 }
-
-.menu{
-    margin-top: 50px;
-    margin-left: 35px;
-}
-
 .ul-menu{
     display: flex;
-    /* background-color: aqua; */
-}
+    width: 100%;
+    max-width: 800px;
+    justify-content: space-between;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
 
-li[class*=li-menu]{
+}
+.ul-menu li {
     border-left: 2px solid #fff;
-    padding-left: 31px;
+    width: 16.6%;
+    box-sizing: border-box;
+    text-align: center;
+   
+    padding: 5px;
 }
 
-/* .li-menu
-{
-    font-family: ;
-} */
-
-.ul-menu > li{
-    margin-right: 31px;
+.ul-menu li:nth-child(1){
+    border-left:none;
 }
-
 .menu-slogan{
+    position: relative;
     background-color:#000;
-    /* margin-top: -8px; */
-    float: right;
     width: 70%;
+    float: right;
     height: 90px;
     color: #fff;
+}
+.menu-slogan .slogan{
+    max-width: 800px;
     padding-left: 20px;
     box-sizing: border-box;
-    padding-top: 5px;
+    padding-top: 10px;
+    position: relative;
 }
-
+.menu-slogan a{
+    color: white;
+    text-decoration: none;
+}
 .btn-rentacar{
-    padding: 10px;
+    padding:10px;
     text-decoration: none;
     background-color: #ecac3e;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
-    color: #000;
+    color: white;
+    right: 0;
+    top: 0;
     margin-left: 205px;
-    width: 220px;
+    position: absolute;
 }
 
 .clear{
@@ -119,24 +140,22 @@ li[class*=li-menu]{
 }
 
 .banner{
-    background-color:rgb(71, 71, 179);
-    height: 478px;
+    height: 530px;
     clear: both;
-    background-image: url('images/car.jpg');
+    background-image: url('../images/car.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     position: relative;
     top: 0;
     left: 0;
 }
-.nav-top{
-    position: relative;
-}
-
 .banner-slogan{
     color: #fff;
     font-weight: 500px;
     position:absolute;
-    top: 75%;
-    left: 70%;
+    bottom: 20px;
+    right: 20px;
     height: 100px;
     text-align: center;
     line-height: 30px;
@@ -145,34 +164,32 @@ li[class*=li-menu]{
 .banner > .banner-slogan > .banner-werent{
     line-height: 45px;
 }
-
+.banner .banner-center{
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+    padding: 10px;
+    padding-top:60px;
+}
 .banner-form-search{
     width: 410px;
     height: auto;
     background-color: #fff;
-    top: 60px;
-    left: 70px;
-    position: absolute;
-    padding: 30px 20px;
-    
+    padding: 30px 20px; 
 }
-
 .banner-form-search-title{
     text-align: center;
     border-bottom: 1px solid #000;
     line-height: 0.1em;
     margin: 10px 0 20px;
 }
-
 .banner-form-search-title >span{
     background: #fff;
     padding: 0 10px;
 }
-
 .form-search{
     position: relative;
 }
-
 .banner-form-search-input{
     text-align: center;
     margin: 0 auto;
@@ -202,7 +219,6 @@ li[class*=li-menu]{
     padding-top: 30px;
 }
 
-
 .introtouse > hr
 {
     width: 80px;
@@ -211,49 +227,82 @@ li[class*=li-menu]{
 
 .introtouse{
     text-align: center;
-    margin: 0 auto;
-    margin-top:35px;
+    margin:auto;
+    padding-top:35px;
+    max-width: 1000px;
 }
+.introtouse h2{
+    font-size: 90%;
+    color: rgb(29, 29, 29);
+}
+.introtouse .title{
+    font-size: 140%;
+}
+.introtouse .title:after{
+    content: "";
+    display: block;
 
+    width: 150px;
+    height: 1.4px;
+    margin:8px auto;
+    background-color: #ecac3e;
+}
 .ul-introtouse
 {
     display: flex;
+    justify-content: space-between;
     margin: 0 auto;
     margin-top:35px;
     margin-bottom: 40px;
-    /* display: block; */
 }
 
 .ul-introtouse > .li-ul-introtouse
 {
-    margin-right: 100px;
+    width: 32%;
     text-align:center;
     background: #f1f1f1;
-    padding-bottom: 30px;
+    padding-bottom: 70px;
+    position: relative;
 }
-
+.ul-introtouse p{
+    text-align: left;
+    padding: 10px;
+    line-height: 1.4em;
+}
+.ul-introtouse > .li-ul-introtouse > img{
+    width: 100%;
+    height: auto;
+}
 .li-ul-introtouse > span{
     padding: 10px;
     display: block;
     color: #ecac3e;
     font-weight: 600;
 }
-
-.ul-introtouse > .li-ul-introtouse:nth-child(1)
-{
-    margin-left: 70px;
-}
-.li-ul-introtouse-link
-{
+.introtouse-link{
     text-decoration: none;
     color: #fff;
-    background: #ecac3e;
-    padding: 10px 25px;
-    border-radius: 5px;
-    display: inline-block;
-    margin-top: 20px;
+    
+    
+    position: absolute;
+    box-sizing: border-box;
+    bottom: 20px;
+    display: block;
+    left: 0;
+    width: 100%;
 }
-
+.introtouse-link a{
+    padding: 10px 25px;
+    border-radius: 10px;
+    background: #ecac3e;
+    margin: auto;
+    color: white;
+    text-decoration: none;
+    font-size: 90%;
+}
+.introtouse-link a:hover{
+    background: #d68c0c;
+}
 .campain-background{
     position: relative;
     margin: 0 auto;
@@ -263,7 +312,7 @@ li[class*=li-menu]{
 
 }
 .campain-background::before{
-    background-image: url('images/car.jpg');
+    background-image: url('../images/car.jpg');
     background-position: center;
     background-attachment: fixed;
     z-index: -1;
@@ -335,8 +384,8 @@ li[class*=li-menu]{
 }
 
 .ul-campain
-{   width: 95%;
-    max-width: 1024px;
+{   width: 100%;
+    max-width: 1000px;
     margin: auto;
     margin-top: 30px;
     display: flex;
@@ -347,10 +396,6 @@ li[class*=li-menu]{
     
     margin: 0 auto;
     z-index: 10;
-}
-
-.list-car{
-
 }
 
 
@@ -433,7 +478,7 @@ li[class*=li-menu]{
     width: 100%;
     height: 500px;
     /* max-width: 1024px; */
-    background-image: url('images/car.jpg');
+    background-image: url('../images/car.jpg');
     background-position: center;
     color: #fff;
     font-weight: bold;
@@ -485,18 +530,18 @@ li[class*=li-menu]{
 
 .li-footer-title
 {
-    border-left: 10px solid #ecac3e;
-    height: 30px;
+    border-left: 8px solid #ecac3e;
+    height: 18px;
     font-weight:600;
-    font-size: 23px;
+    font-size: 21px;
     padding: 5px 10px;
-    padding-top: 17px;
+    padding-top: 10px;
 }
 
 .li-footer-content
 {
     line-height: 25px;
-    font-weight:600;
+ 
     margin-top: 30px;
 }
 
