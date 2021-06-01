@@ -62,54 +62,56 @@ table {
     height: 10px;
     background-color: #ecac3e;
 }
-.nav-top{
+/* .nav-top{
     position: relative;
     width: 100%;
     margin: auto;
-}
+} */
 .nav-top .logo{
-    float: left;
-    position:relative;
-    right: 0;
-    width: 15%;
+    position: relative;
+    width: 100%;
+    max-width: 1024px;
     padding-left: 20px;
+    margin: auto;
+    height: 90px;
 }
-.nav-top .logo img{
-    width: 100px;
-    position: absolute;
-    right: 20px;
-    top: 10px;
-}
+
 .ul-menu{
     display: flex;
     width: 100%;
-    max-width: 800px;
+    max-width: 1024px;
     justify-content: space-between;
     text-align: center;
-    position: absolute;
+    /* position: absolute; */
     bottom: 0;
     left: 0;
-
+    color: #000;
+    padding-bottom: 5px;
 }
 .ul-menu li {
-    border-left: 2px solid #fff;
+    border-left: 1px solid rgb(175, 174, 174);
     width: 16.6%;
     box-sizing: border-box;
     text-align: center;
-   
-    padding: 5px;
+    padding: 5px 33px;
 }
 
-.ul-menu li:nth-child(1){
+/* .ul-menu li:nth-child(1){
     border-left:none;
+} */
+
+.ul-menu li:last-child{
+    border-right:1px solid rgb(175, 174, 174);
 }
+
+
 .menu-slogan{
     position: relative;
-    background-color:#000;
-    width: 70%;
-    float: right;
-    height: 90px;
-    color: #fff;
+    background-color:#fff;
+    width: 100%;
+    /* float: right; */
+    height: auto;
+    color: #000;
 }
 .menu-slogan .slogan{
     max-width: 800px;
@@ -118,10 +120,7 @@ table {
     padding-top: 10px;
     position: relative;
 }
-.menu-slogan a{
-    color: white;
-    text-decoration: none;
-}
+
 .btn-rentacar{
     padding:10px;
     text-decoration: none;
@@ -571,4 +570,46 @@ table {
     width: 100%;
     overflow: hidden;
 }
+
+.menu
+{
+    width: 100%;
+    max-width: 1024px;
+    margin: auto;
+}
+
+.header-btn
+{
+    position: absolute;
+    right: 0;
+    top: 45px;
+}
+
+.header-btn > a:nth-child(1){
+    padding: 10px 20px;
+    background: #d68c0c;
+    border-radius: 10px;
+    color: #fff;
+    margin-right: 30px;
+}
+
+.header-btn > a:nth-child(2){
+    padding: 10px 20px;
+    background: #393bd8;
+    border-radius: 10px;
+    color: #fff;
+}
+
+.logo  img{
+    width: 100%;
+    height: auto;
+}
+
+.logo-left
+{
+    width: 280px;
+    padding-top: 30px;
+}
+
+
 
