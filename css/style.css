@@ -57,6 +57,7 @@ table {
     /* max-width: 1024px; */
 }
 
+/*  ーーーーーーーーーーーーーヘッダーここからーーーーーーーーーーーーーーーー */
 .nav-bar{
     border-color: #ecac3e;
     height: 10px;
@@ -154,15 +155,17 @@ table {
     color: #fff;
     font-weight: 500px;
     position:absolute;
-    bottom: 20px;
+    font-size: 130%;
+    top: 70px;
     right: 20px;
     height: 100px;
     text-align: center;
     line-height: 30px;
 }
 
-.banner > .banner-slogan > .banner-werent{
-    line-height: 45px;
+.banner-slogan .banner-werent{
+    line-height: 75px;
+    margin-top: 70px;
 }
 .banner .banner-center{
     max-width: 1000px;
@@ -218,7 +221,7 @@ table {
 .span-banner-form-search-title{
     padding-top: 30px;
 }
-
+/*  ーーーーーーーーーーーーー　introtouse　ここからーーーーーーーーーーーーーーーー */
 .introtouse > hr
 {
     width: 80px;
@@ -228,12 +231,15 @@ table {
 .introtouse{
     text-align: center;
     margin:auto;
+    padding: 12px;
+    box-sizing: border-box;
     padding-top:35px;
-    max-width: 1000px;
+    max-width: 1024px;
 }
 .introtouse h2{
     font-size: 90%;
     color: rgb(29, 29, 29);
+    margin-top: 10px;
 }
 .introtouse .title{
     font-size: 140%;
@@ -241,7 +247,6 @@ table {
 .introtouse .title:after{
     content: "";
     display: block;
-
     width: 150px;
     height: 1.4px;
     margin:8px auto;
@@ -253,154 +258,44 @@ table {
     justify-content: space-between;
     margin: 0 auto;
     margin-top:35px;
-    margin-bottom: 40px;
-}
 
-.ul-introtouse > .li-ul-introtouse
+}
+.ul-introtouse a:hover{
+    opacity: 0.8;
+}
+.ul-introtouse .li-ul-introtouse
 {
-    width: 32%;
-    text-align:center;
-    background: #f1f1f1;
-    padding-bottom: 70px;
+    width: 31%;
     position: relative;
 }
 .ul-introtouse p{
     text-align: left;
-    padding: 10px;
     line-height: 1.4em;
+    padding: 10px 0;
 }
-.ul-introtouse > .li-ul-introtouse > img{
+.ul-introtouse .li-ul-introtouse img{
     width: 100%;
     height: auto;
 }
-.li-ul-introtouse > span{
-    padding: 10px;
+.li-ul-introtouse span{
+    border-left: 5px solid #ecac3e;
+    padding: 8px;
+    margin-top: 10px;
     display: block;
     color: #ecac3e;
     font-weight: 600;
-}
-.introtouse-link{
-    text-decoration: none;
-    color: #fff;
-    
-    
-    position: absolute;
-    box-sizing: border-box;
-    bottom: 20px;
-    display: block;
-    left: 0;
-    width: 100%;
-}
-.introtouse-link a{
-    padding: 10px 25px;
-    border-radius: 10px;
-    background: #ecac3e;
-    margin: auto;
-    color: white;
-    text-decoration: none;
-    font-size: 90%;
-}
-.introtouse-link a:hover{
-    background: #d68c0c;
-}
-.campain-background{
-    position: relative;
-    margin: 0 auto;
-    text-align: center;
-    height: 550px;
-    padding-top: 30px;
-
-}
-.campain-background::before{
-    background-image: url('../images/car.jpg');
-    background-position: center;
-    background-attachment: fixed;
-    z-index: -1;
-    display: block;
-    content: "";
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-
-}
-.campain-background::after{
-    z-index: -1;
-    display: block;
-    content: "";
-    position: absolute;
-    background-color: #000;
-    opacity: 0.65;
-    background-attachment: fixed;
-    height: 100%;
-    width: 100%;
-    /* padding-top: 45px; */
-    top: 0;
-    left: 0;
-}
-/* .campain{
-    background-color: #000;
-    opacity: 0.7;
-    background-attachment: fixed;
-    height: 500px;
-    padding-top: 45px;
-} */
-
-.campain > hr{
-    width: 80px;
-    background-color: #ecac3e;
+    text-align: left;
 }
 
-.campain > span{
-    color: #fff;
-}
+/*  ーーーーーーーーーーーーー　introtouse　ここまでーーーーーーーーーーーーーーーー */
 
-.li-campain{
-    margin-right: 30px;
-    text-align:center;
-    background: #fff;
-    padding-bottom: 30px;
-    width: 25%;
-}
-
-.li-span-campain{
-    background-color: #ecac3e;
-    padding: 10px 50px;
-    width: 100%;
-    box-sizing: border-box;
-    display: block;
-}
-
-.li-campain > img{
-    width: 100%;
-    height: auto;
-    margin-bottom: 10px;
-}
-
-.li-campain > hr{
-    width: 80px;
-    background-color: #ecac3e;
-}
-
-.ul-campain
-{   width: 100%;
-    max-width: 1000px;
-    margin: auto;
+/*  ーーーーーーーーーーーーー　LIST-CAR　ここからーーーーーーーーーーーーーーーー */
+.list-car{
+    background: #e4f1f6;
     margin-top: 30px;
-    display: flex;
-    justify-content: space-between;
 }
-
-.campain-img-list{
-    
-    margin: 0 auto;
-    z-index: 10;
-}
-
-
 .span-list-car{
-    background-color: #000;
+    background-color: rgb(0, 0, 0);
     color: #fff;
     border-left: 15px solid #ecac3e;
     width: 100%;
@@ -409,11 +304,8 @@ table {
     padding: 15px 15px;
     margin: auto;
     box-sizing: border-box;
-    margin-top: 50px;
-    margin-bottom: 30px;
-
+    margin-bottom: 40px;
 }
-
 .span-list-car_{
     font-family: Georgia, 'Times New Roman', Times, serif;
     margin: auto;
@@ -421,8 +313,9 @@ table {
     display: block;
     width: 100%;
     max-width: 1024px;
-    margin-top: 50px;
-    font-size: 25px;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    font-size: 28px;
 }
 
 .ul-list-car{
@@ -443,14 +336,34 @@ table {
     width: 32%;
     margin-bottom: 55px;
     text-align:center;
-    background: #fff;
 }
 
 .li-list-car > img{
     width: 100%;
     height: auto;
 }
-
+.list-car .car-link {
+	border: solid 1px black;
+	padding: 10px 50px;
+	font-size: 105%;
+	font-weight: 600;
+	font-family: YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "serif";
+  	display: inline-block;
+    background: -webkit-linear-gradient(left, black 50%, transparent 50%);
+    background: -o-linear-gradient(left, black 50%, transparent 50%);
+    background: linear-gradient(to right, black 50%, transparent 50%);
+  	background-size: 200% 100.5%;
+  	background-position: right bottom;
+  	text-align: center;
+  	color: #0E0E0E;
+    margin-top: 20px;
+  	transition: all .3s; 
+}
+.list-car .car-link:hover {
+    background-position: left bottom;
+    color: white;
+    opacity: 1; 
+}
 .span-li-list-car{
     margin: 0 auto;
     text-align: center;
@@ -472,7 +385,9 @@ table {
     text-align: left;
     line-height: 25px;
 }
+/*  ーーーーーーーーーーーーー　LIST-CAR　ここまでーーーーーーーーーーーーーーーー */
 
+/*  ーーーーーーーーーーーーー　CONTACT　ここからーーーーーーーーーーーーーーーー */
 .contact-us{
     /* background-color: aquamarine; */
     width: 100%;
