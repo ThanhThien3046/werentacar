@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" type="image/png" href="images/favicon.png">
+    <script src="./js/jquery.slim.min.js"></script>
     <title>we-rentacar</title>
 </head>
 <body>
@@ -15,7 +16,30 @@
             
             <div class="menu-slogan">
                 <div class="logo">
-                    <div class="logo-left"><img src="images/logo.png" alt="we-rentacar"></div>
+                    <div class="logo-left"></div>
+                    <div><i class="fas fa-phone-rotary"></i></div>
+                    <div>hgdh</div>
+                    <div>hgdh</div>
+                    <div class="hamburger-menu">
+                        <nav id="js-nav" class="nav">
+                            <ul class="list">
+                                <li><a href="">ホーム</a></li>
+                                <li><a href="">会社情報</a></li>
+                                <li><a href="">キャンペーン</a></li>
+                                <li><a href="">車重案内</a></li>
+                                <li><a href="">ご利用案内</a></li>
+                                <li><a href="">お問い合わせ</a></li>
+                            </ul>
+                        </nav>
+                         <!-- hamburger button -->
+                        <button id="js-hamburger" class="hamburger" type="button">
+                            <span id="js-top-line" class="top-line"></span>
+                            <span id="js-center-line" class="center-line"></span>
+                            <span id="js-bottom-line" class="bottom-line"></span>
+                            <p id="js-menu_btn" class="menu_btn">MENU</p>
+                        </button>
+                        <!-- end hamburger button -->
+                    </div>
                     <div class="header-btn">
                         <a href="">レンタカー予約 ＞</a>
                         <a href="">お問い合わせ ＞</a>
@@ -52,8 +76,8 @@
                             <td class="banner-form-search-input-content"><input type="date" value="2021-05-19"></td>
                         </tr>
                         <tr>
-                            <td class="banner-form-search-input-content"><input type="time" value="10:00" style="width: 130px;"></td>
-                            <td class="banner-form-search-input-content"><input type="time" value="18:00" style="width: 130px;"></td>
+                            <td class="banner-form-search-input-content"><input type="time" value="10:00"></td>
+                            <td class="banner-form-search-input-content"><input type="time" value="18:00"></td>
                         </tr>
                     </table>
 
@@ -65,10 +89,10 @@
                             <td class="banner-form-search-input-content">返却日時</td>
                         </tr>
                         <tr>
-                            <td class="banner-form-search-input-content"><input type="time" value="10:00" style="width: 130px;"></td>
+                            <td class="banner-form-search-input-content"><input type="time" value="10:00"></td>
                             <td class="banner-form-search-input-content">
                                 <!-- <input type="text"> -->
-                                <select name="time" id="pet-select" style="width: 130px;height:24px;">
+                                <select name="time" id="pet-select">
                                     <option value="">当日利用</option>
                                     <option value="dog">Dog</option>
                                     <option value="cat">Cat</option>
@@ -81,9 +105,11 @@
                         </tr>
                         <tr>
                             <td class="banner-form-search-input-content">出発日時</td>
+                            <td class="banner-form-search-input-content"></td>
                         </tr>
                         <tr>
-                            <td><input type="time" value="18:00" style="width: 130px;"></td>
+                            <td class="banner-form-search-input-content"><input type="time" value="18:00"></td>
+                            <td class="banner-form-search-input-content"></td>
                         </tr>
                     </table>
                     <button type="submit" class="search-submit">空き状況を検索</button>
@@ -359,6 +385,17 @@
             </ul>
             <div class="copyright">Copyright &copy; 2021 WE・RENTACAR Co.,Ltd. All rights reserved</div>
         </div>
-    </div>   
+    </div>
+    
+    <!-- js for hamburger menu -->
+    <script>
+        $("#js-hamburger").click(function () {
+        $("#js-top-line").toggleClass("active");
+        $("#js-center-line").toggleClass("active");
+        $("#js-bottom-line").toggleClass("active");
+        $("#js-menu_btn").toggleClass("active");
+        $("#js-nav").toggleClass("show");
+        });
+    </script>
 </body>
 </html>
