@@ -79,7 +79,8 @@ table {
     position: relative;
     width: 100%;
     max-width: 1024px;
-    padding-left: 20px;
+    margin: 12px;
+    padding-left: 12px;
     margin: auto;
     height: 90px;
 }
@@ -88,6 +89,8 @@ table {
     display: flex;
     width: 100%;
     max-width: 1024px;
+    padding: 12px;
+    box-sizing: border-box;
     justify-content: space-between;
     text-align: center;
     /* position: absolute; */
@@ -199,9 +202,7 @@ table {
     background: #fff;
     padding: 0 10px;
 }
-.form-search{
-    position: relative;
-}
+
 .banner-form-search-input{
 
     text-align: center;
@@ -251,19 +252,19 @@ table {
     bottom: 10px;
 } */
 
-<<<<<<< HEAD
+/* <<<<<<< HEAD */
 /*  ーーーーーーーーーーーーー　introtouse　ここからーーーーーーーーーーーーーーーー */
 .introtouse > hr
 {
     width: 80px;
     background-color: #ecac3e;
 }
-=======
+/* ======= */
 .span-banner-form-search-title{
     padding-top: 30px;
 }
 /*  ーーーーーーーーーーーーー　ご利用案内　ここからーーーーーーーーーーーーーーーー */
->>>>>>> indexresupon
+/* >>>>>>> indexresupon */
 
 .use{
     text-align: center;
@@ -564,7 +565,8 @@ table {
 }
 .header-btn{
     position: absolute;
-    right: 0;
+    right: 12px;
+
     top: 45px;
 }
 .header-btn > a:nth-child(1){
@@ -585,21 +587,27 @@ table {
     height: auto;
 }
 .logo-left{
-    width: 280px;
-    margin-top: 30px;
+    width: 310px;
+    margin-top: 20px;
     background-image: url('../images/logo.png');
     background-size: cover;
-    height: 42px;
+    height: 45px;
     background-repeat: no-repeat;
 }
-<<<<<<< HEAD
+/* <<<<<<< HEAD */
 
 .hamburger-menu
 {
     display: none;
 }
 
-@media screen and (max-width:480px){
+.icon-list
+{
+    display: none;
+}
+
+
+@media screen and (max-width:767px){
     .header-btn
     {
         display: none;
@@ -615,6 +623,8 @@ table {
     .hamburger-menu
     {
         display: block;
+        padding: 5px;
+        background: #edad3e;
     }
 
     
@@ -699,14 +709,16 @@ table {
         height: 35px;
         z-index: 1;
         border: none;
+        margin-top:5px;
+        background: #edad3e;
       }
       
       .hamburger span {
         position: absolute;
-        left: 0;
-        background: #d4712f;
-        width: inherit;
-        height: 5px;
+        left: 10px;
+        background: #fff;
+        width: 30px;
+        height: 3px;
         transition: transform 0.5s, opacity 0.5s;
       }
       
@@ -715,18 +727,19 @@ table {
       }
       
       .center-line {
-        top: 15px;
+        top: 10px;
       }
       
       .bottom-line {
-        bottom: 0px;
+        top: 20px;
       }
       .menu_btn
       {
-        padding-top:35px
+        padding-top:28px;
+        color: #fff;
       }
       .top-line.active {
-        transform: translateY(15px) rotate(45deg);
+        transform: translateY(5px) rotate(45deg);
       }
       
       .center-line.active {
@@ -757,14 +770,57 @@ table {
 
       .banner-form-search
       {
-          padding: 200px 12px;
+          margin: 200px 12px;
           background-color: transparent;
       }
       /* end hamburger menu */
+
+      .use{
+        padding-top: 450px;
+      }
+
+      .banner .banner-center
+      {
+          padding:10px 0px 0px 0px;
+      }
+
+      .banner-form-search-title >span
+      {
+        background: #e4f1f6;
+      }
+
+      .form-search{
+        position: relative;
+        background-color: #e4f1f6;
+      }
+
+      .icon-list{
+          display: flex;
+          margin-top: 15px;
+          position: absolute;
+          right: 55px;
+          text-align: center;
+      }
+
+      .iconlist_i_p i{
+        font-size: 21px;
+        margin: 0 auto;
+        margin-bottom:5px; 
+        text-align: center;
+      }
+
+      .iconlist_i_p p{
+        margin-right: 9px;
+        font-size: 11px;
+
+      }
+      
 }
 
 
-=======
+
+
+/* ======= */
 @media Screen and (max-width:767px){
     .use ul li{
         width: 48%;
@@ -845,4 +901,4 @@ table {
         font-size: 10px;
     }
 }
->>>>>>> indexresupon
+/* >>>>>>> indexresupon */
