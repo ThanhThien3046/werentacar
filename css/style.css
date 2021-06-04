@@ -5,6 +5,7 @@
 }
 .banner{
     height: 530px;
+    
     clear: both;
     background-image: url('../images/car.jpg');
     background-repeat: no-repeat;
@@ -15,6 +16,7 @@
     left: 0;
 }
 .banner-slogan{
+    
     color: #fff;
     font-weight: 500px;
     position:absolute;
@@ -30,34 +32,39 @@
     margin-top: 70px;
 }
 .banner .banner-center{
+
     max-width: 1000px;
     position: relative;
     margin: auto;
     padding: 10px;
-    padding-top:60px;
+    padding-top:35px;
 }
 .banner-form-search{
     width: 100%;
     max-width: 410px;
     height: auto;
     background-color: #fff;
-    /* padding: 30px 20px; 
-     */
-     padding: 30px 12px; 
+    
+     padding: 25px 15px; 
      box-sizing: border-box;
 }
 .banner-form-search-title{
     text-align: center;
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid hsl(0, 0%, 65%);;
     line-height: 0.1em;
     margin: 10px 0 20px;
+    font-size: 110%;
+    font-weight: 600;
+    color: hsl(0, 0%, 15%);
 }
 .banner-form-search-title >span{
     background: #fff;
     padding: 0 10px;
 }
+.span-banner-form-search-title{
+    padding-top: 15px;
+}
 .banner-form-search-input{
-
     text-align: center;
     margin: 0 auto;
     width: 100%;
@@ -69,32 +76,45 @@
     justify-content: space-between;
 }
 .banner-form-search-input tr td{
-    width: 49%;
+    width: 47%;
+}
+.banner-form-search-input tr td.form-content{
+    text-align: left;
+    font-weight: 600;
+    margin-top: 5px;
 }
 .banner-form-search-input tr td input{
-    width: 90%;
+    width: 100%;
     margin: 10px 0;
+    padding: 5px 2px;
+    cursor: pointer;
+    box-sizing: border-box;
+    
 } 
 .banner-form-search-input tr td select{
-    width: 90%;
+    width: 100%;
     margin: 10px 0;
-    padding: 3px;
+    padding: 7px 2px;
+    cursor: pointer;
+    box-sizing: border-box;
 } 
-.span-banner-form-search-title{
-    padding-top: 30px;
-}
+
 .search-submit{
     display: block;
     text-align: center;
     margin: 0 auto;
-    background: #000;
+    cursor: pointer;
+    background: rgb(27, 27, 27);
     color: #fff;
     margin-top: 20px;
     width: 200px;
-    padding: 5px 10px;
+    padding: 7px 10px;
+    box-sizing: border-box;
+    border: none;
+    box-shadow: 3px 3px 2px hsl(0, 0%, 59%);
 }
-.span-banner-form-search-title{
-    padding-top: 30px;
+.search-submit:hover{
+    background: hsl(0, 0%, 20%);
 }
 /* ーーーーーーーーーーーーーーーーー　バナー　ここまで　ーーーーーーーーー */
 
@@ -337,12 +357,13 @@
         margin-top: 535px;
       }
       .banner-form-search{
-          margin: 200px 12px;
+          max-width: 700px;
+          margin: 200px auto;
           background-color: transparent;
       }
       /* end hamburger menu */
       .use{
-        padding-top: 450px;
+        padding-top: 485px;
       }
       .banner .banner-center{
           padding:10px 0px 0px 0px;
