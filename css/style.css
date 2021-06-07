@@ -75,30 +75,44 @@
     flex-wrap: wrap;
     justify-content: space-between;
 }
-.banner-form-search-input tr td{
-    width: 47%;
+select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
-.banner-form-search-input tr td.form-content{
+.banner-form-search-input .banner-form-search-td{
+    width: 47%;
+    position: relative;
+}
+.banner-form-search-input .banner-form-search-td i{
+    position: absolute;
+    top:17px;
+    right: 6px;
+
+}
+.banner-form-search-input td.form-content{
     text-align: left;
     font-weight: 600;
     margin-top: 5px;
 }
-.banner-form-search-input tr td input{
+.banner-form-search-input .banner-form-search-td input{
     width: 100%;
     margin: 10px 0;
-    padding: 5px 2px;
+    padding: 5px 3px;
+    height: 32px;
     cursor: pointer;
     box-sizing: border-box;
-    
+    display: block; 
 } 
-.banner-form-search-input tr td select{
+.banner-form-search-input .banner-form-search-td select{
     width: 100%;
     margin: 10px 0;
-    padding: 7px 2px;
+    padding: 5px 3px;
+    height: 32px;
     cursor: pointer;
     box-sizing: border-box;
+    background: white;
 } 
-
 .search-submit{
     display: block;
     text-align: center;
@@ -217,7 +231,6 @@
     padding-bottom: 20px;
     font-size: 28px;
 }
-
 .list-car ul{
     display: flex;
     flex-wrap: wrap;
@@ -320,6 +333,7 @@
 .about ul li a:hover{
     text-decoration: underline;
 }
+
 .about ul li span{
     position: absolute;
     box-sizing: border-box;
@@ -329,6 +343,7 @@
     padding: 7px;
     color: white;
     z-index: 1;
+
 }
 .about ul li span::before{
     background-image: linear-gradient(rgba(255, 255, 255, 0.021),black);
@@ -461,7 +476,14 @@
         margin-bottom: 20px;
     }
     .about ul li span {
-        font-size: 55%;
-        padding:5px 4px;
+        font-size: 76%;
+        padding:5px 5px;
+        padding-right: 0;
+    }
+}
+@media Screen and (max-width:320px){
+    .about ul li span {
+        font-size: 60%;
+
     }
 }

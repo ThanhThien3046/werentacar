@@ -223,6 +223,9 @@ table {
     font-weight: 600;
 }
 .contact-content a{
+    color: white;
+}
+.contact-content a.contact-link{
     padding: 15px 40px;
     background-color: #edad3e;
     color: #fff;
@@ -315,12 +318,7 @@ table {
         margin: auto;
         display: none;
     }
-    .hamburger-menu{
-        cursor: pointer;
-        display: block;
-        padding: 5px;
-        background: #edad3e;
-    }
+    
     .nav-top{
         position: sticky;
         top:0;
@@ -383,17 +381,24 @@ table {
       .list li a{
         color: black;    
       }
-
+      .hamburger-menu{
+        cursor: pointer;
+        display: block;
+        background: #edad3e;
+        padding-bottom: 0;
+    }
       .hamburger {
         cursor: pointer;
         position: relative;
-        margin-left: auto;
-        width: 45px;
-        height: 35px;
+        width: 50px;
+        height: 59px;
+        padding: 7px;
         z-index: 2;
         border: none;
-        margin-top:5px;
+        box-sizing: border-box;
+        color: white;
         background: #edad3e;
+        padding-top: 10px;
       }
       .hamburger span {
         position: absolute;
@@ -404,19 +409,19 @@ table {
         transition: transform 0.3s;
       }
       .top-line {
-        top: 7px;
+        top: 15px;
       }
       .center-line {
-        top: 17px;
+        top: 25px;
       }
       .bottom-line {
-        top: 27px;
+        top: 35px;
       }
       .menu_btn{
         padding-top:32px;
         padding-left: 2px;
         font-size: 85%;
-        color: #fff;
+        z-index: 10;
       }
       .top-line.active {
         transform: translateY(10px) rotate(135deg);
@@ -426,9 +431,7 @@ table {
       }
       .bottom-line.active {
         transform: translateY(-10px) rotate(-135deg);
-
       }
-      
       /* end hamburger menu */
       .icon-list{
           display: flex;
