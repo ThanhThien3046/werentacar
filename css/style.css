@@ -202,7 +202,8 @@ select{
 /*  ーーーーーーーーーーーーー　LIST-CAR　ここからーーーーーーーーーーーーーーーー */
 #list-car{
     background: #e4f1f6;
-    margin-top: 30px;
+    margin-top: 15px;
+    padding-bottom: 10px;
 }
 .list-car{
     width: 100%;
@@ -211,14 +212,14 @@ select{
     padding: 12px;
     box-sizing: border-box;
 }
-.list-car h2{
+.list-car .type{
     background-color: #2b5799;
     color: #fff;
     border-left: 15px solid #edad3e;
     display: block;
     padding: 15px 15px;
     box-sizing: border-box;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 .list-car-title{
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -227,63 +228,88 @@ select{
     display: block;
     width: 100%;
     max-width: 1024px;
-    padding-top: 50px;
+    padding-top: 30px;
     padding-bottom: 20px;
     font-size: 28px;
 }
-.list-car ul{
+.list-car .car-line{
     display: flex;
     flex-wrap: wrap;
-    justify-content:space-between;
-    width: 100%;
+    justify-content: space-between;
+
 }
-.list-car ul li{
-    width: 32%;
-    margin-bottom: 55px;
-    text-align:center;
+.list-car .car-line-img{
+    width: 45%;
 }
-.li-list-car > img{
+.list-car .car-line-img img{
     width: 100%;
     height: auto;
 }
-.list-car .car-link {
-	border: solid 1px black;
-	padding: 10px 50px;
-	font-size: 105%;
-	font-weight: 600;
+.car-line-type{
+    width: 49%;
+}
+.car-line-type p{
+    line-height: 1.5em;
+    font-size: 90%;
+    letter-spacing: .07em; 
+}
+.car-line-type p strong{
+    font-weight: 600;
+    font-size: 100%;
+}
+.list-car .car-line-type .car-line-btn a{
+    width: 100%;
+	padding: 8px 5px;
+    border-radius: 6px;
+    box-sizing: border-box;
+	font-size: 96%;
 	font-family: YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "serif";
-  	display: inline-block;
-    background: -webkit-linear-gradient(left, #edad3e 50%, transparent 50%);
-    background: -o-linear-gradient(left, #edad3e 50%, transparent 50%);
-    background: linear-gradient(to right, #edad3e 50%, transparent 50%);
-  	background-size: 200% 100.5%;
-  	background-position: right bottom;
   	text-align: center;
-  	color: #0E0E0E;
-    margin-top: 20px;
-  	transition: all .3s;
-}
-.list-car .car-link:hover {
-    background-position: left bottom;
+  	color: white;
+    margin-top: 10px;
+    border: 1px solid #f7ad25;
+    background: linear-gradient(to bottom, #fca037, rgb(255, 150, 13));
+    display: block;
     color: white;
-    opacity: 1; 
+    box-shadow: 0px 3px 0px #b36500;
+    -webkit-box-shadow: 0px 3px 2px #b36500;
 }
-.span-li-list-car{
-    margin: 0 auto;
+.list-car .car-line-type .car-line-btn a:hover{
+    background: linear-gradient(to bottom, #fd8700, rgb(255, 147, 6));
+    opacity: 0.8;
+}
+
+.list-car .price{
+    margin-bottom: 30px;
+    margin-top: 15px;
+}
+.list-car .price p{
+    text-align: center;
+    margin: 10px 0;
+    font-weight: 600;
+    font-size: 90%;
+    color: hsl(0, 0%, 13%);
+}
+.list-car table tr{
+    width: 100%;
+    background: white;
+    border:1px solid hsl(0, 0%, 84%);
+}
+.list-car table tr th{
+    background: hsl(39, 100%, 94%);
+    padding: 9px 4px;
+}
+.list-car table tr td{
+    padding: 9px 4px;
+    border:1px solid hsl(0, 0%, 84%);
     text-align: center;
 }
-.li-list-car > span:nth-child(3)
-{
-    font-size: 24px;
-    font-weight: bold;
-}
-.list-car .car-name{
-    font-weight: bold;
-    line-height: 40px;
-}
-.li-list-car > p{
-    text-align: left;
-    line-height: 25px;
+.list-car .price span{
+    margin-top: 5px;
+    font-size: 70%;
+    display: block;
+    text-align: right;
+    color:red;
 }
 /*  ーーーーーーーーーーーーー　LIST-CAR　ここまでーーーーーーーーーーーーーーーー */
 
@@ -341,12 +367,12 @@ select{
     bottom: 0px;
     left: 0px;
     padding: 7px;
-    color: white;
+    color: hsl(0, 0%, 100%);
     z-index: 1;
 
 }
 .about ul li span::before{
-    background-image: linear-gradient(rgba(255, 255, 255, 0.021),black);
+    background-image: linear-gradient(#ffffff05,black);
     content: "";
     display: block;
     width: 100%;
@@ -361,6 +387,46 @@ select{
     height: auto;
 }
 /*  ーーーーーーーーーーーーー　会社概要　ここまでーーーーーーーーーーーーーーーー */
+@media screen and (min-width:767px){
+    .list-car .car-line-img{
+        width: 100%;
+    }
+    .list-car .car-line-type{
+        width: 100%;
+    }
+    .car-line-price{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .car-line{
+        width: 40%;
+        margin-bottom: 20px;
+    }
+    .list-car .price{
+        width: 55%;
+    }
+    .car-line-type p{
+        text-align: center;
+        font-size: 100%;
+    }
+    .car-line-type p strong{
+        line-height: 1.7em;
+        font-size: 110%;
+    }
+    .list-car .car-line-type .car-line-btn a{
+        margin:10px auto;
+        margin-bottom: 25px;
+        max-width: 250px;
+        padding: 10px;
+       
+    }
+    .list-car table tr th{
+        background: hsl(39, 100%, 94%);
+        padding: 12px 4px;
+    }
+
+}
 @media screen and (max-width:767px){
       .banner-slogan{
           display: none;
@@ -412,6 +478,11 @@ select{
         width: 48%;
         margin-bottom: 15px;
     }
+    #list-car{
+        background: #e4f1f6;
+        margin-top: 0px;
+        padding-bottom: 5px;
+    }
     .list-car ul li{
         width: 48%;
     }
@@ -447,9 +518,9 @@ select{
     .use ul li:last-child{
         margin-bottom: 0;
     }
-    .list-car ul li{
-        width: 100%;
-        margin-bottom: 20px;
+    #list-car{
+        margin-top: 10px;
+        padding-bottom: 0;
     }
     .list-car{
         padding-top: 0;
@@ -457,10 +528,10 @@ select{
     }
     .list-car-title{
         margin-top: 0;
-        padding-top: 25px;
+        padding-top: 20px;
         font-size: 140%;
     }
-    .list-car h2{
+    .list-car .type{
         border-left: 12px solid #edad3e;
         padding: 10px;
         margin-bottom: 20px;
@@ -476,7 +547,7 @@ select{
         margin-bottom: 20px;
     }
     .about ul li span {
-        font-size: 76%;
+        font-size: 74%;
         padding:5px 5px;
         padding-right: 0;
     }
