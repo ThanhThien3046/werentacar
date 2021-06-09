@@ -1,0 +1,102 @@
+.main{
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.block_step > p{
+    border-bottom: 2px solid #edad3e;
+    width: 100%;
+    padding: 15px 0px;
+}
+
+.block_content
+{
+    display: flex;
+    justify-content:space-between;
+    margin-top: 20px;
+}
+
+.block_content > span:nth-child(1){
+    width: 60%;
+    font-size: 12px;
+}
+
+.block_content > span:nth-child(2){
+    width: 40%;
+    height: 90px;
+    margin-left: 25px;
+    background: rgba(0, 0, 0, 0.3)url('../images/credo.jpg');
+    background-size: cover;
+    background-blend-mode: darken;
+    display: flex;
+}
+
+.space{
+    margin: 40px 0;
+}
+
+.arrow-right{
+    border-left: 5px solid #fff;
+    border-top: 5px solid #edad3e;
+    border-bottom: 5px solid #edad3e;
+    width: 0;
+    height: 0;
+}
+
+.banner_bar{
+    font-size: 20px;
+}
+.image_text{
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    margin: auto
+}
+
+
+@media screen and (min-width:768px) {
+    .block_step > p{
+        border-bottom: 2px solid #edad3e;
+        width: 100%;
+        padding: 15px 0px;
+    }
+    
+    .block_content
+    {
+        display: flex;
+        justify-content:space-between;
+        margin-top: 20px;
+    }
+    
+    .block_content > span:nth-child(1){
+        width: 60%;
+        font-size: 100%;
+    }
+    
+    .block_content > span:nth-child(2){
+        width: 40%;
+        height: 200px;
+        margin-left: 25px;
+        background: rgba(0, 0, 0, 0.3)url('../images/credo.jpg');
+        background-size: cover;
+        background-blend-mode: darken;
+        display: flex;
+    }
+
+    .arrow-right{
+		border-left: 10px solid #fff;
+		border-top: 10px solid #edad3e;
+		border-bottom: 10px solid #edad3e;
+		width: 0;
+		height: 0;
+	}
+
+    .image_text{
+        color: #fff;
+        font-size: 24px;
+        font-weight: 600;
+        margin: auto
+    }
+}
