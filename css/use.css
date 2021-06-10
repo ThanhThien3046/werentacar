@@ -1,11 +1,10 @@
 .banner_bar{
 	width: 100%;
-	height: 40px;
+	padding: 12px;
 	background-color: #edad3e;
-	box-shadow: 3px 3px 3px hsl(0deg 0% 49%);
+	box-shadow: 0px 3px 3px hsl(0deg 0% 49%);
 }
 .banner_bar h1{
-	padding: 12px;
 	box-sizing: border-box;
 	width: 100%;
 	margin: auto;
@@ -86,12 +85,9 @@
 	box-shadow: 3px 3px 3px hsl(0deg 0% 49%);
 	color: #fff;
 	font-size: 14px;
-
-	border-radius: 5px;
-
 }
 .step1_content>span:nth-child(2) > a:hover{
-	opacity: 0.8;
+	background-color:hsla(41,100%,43%,1.00);
 }
 .step1_content>span:nth-child(2) > a:nth-child(1){
 	margin-right: 25px;
@@ -155,36 +151,41 @@
 	height: auto;
 	box-shadow: 3px 3px 3px hsl(0deg 0% 49%);
 	margin-top: 20px;
+
 }
 
 .content_banner p{
 	text-align: center;
 	font-size: 16px;
+	font-family: YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "serif";
 	font-weight: 600;
 	padding-top: 10px;
+	color: white;
 }
-
 .list-round{
 	display: flex;
 	margin: 0 auto;
+	max-width: 300px;
 }
-
 .round{
 	border-radius: 50%;
 	background: #fff;
-	width: 90px;
-	height: 90px;
+	width: 70px;
+	height: 70px;
 	display: flex;
 	align-items: center;
 	text-align: center;
 	justify-content: space-around;
 	margin: 10px auto;
+	padding: 4px;
 	font-size: 11px;
+	line-height: 1.4em;
+	color:hsla(33,100%,32%,1.00)
 }
 .arrow-right{
-	border-left: 5px solid #fff;
-	border-top: 5px solid #edad3e;
-	border-bottom: 5px solid #edad3e;
+	border-left: 7px solid #fff;
+	border-top: 7px solid #edad3e;
+	border-bottom: 7px solid #edad3e;
 	width: 0;
 	height: 0;
 	margin: auto;
@@ -195,23 +196,25 @@
 	text-align: center;
 	justify-content:space-around;
 	display: flex;
+	margin-bottom: 15px;
 }
 
 .list_btn_lastct a:nth-child(1){
-	margin-right:30px;
+	margin-right:20px;
 }
 
 .btn_lastct{
+	font-family: YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "serif";
 	width: 150px;
-	display: inline-flex;
+	display: block;
 	margin: auto;
-	padding: 10px 10px;
+	padding: 7px 5px;
 	background-color: #edad3e;
 	color: #fff;
-	box-shadow: 3px 3px 3px hsl(0deg 0% 49%);
+	box-shadow: 2px 3px 1px hsl(0deg 0% 49%);
 	justify-content: space-around;
 	box-sizing: border-box;
-	font-size: 11px;
+	font-size: 13px;
 }
 .list_image_slider{
 	width: 100%;	
@@ -244,17 +247,21 @@
 	.step1_content>span:nth-child(2) > a:nth-child(1){
 		margin-right: 20px;
 	}
+	.round{
+		border-radius: 50%;
+		background: #fff;
+		width: 60px;
+		height: 60px;
+
+	}
+	.btn_lastct{
+	font-size: 12px;
+}
 
 }
 
 @media screen and (min-width:768px){
-	.booking-text{
-		text-align: center;
-		padding: 30px 0px;
-	}
-	.booking-text h2{
-		font-size: 90%;
-	}
+	
 	.step1{
 		display: flex;
 	}
@@ -267,6 +274,13 @@
 		font-weight: 600;
 	}
 	.booking-text{
+		text-align: center;
+		padding: 30px 0px;
+	}
+	.booking-text p{
+		font-size: 120%;
+	}
+	.booking-text h2{
 		font-size: 100%;
 	}
 	.step1-round{
@@ -377,21 +391,22 @@
 
 	.content_banner p{
 		text-align: center;
-		font-size: 25px;
+		font-size: 22px;
 		font-weight: 600;
 		padding-top: 30px;
+		color: white;
 	}
 
 	.list-round{
 		display: flex;
 		margin: 0 auto;
+		max-width: 680px;
 	}
-
 	.round{
 		border-radius: 50%;
 		background: #fff;
-		width: 150px;
-		height: 150px;
+		width: 130px;
+		height: 130px;
 		display: flex;
 		align-items: center;
 		text-align: center;
@@ -429,6 +444,10 @@
 		box-shadow: 3px 3px 3px hsl(0deg 0% 49%);
 		justify-content: space-around;
 		font-size: 100%;
+		margin-bottom: 35px;
+	}
+	.btn_lastct:hover{
+		background-color:hsla(41,100%,43%,1.00);
 	}
 	.list_image_slider{
 		width: 100%;	
@@ -436,7 +455,7 @@
 		background-size: cover;
 		background-position: center;
 	}
-
+	
 }
 
 @media screen and (min-width:960px){
