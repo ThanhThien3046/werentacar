@@ -1,74 +1,9 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-body{
-    font-family: "segoe UI", 'Noto Sans JP', "游ゴシック", 
-    YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", 
-    Verdana, "メイリオ", Meiryo, sans-serif;
-}
-body a{
-    text-decoration: none;
-    color: black;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-
-.wrap-content
-{
-    width: 100%;
-    /* max-width: 1024px; */
-}
-
 .banner_bar{
 	width: 100%;
 	height: 40px;
 	background-color: #edad3e;
 	box-shadow: 3px 3px 3px hsl(0deg 0% 49%);
 }
-
 .banner_bar h1{
 	padding: 12px;
 	box-sizing: border-box;
@@ -77,276 +12,252 @@ table {
 	text-align: center;
 	color: #fff;
 }
-/* MAIN CSS */
+.booking-text{
+	font-size: 16px;
+	padding: 15px 0px;
+	text-align: center;
+}
+.booking-text p{
+	font-weight: 600;
+	padding-bottom: 15px;
+}
+.booking-text h2{
+	line-height: 30px;
+	font-size: 12px;
+}
 .main{
 	width: 100%;
 	max-width: 1024px;
 	margin: 0 auto;
 	box-sizing: border-box;
+	padding: 12px
 }
-
-.booking-text{
-	text-align: center;
-
-}
-
-.booking-text p{
-	font-weight: 600;
-	padding-bottom: 15px;
-}
-
-.booking-text span{
-	line-height: 30px;
-}
-
 .step1{
 	display: flex;
 }
-
 .step-title{
 	border-bottom: 2px solid #edad3e;
-	padding-bottom: 10px;
+	width: 100%;
+	position: relative;
+	margin: 20px 0px;
+	font-size: 14px;
+	font-weight: 600;
+	padding-bottom: 8px;
+}
+.step1-round{
+	border-radius: 50%;
+	border: 2px solid #edad3e;
+	width: 55px;
+	margin-right: 5px;
+	height: 49px;
+	display:flex;
+	align-items: center;
+	text-align: center;
+	justify-content: space-around;
+	font-family: 'Times New Roman', Times, serif;
+}
+.step1 p img{
+	width: 100%;
+	max-width: 75px;
+	height: auto;
+	position: absolute;
+	right: 0px;
+	bottom: 7px;
+}
+.step1_content{
+	display: flex;
+	flex-wrap: wrap;
+	font-size: 14px;
+}
+.step1_content>span:nth-child(2){
+	margin: 20px auto;
+	display: flex;
+}
+.step1_content>span:nth-child(1){
+	line-height:1.7em;
+	margin-top: 10px;
+}
+.step1_content>span:nth-child(2) > a{
+	width: 150px;
+	text-align: center;
+	padding: 5px 20px; 
+	background: #edad3e;
+	box-sizing: border-box;
+	box-shadow: 3px 3px 3px hsl(0deg 0% 49%);
+	color: #fff;
+	font-size: 14px;
+
+	border-radius: 5px;
+
+}
+.step1_content>span:nth-child(2) > a:hover{
+	opacity: 0.8;
+}
+.step1_content>span:nth-child(2) > a:nth-child(1){
+	margin-right: 25px;
+}
+.table-content{
+	margin-bottom: 30px;
+}
+.table-content table{
+	width: 100%;
+	max-width: 650px;
+	margin: 0 auto;
+
+	white-space: pre-line;
+}
+.table-content .table-title{
+	font-weight: bold;
+	text-align: center;
+	padding: 15px ;
+}
+.table-content table tr td:nth-child(1){
+	width: 125px;
+	background-color: hsl(0, 0%, 94%);
+}
+.table-content table tr td{
+	border: 1px solid hsl(0, 0%, 80%);
+	margin: 0 auto;
+	font-size: 12px;
+	padding: 15px ;
+	padding-left: 10px;
+}
+.arrow-down {
+	width: 0; 
+	height: 0; 
+	border-left: 25px solid transparent;
+	border-right: 25px solid transparent;
+	border-top: 15px solid #edad3e;
+	margin: 0 auto;
+	margin-bottom: 30px;
 }
 
+.navbar{
+	background-color: #edad3e;
+	width: 100%;
+	padding: 5px 0px 5px 7px;
+	box-sizing: border-box;
+	margin-top: 30px;
+	margin-bottom: 20px;
+	color: white;
+}
 
-/* RESPONSIVE */
+.step2_content{
+	line-height: 2em;
+	margin-bottom: 35px;
+	font-size: 16px;
+}
+.content_banner{
+	background: #edad3e;
+	width: 100%;
+	max-width: 850px;
+	margin: 0 auto;
+	height: auto;
+	box-shadow: 3px 3px 3px hsl(0deg 0% 49%);
+	margin-top: 20px;
+}
 
-@media screen and (min-width:320px){
-	.booking-text{
-		font-size: 12px;
-		padding: 15px 0px;
-	}
+.content_banner p{
+	text-align: center;
+	font-size: 16px;
+	font-weight: 600;
+	padding-top: 10px;
+}
 
-	.main{
-		width: 100%;
-		max-width: 1024px;
-		margin: 0 auto;
-		box-sizing: border-box;
-		padding: 12px
-	}
+.list-round{
+	display: flex;
+	margin: 0 auto;
+}
 
-	.step1{
-		display: flex;
-	}
+.round{
+	border-radius: 50%;
+	background: #fff;
+	width: 90px;
+	height: 90px;
+	display: flex;
+	align-items: center;
+	text-align: center;
+	justify-content: space-around;
+	margin: 10px auto;
+	font-size: 11px;
+}
+.arrow-right{
+	border-left: 5px solid #fff;
+	border-top: 5px solid #edad3e;
+	border-bottom: 5px solid #edad3e;
+	width: 0;
+	height: 0;
+	margin: auto;
+}
 
-	.step-title{
-		border-bottom: 2px solid #edad3e;
-		width: 100%;
-		position: relative;
-		margin: 20px 0px;
-		font-size: 14px;
-		font-weight: 600;
-	}
-	
-	.step1-round{
-		border-radius: 50%;
-		border: 2px solid #edad3e;
-		width: 55px;
-		height: 45px;
-		display:flex;
-		align-items: center;
-		text-align: center;
-		justify-content: space-around;
-		font-family: 'Times New Roman', Times, serif;
-	}
-	.step1 p img{
-		width: 100%;
-		max-width: 75px;
-		height: auto;
-		position: absolute;
-		right: 0px;
-		bottom: 7px;
-	}
+.list_btn_lastct{
+	margin: 0 auto;
+	text-align: center;
+	justify-content:space-around;
+	display: flex;
+}
 
+.list_btn_lastct a:nth-child(1){
+	margin-right:30px;
+}
+
+.btn_lastct{
+	width: 150px;
+	display: inline-flex;
+	margin: auto;
+	padding: 10px 10px;
+	background-color: #edad3e;
+	color: #fff;
+	box-shadow: 3px 3px 3px hsl(0deg 0% 49%);
+	justify-content: space-around;
+	box-sizing: border-box;
+	font-size: 11px;
+}
+.list_image_slider{
+	width: 100%;	
+	max-height: 250px;
+	height: 250px;
+	background-image: url('../images/car1.jpg');
+	background-size: cover;
+}
+@media screen and (max-width:320px){
+	.booking-text h2{
+		line-height: 20px;
+		font-size: 10px;
+	}
 	.step1_content{
 		display: flex;
 		flex-wrap: wrap;
-		font-size: 12px;
+		font-size: 14px;
 		width: 100%;
-		line-height: 30px;
 	}
-
-	.step1_content>span:nth-child(2){
-		margin: 20px auto;
-		display: flex;
-	}
-
-	.step1_content>span:nth-child(1){
-		line-height: 35px;
-		margin-top: 10px;
-	}
-
 	.step1_content>span:nth-child(2) > a{
-		width: 100px;
+		width: 130px;
 		text-align: center;
-		/* padding: 10px 20px; */
+		padding: 5px 5px; 
 		background: #edad3e;
+		box-sizing: border-box;
 		box-shadow: 3px 3px 3px hsl(0deg 0% 49%);
 		color: #fff;
+		font-size: 14px;
 	}
-
 	.step1_content>span:nth-child(2) > a:nth-child(1){
 		margin-right: 20px;
 	}
-	.table-content{
-		margin-bottom: 30px;
-	}
-	.table-content table{
-		width: 100%;
-		max-width: 650px;
-		margin: 0 auto;
-		line-height: 2;
-		white-space: pre-line;
-	}
-
-	.table-content table th{
-		font-weight: bold;
-		padding-bottom: 15px;
-	}
-
-	.table-content table tr td:nth-child(1)
-	{
-		width: 125px;
-		background-color: hsl(0, 0%, 90%);
-	}
-
-	.table-content table tr td{
-		border: 1px solid rgb(82, 79, 79);
-		margin: 0 auto;
-		font-size: 12px;
-		padding-left: 10px;
-	}
-	.arrow-down {
-		width: 0; 
-		height: 0; 
-		border-left: 25px solid transparent;
-		border-right: 25px solid transparent;
-		border-top: 15px solid #edad3e;
-		margin: 0 auto;
-		margin-bottom: 30px;
-	}
-
-	.navbar{
-		background-color: #edad3e;
-		width: 100%;
-		padding: 12px 0px 12px 10px;
-		box-sizing: border-box;
-		margin-top: 30px;
-		margin-bottom: 20px;
-	}
-
-	.step2_content{
-		line-height: 30px;
-		margin-bottom: 35px;
-	}
-	.content_banner{
-		background: #edad3e;
-		width: 100%;
-		max-width: 850px;
-		margin: 0 auto;
-		height: auto;
-		box-shadow: 3px 3px 3px hsl(0deg 0% 49%);
-		margin-top: 20px;
-	}
-
-	.content_banner p{
-		text-align: center;
-		font-size: 16px;
-		font-weight: 600;
-		padding-top: 30px;
-	}
-
-	.list-round{
-		display: flex;
-		margin: 0 auto;
-	}
-
-	.round{
-		border-radius: 50%;
-		background: #fff;
-		width: 90px;
-		height: 90px;
-		display: flex;
-		align-items: center;
-		text-align: center;
-		justify-content: space-around;
-		margin: 20px auto;
-		font-size: 11px;
-	}
-	.arrow-right{
-		border-left: 5px solid #fff;
-		border-top: 5px solid #edad3e;
-		border-bottom: 5px solid #edad3e;
-		width: 0;
-		height: 0;
-		margin: auto;
-	}
-
-	.list_btn_lastct{
-		margin: 0 auto;
-		text-align: center;
-		justify-content:space-around;
-		display: flex;
-	}
-
-	.list_btn_lastct a:nth-child(1){
-		margin-right:30px;
-	}
-
-	.btn_lastct{
-		width: 150px;
-		display: inline-flex;
-		margin: auto;
-		padding: 10px 10px;
-		background-color: #edad3e;
-		color: #fff;
-		box-shadow: 3px 3px 3px hsl(0deg 0% 49%);
-		justify-content: space-around;
-		box-sizing: border-box;
-		font-size: 11px;
-	}
-	.list_image_slider{
-		width: 100%;	
-		/* overflow: hidden; */
-		/* max-width: 1024px; */
-		max-height: 500px;
-		height: 250px;
-		background-image: url('../images/car1.jpg');
-		background-size: cover;
-	}
-}
-
-@media screen and (min-width:480px){
-
 
 }
 
 @media screen and (min-width:768px){
-	.main{
-		width: 100%;
-		max-width: 1024px;
-		margin: 0 auto;
-		box-sizing: border-box;
-	}
-	
 	.booking-text{
 		text-align: center;
 		padding: 30px 0px;
 	}
-	
-	.booking-text p{
-		font-weight: 600;
-		padding-bottom: 15px;
+	.booking-text h2{
+		font-size: 90%;
 	}
-	
-	.booking-text span{
-		line-height: 30px;
-	}
-
 	.step1{
 		display: flex;
 	}
-
 	.step-title{
 		border-bottom: 2px solid #edad3e;
 		width: 100%;
@@ -358,7 +269,6 @@ table {
 	.booking-text{
 		font-size: 100%;
 	}
-	
 	.step1-round{
 		border-radius: 50%;
 		border: 2px solid #edad3e;
@@ -390,11 +300,9 @@ table {
 		line-height: 35px;
 		margin-top: 10px;
 	}
-
 	.step1_content>span:nth-child(2) > a:nth-child(1){
 		margin-right: 0px;
 	}
-
 	.step1_content>span:nth-child(2){
 		margin-top: 5px;
 		position: absolute;
@@ -402,7 +310,6 @@ table {
 		flex-wrap: wrap;
 		display: flex;
 	}
-
 	.step1_content>span:nth-child(2) > a{
 		padding: 10px 15px;
 		background: #edad3e;
@@ -412,7 +319,6 @@ table {
 		text-align: center;
 		color: #fff;
 	}
-
 	.table-content{
 		margin: 50px 0;
 	}
@@ -453,7 +359,7 @@ table {
 		width: 100%;
 		padding: 12px 0px 12px 10px;
 		box-sizing: border-box;
-		margin-top: 30px;
+		margin-top: 20px;
 		margin-bottom: 20px;
 	}
 	.step2_content{
@@ -524,15 +430,11 @@ table {
 		justify-content: space-around;
 		font-size: 100%;
 	}
-
 	.list_image_slider{
 		width: 100%;	
-		/* overflow: hidden; */
-		/* max-width: 1024px; */
-		max-height: 500px;
-		height: 500px;
 		background-image: url('../images/car1.jpg');
 		background-size: cover;
+		background-position: center;
 	}
 
 }

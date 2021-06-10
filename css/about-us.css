@@ -1,0 +1,158 @@
+@charset "UTF-8";
+.aboutus{
+	padding: 12px;
+	box-sizing: border-box;
+}
+.about-top{
+	font-family: YuGothic, "Yu Gothic medium", "Hiragino Sans", Meiryo, "sans-serif";
+	font-size:75%;
+	margin-top: 5px;
+}
+.about-top a{
+	text-decoration: underline;
+}
+.about-top i{
+	margin: 0 10px;
+	color:hsla(0,0%,31%,1.00);
+}
+.aboutus h1{
+	font-size: 110%;
+	font-weight: 600;
+	border-bottom: 1px solid #edad3e;
+	padding-bottom: 5px;
+	margin-top: 20px;
+}
+.about-left{
+	margin-top: 20px;
+}
+.about-left h2{
+	font-weight: 600;
+	margin: 7px 0;
+	margin-top: 12px;
+}
+.about-left p{
+	margin-bottom: 2px;
+	color: hsla(0,0%,20%,1.00);
+}
+.about-left p.mrg-top{
+	margin-top: 15px;
+}
+.about-left strong{
+	font-weight:700;
+	color: black;
+	font-family:YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "serif";
+}
+.about-right{
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.about-right ul{
+	border: 1px solid hsla(0,0%,72%,1.00);
+}
+
+.about-right ul li{
+	border-bottom: 1px solid hsla(0,0%,82%,1.00);
+}
+.about-right ul li:first-child {
+	padding: 13px 5px;
+	background: #e9a93e;
+	color: white;
+	text-align: center
+}
+.about-right ul li a{
+	display: block;
+	padding: 12px 10px;
+	position: relative;
+	background: hsla(0,0%,98%,1.00);
+	
+}
+.about-right ul li a:hover{
+	background: #fcf0e3;
+	color: #b76a06;
+}
+
+.about-right ul li:last-child{
+	border-bottom: none;
+}
+.about-right ul li i{
+	margin-right: 20px;
+}
+.aboutus table{
+	margin-bottom: 20px;
+}
+.aboutus table tr{
+	border: 1px solid hsla(0,0%,82%,1.00);
+}
+.aboutus table th{
+	border-right: 1px solid hsla(0,0%,82%,1.00);
+	background: #fcf0e3;
+	color: #b76a06;
+	font-size: 85%;
+	padding: 8px 8px;
+	padding-right: 0px;
+	text-align: left;
+	width: 80px;
+}
+.aboutus table td{
+	padding: 10px 5px;
+	font-size: 82%;
+}
+.aboutus iframe{
+	width: 100%;
+	height: 250px;
+}
+@media Screen and (min-width:768px){
+	.aboutus {
+		width: 100%;
+		max-width: 1020px;
+		margin: auto;
+		
+		padding-bottom: 40px;
+	}
+	.about-top{
+		font-size: 90%;
+		margin-top: 10px;
+	}
+	.aboutus h1{
+		font-size: 120%;
+		margin-bottom: 50px;
+		margin-top: 30px;
+	}
+	.about-float{
+		display: flex;
+		justify-content: space-between;
+		
+	}
+	.about-left{
+		width: 63%;
+		margin-top: 0;
+	}
+	.about-left h2{
+		margin-top: 15px;
+	}
+	.about-right{
+		width: 30%;
+		margin-top: 0;
+	}
+	.about-left p.mrg-top{
+		margin-top: 25px;
+	}
+	.aboutus table{
+		margin-bottom: 40px;
+	}
+	.aboutus table th{
+
+	font-size: 105%;
+	padding: 12px 15px;
+	padding-right: 0px;
+	text-align: left;
+	width: 180px;
+}
+.aboutus table td{
+	padding: 8px 15px;
+	font-size: 100%;
+}
+	.aboutus iframe{
+		height: 320px;
+	}
+}

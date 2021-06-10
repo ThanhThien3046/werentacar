@@ -268,14 +268,13 @@ select{
   	color: white;
     margin-top: 10px;
     border: 1px solid #f7ad25;
-    background: linear-gradient(to bottom, #fca037, rgb(255, 150, 13));
+    background: #edad3e;
     display: block;
-    color: white;
-    box-shadow: 0px 3px 0px #b36500;
-    -webkit-box-shadow: 0px 3px 2px #b36500;
+    box-shadow: 0px 3px 2px hsla(31,88%,56%,1.00);;
+    -webkit-box-shadow: 0px 3px 2px hsla(31,88%,16%,1.00);;
 }
 .list-car .car-line-type .car-line-btn a:hover{
-    background: linear-gradient(to bottom, #fd8700, rgb(255, 147, 6));
+
     opacity: 0.8;
 }
 
@@ -306,10 +305,10 @@ select{
 }
 .list-car .price span{
     margin-top: 5px;
-    font-size: 70%;
+    font-size: 80%;
     display: block;
     text-align: right;
-    color:red;
+ 
 }
 /*  ーーーーーーーーーーーーー　LIST-CAR　ここまでーーーーーーーーーーーーーーーー */
 

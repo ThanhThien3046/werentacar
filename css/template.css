@@ -22,9 +22,6 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
-body {
-	line-height: 1;
-}
 body{
     font-family: "segoe UI", 'Noto Sans JP', "游ゴシック", 
     YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", 
@@ -49,9 +46,7 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-.wrap-content{
-    width: 100%;
-}
+
 /*  ーーーーーーーーーーーーーヘッダーここからーーーーーーーーーーーーーーーー */
 .nav-bar{
     border-color: #ecac3e;
@@ -197,7 +192,7 @@ table {
     background-color:rgba(255, 255, 255, 0.65);
 }
 .contact .contact-title{
-    padding-top: 50px;
+    padding-top: 30px;
     font-size: 27px;
 }
 .contact .contact-title::after{
@@ -212,7 +207,7 @@ table {
 .contact-content p{
     line-height: 40px;
     font-size:100%;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     max-width: 100%;
     padding: 20px;
     box-sizing: border-box;
@@ -351,7 +346,6 @@ table {
     }
     /* hamburger menu */
     .navigation{
-        background: white;
         position: fixed;
         top: 57px;
         right: 0;
@@ -376,7 +370,6 @@ table {
         border-top: 1px solid rgb(207, 207, 207);
         border-left: 1px solid rgb(207, 207, 207);
         z-index: 9;
-        background: white;
       }
       .navigation.show {
         transform: translateX(0%);
@@ -384,6 +377,10 @@ table {
         padding-top: -20px;
         z-index: 1;
       }
+		body.show{
+			height: 100%;
+			overflow: hidden;
+		}
       .list {
         display: flex;
         flex-direction: column;
@@ -507,7 +504,7 @@ table {
         color: white;
     }
     .contact .contact-title{
-        padding-top: 30px;
+        padding-top: 20px;
         font-size: 24px;
     }
     .footer-bar span{
