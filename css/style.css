@@ -172,13 +172,21 @@ select{
     width: 31%;
     position: relative;
 }
+.use ul li dt{
+	overflow: hidden;
+}
 .use ul li img{
-    width: 100%;
-    height: auto;
+	width: 100%;
+	height: auto;
+	display: block;
+	transition: 1s;
+}
+.use ul li img:hover {
+	transform: scale(1.15);
 }
 .use ul li span{
     border-left: 3px solid #edad3e;
-    padding: 5px;
+    padding:1px 6px;
     margin-top: 10px;
     display: block;
     color: #edad3e;
@@ -188,7 +196,7 @@ select{
 }
 .use ul p{
     text-align: left;
-    line-height: 1.4em;
+   
     padding: 10px 0;
     font-size: 95%;
 }
@@ -208,7 +216,7 @@ select{
     box-sizing: border-box;
 }
 .list-car .type{
-    background-color: #2b5799;
+	background: #0067b6;
     color: #fff;
     border-left: 15px solid #edad3e;
     display: block;
@@ -345,6 +353,8 @@ select{
     width: 32%;
     margin-bottom:20px;
     position: relative;
+	display: block;
+	overflow: hidden;
 }
 .about ul {
     text-decoration: underline;
@@ -362,7 +372,6 @@ select{
     padding: 7px;
     color: hsl(0, 0%, 100%);
     z-index: 1;
-
 }
 .about ul li span::before{
     background-image: linear-gradient(#ffffff05,black);
@@ -375,9 +384,14 @@ select{
     height: 80px;
     z-index: -1;
 }
+
 .about ul li img{
     width: 100%;
     height: auto;
+	transition: 1s;
+}
+.about ul li:hover img{
+	transform:scale(1.15);
 }
 /*  ーーーーーーーーーーーーー　会社概要　ここまでーーーーーーーーーーーーーーーー */
 @media screen and (min-width:767px){

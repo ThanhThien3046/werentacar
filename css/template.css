@@ -55,10 +55,7 @@ table {
     background-color: #ecac3e;
 }
 */
-.nav-top{
-    border-bottom: 1px solid hsl(0, 0%, 77%);
-    
-}
+
 .nav-top .logo{
     display: flex;
     justify-content: space-between;
@@ -66,16 +63,13 @@ table {
     position: relative;
     width: 100%;
     max-width: 1024px;
-    margin: 12px;
     padding-left: 12px;
     margin: auto;
     height: 90px;
 }
 .menu{
 	width: 100%;
-	border-top: 1px solid hsla(0,0%,85%,1.00);
-	background-color: hsl(39, 100%, 94%);
-	color: #b76a06;
+	background:#0067b6;
 }
 .ul-menu{
     display: flex;
@@ -92,22 +86,22 @@ table {
     color: #000;
 }
 .ul-menu li {
-    border-left: 1px solid hsla(0,0%,65%,1.00);
-    width: 16.6%;
+    border-left: 1px solid white;
+    width:16.67%;
     box-sizing: border-box;
     text-align: center;
 }
 .ul-menu li a{
     display: block;
 	padding: 13px 5px;
-	color: #b76a06;
+	color: white;
 }
 .ul-menu li a:hover{
 	color: white;
 	background:#edad3e;
 }
 .ul-menu li:last-child{
-    border-right:1px solid hsla(0,0%,65%,1.00);
+    border-right:1px solid white;
 }
 .menu-slogan{
     position: relative;
@@ -154,7 +148,7 @@ table {
 }
 .header-btn a:nth-child(2){
     padding: 10px 25px;
-    background: #393bd8;
+    background: #d1011b;
     border-radius: 5px;
     color: #fff;
     font-size: 95%;
@@ -286,11 +280,11 @@ table {
 }
 .li-footer-title{
     border-left: 5px solid #edad3e;
-    height: 18px;
+    
     font-weight:600;
     font-size: 20px;
-    padding: 5px 6px;
-    padding-top: 8px;
+    padding: 1px 6px;
+    
     margin-top: 30px;
 }
 .ul-footer{
@@ -340,7 +334,12 @@ table {
         position: sticky;
         top:0;
         z-index: 99;
+		border-bottom: none;
     }
+	.nav-top{
+  		border-bottom: 1px solid hsla(0,0%,85%,1.00);
+    
+	}
     .nav-top .logo{
         height: 58px;
         padding-left: 10px;
