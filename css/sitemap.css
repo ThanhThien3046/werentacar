@@ -1,0 +1,49 @@
+.main{
+	width: 100%;
+	max-width: 1000px;
+	margin: 0 auto;
+	box-sizing: border-box;
+}
+.contact-top{
+	font-family: YuGothic, "Yu Gothic medium", "Hiragino Sans", Meiryo, "sans-serif";
+	font-size:75%;
+	margin-top: 5px;
+}
+.title_contact{
+	font-size: 110%;
+	font-weight: 600;
+	border-bottom: 1px solid #edad3e;
+	padding-bottom: 5px;
+	margin-top: 20px;
+}
+
+.bar{
+    background-color: #0067b6;
+    border-left: 15px solid #edad3e;
+    display: block;
+    padding: 15px 15px;
+    box-sizing: border-box;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    color: #fff;
+
+}
+
+.list_link{
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    flex: 1 1 1;
+}
+.list_link li{
+    background-color: #e4f1f6;
+    width: 30%;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    align-items: stretch;
+}
+
+@media screen and (min-width: 786px) {
+    
+}

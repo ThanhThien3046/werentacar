@@ -1,0 +1,156 @@
+.contact-top{
+	font-family: YuGothic, "Yu Gothic medium", "Hiragino Sans", Meiryo, "sans-serif";
+	font-size:75%;
+	margin-top: 5px;
+}
+.contact-top a{
+	text-decoration: none;
+}
+.contact-top i{
+	margin: 0 10px;
+	color:hsla(0,0%,31%,1.00);
+}
+
+.title_contact{
+	font-size: 110%;
+	font-weight: 600;
+	border-bottom: 1px solid #edad3e;
+	padding-bottom: 5px;
+	margin-top: 20px;
+}
+
+.bar{
+    background-color: rgb(236, 233, 228);
+    border-left: 15px solid #edad3e;
+    display: block;
+    padding: 15px 15px;
+    box-sizing: border-box;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.pagrap{
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+.pagrap a{
+    text-decoration: underline;
+    color: #2c6bc6;
+}
+.person_info_form{
+    margin: 0 auto;
+    width: 100%;
+
+}
+
+.person_info{
+    width: 100%;
+    max-width: 1024px;
+    height: auto;
+}
+
+
+.person_info  tr td{
+    box-sizing: border-box;
+    display: block;
+}
+
+.person_info  tr:nth-child(1) td:nth-child(2){
+    border-right: none;
+}
+
+.person_info  tr:nth-child(1) td:nth-child(3){
+    border-left: none;
+    padding-left: 0px;
+}
+
+.person_info  tr td input{
+    width: 100%;
+    /* max-width: 670px; */
+    height: 40px;
+    margin: 10px 0px;
+    border: 1px solid #939393;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.person_info  tr td input:focus{
+    outline: none !important;
+    box-shadow: 0 0 7px #719ECE;
+}
+
+.person_info  tr td textarea{
+    height: 200px;
+    margin: 10px 10px;
+    width: 95%;
+    border: 1px solid #939393;
+}
+.person_info  tr td textarea:focus{
+    outline: none !important;
+    box-shadow: 0 0 7px #719ECE;
+}
+
+.person_info tr td:nth-child(1){
+    background-color: #f4f4f4;
+    width: 100%;
+    padding: 15px 10px;
+    box-sizing: border-box;
+    vertical-align: top;
+}
+
+.type{
+    background-color: #d1011b;
+    font-size: 10px;
+    color: #fff;
+    padding: 2px 4px;
+    margin-right: 5px;
+    box-sizing: border-box;
+}
+.verify{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    font-size: 14px;
+}
+.verify button{
+    background-color: #edad3e;
+    border: none;
+    padding: 8px 95px;
+    color: #fff;
+    font-size: 18px;
+    margin-top: 20px;
+    font-family: YuGothic, "Yu Gothic medium", "Hiragino Sans", Meiryo, "sans-serif";
+    cursor: pointer;
+}
+@media screen and (min-width:768px) {
+    .person_info  tr td{
+        display: table-cell;
+    }
+    .person_info tr td:nth-child(1){
+        width: 30%;
+    }
+    .person_info{
+        border: 1px solid #8f8e8d;
+    }
+    .person_info  tr td{
+        border: 1px solid #8f8e8d;
+    }
+    .person_info  tr td input{
+        width: 96%;
+        margin: 10px;
+    }
+    .pagrap{
+        font-size: 100%;
+    }
+    .verify{
+        font-size: 100%;
+    }
+    .person_info  tr:nth-child(1) td:nth-child(2) input{
+        width: 95%;
+    }
+    
+    .person_info  tr:nth-child(1) td:nth-child(3) input{
+        width: 95%;
+        margin-left: 0px;
+    }
+}
