@@ -66,7 +66,7 @@
     max-width: 410px;
     height: auto;
     background-color: #fff;
-     padding: 25px 15px; 
+     padding: 15px 15px; 
      box-sizing: border-box;
 	z-index: 5;
 }
@@ -118,7 +118,7 @@ select{
 }
 .banner-form-search-input .banner-form-search-td input{
     width: 100%;
-    margin: 10px 0;
+    margin: 7px 0;
     padding: 5px 3px;
     height: 32px;
     cursor: pointer;
@@ -127,7 +127,7 @@ select{
 } 
 .banner-form-search-input .banner-form-search-td select{
     width: 100%;
-    margin: 10px 0;
+    margin: 6px 0;
     padding: 5px 3px;
     height: 32px;
     cursor: pointer;
@@ -141,7 +141,7 @@ select{
     cursor: pointer;
     background: rgb(27, 27, 27);
     color: #fff;
-    margin-top: 20px;
+    margin: 10px auto;
     width: 200px;
     padding: 7px 10px;
     box-sizing: border-box;
@@ -551,6 +551,7 @@ select{
         top: 0;
         left: 0;
         overflow: hidden;
+        margin-bottom: -50px;
     }
     .use ul li{
         width: 100%;
@@ -629,5 +630,10 @@ select{
         top: 0;
         left: 0;
         overflow: hidden;
+        margin-bottom: -20px;
+    }
+
+    .use{
+        padding-top:0px;
     }
 }
