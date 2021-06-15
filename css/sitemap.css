@@ -9,6 +9,9 @@
 	font-size:75%;
 	margin-top: 5px;
 }
+.contact-top i{
+    margin: 0 10px;
+}
 .title_contact{
 	font-size: 110%;
 	font-weight: 600;
@@ -19,31 +22,85 @@
 
 .bar{
     background-color: #0067b6;
-    border-left: 15px solid #edad3e;
+    border-left: 10px solid #edad3e;
     display: block;
-    padding: 15px 15px;
+    padding: 10px 10px;
     box-sizing: border-box;
-    margin-top: 50px;
+    margin-top: 30px;
     margin-bottom: 30px;
     color: #fff;
-
+    box-shadow: 2px 2px 2px hsl(0deg 0% 49%);
 }
 
 .list_link{
     display: flex;
-    justify-content: space-between;
-    flex-flow: row wrap;
-    flex: 1 1 1;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    font-size: 12px;
 }
 .list_link li{
     background-color: #e4f1f6;
+
     width: 30%;
     margin-bottom: 20px;
-    padding: 10px 20px;
+    padding: 15px 5px;
     box-sizing: border-box;
-    align-items: stretch;
+}
+.list_link li:nth-child(2){
+    margin-right: 15px;
+}
+.list_link li:nth-child(3n+1){
+    margin-right: 15px;
 }
 
+.list_link li:nth-child(3n+2){
+    margin-right: 15px;
+}
+
+.list_link li:hover{
+    background: #c8f1f6 ;
+    color : #03747f ;
+    cursor: pointer;
+}
 @media screen and (min-width: 786px) {
+    .contact-top{
+        font-family: YuGothic, "Yu Gothic medium", "Hiragino Sans", Meiryo, "sans-serif";
+        font-size:100%;
+        margin-top: 5px;
+    }
+
+    .bar{
+        background-color: #0067b6;
+        border-left: 15px solid #edad3e;
+        display: block;
+        padding: 15px 15px;
+        box-sizing: border-box;
+        margin-top: 50px;
+        margin-bottom: 30px;
+        color: #fff;
+        box-shadow: 2px 2px 2px hsl(0deg 0% 49%);
+    }
+
+    .list_link{
+        font-size: 100%;
+    }
+    .list_link li{
+        background-color: #e4f1f6;
+        width: 30%;
+        margin-bottom: 20px;
+        padding: 15px 25px;
+        box-sizing: border-box;
+    }
+    .list_link li:nth-child(2){
+        margin-right: 50px;
+    }
+    .list_link li:nth-child(3n+1){
+        margin-right: 50px;
+    }
     
+    .list_link li:nth-child(3n+2){
+        margin-right: 50px;
+    }
+
+
 }
