@@ -219,7 +219,7 @@ select{
 }
 .use ul p{
     text-align: left;
-   
+    line-height: 1.4em;
     padding: 10px 0;
     font-size: 95%;
 }
@@ -540,6 +540,18 @@ select{
     }
 }
 @media Screen and (max-width:480px){
+    .banner{
+        height: 700px;
+        box-sizing: border-box;
+        clear: both;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+    }
     .use ul li{
         width: 100%;
     }
@@ -604,5 +616,18 @@ select{
     .about ul li span {
         font-size: 60%;
 
+    }
+
+    .banner{
+        height: 700px;
+        box-sizing: border-box;
+        clear: both;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        top: 0;
+        left: 0;
+        overflow: hidden;
     }
 }
