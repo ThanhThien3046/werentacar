@@ -127,7 +127,7 @@ select{
 } 
 .banner-form-search-input .banner-form-search-td select{
     width: 100%;
-    margin: 7px 0;
+    margin: 10px 0;
     padding: 5px 3px;
     height: 32px;
     cursor: pointer;
