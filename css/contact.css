@@ -24,13 +24,14 @@
 }
 
 .bar{
-    background-color: rgb(236, 233, 228);
-    border-left: 15px solid #edad3e;
+    background-color: #0067b6;
+    border-left: 12px solid #edad3e;
     display: block;
-    padding: 15px 15px;
+    padding: 10px 10px;
     box-sizing: border-box;
-    margin-top: 50px;
-    margin-bottom: 30px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+	color: white;
 }
 
 .pagrap{
@@ -44,7 +45,6 @@
 .person_info_form{
     margin: 0 auto;
     width: 100%;
-
 }
 
 .person_info{
@@ -76,6 +76,7 @@
     border: 1px solid #939393;
     box-sizing: border-box;
     outline: none;
+	padding-left: 7px;
 }
 
 .person_info  tr td input:focus{
@@ -85,9 +86,12 @@
 
 .person_info  tr td textarea{
     height: 200px;
-    margin: 10px 10px;
-    width: 95%;
+    margin: 10px 0;
+    width: 100%;
     border: 1px solid #939393;
+	box-sizing: border-box;
+	padding: 7px;
+	
 }
 .person_info  tr td textarea:focus{
     outline: none !important;
@@ -95,11 +99,11 @@
 }
 
 .person_info tr td:nth-child(1){
-    background-color: #f4f4f4;
+    background-color:hsla(0,0%,91%,1.00);
     width: 100%;
-    padding: 15px 10px;
+    padding: 10px 10px;
     box-sizing: border-box;
-    vertical-align: top;
+    vertical-align: top;margin: 5px 0;
 }
 
 .type{
@@ -108,23 +112,31 @@
     color: #fff;
     padding: 2px 4px;
     margin-right: 5px;
+	margin-top: 12px;
     box-sizing: border-box;
 }
 .verify{
     text-align: center;
-    margin-top: 20px;
-    margin-bottom: 50px;
+    margin-top: 10px;
+    margin-bottom: 30px;
     font-size: 14px;
 }
 .verify button{
-    background-color: #edad3e;
-    border: none;
-    padding: 8px 95px;
-    color: #fff;
-    font-size: 18px;
-    margin-top: 20px;
     font-family: YuGothic, "Yu Gothic medium", "Hiragino Sans", Meiryo, "sans-serif";
-    cursor: pointer;
+	border: none;
+	background-color: #edad3e;
+	margin-top: 10px;
+	box-shadow: 2px 2px 2px hsla(0,0%,47%,1.00)
+}
+.verify button a{
+	color: white;
+	display: block;
+	padding: 8px 95px;
+    font-size: 15px;
+	
+}
+.verify button:hover{
+	background: #0067b6;
 }
 @media screen and (min-width:768px) {
 	.title_contact {
@@ -140,6 +152,7 @@
     .person_info  tr td{
         display: table-cell;
     }
+	
     .person_info tr td:nth-child(1){
         width: 30%;
     }
@@ -158,6 +171,7 @@
     }
     .verify{
         font-size: 100%;
+		margin-top: 30px;
     }
     .person_info  tr:nth-child(1) td:nth-child(2) input{
         width: 95%;
@@ -167,4 +181,9 @@
         width: 95%;
         margin-left: 0px;
     }
+	.person_info  tr td textarea{
+		height: 200px;
+		margin: 10px 10px;
+		width: 96%;
+	}
 }
