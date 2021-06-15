@@ -1,36 +1,60 @@
 
 /* ーーーーーーーーーーーーーーーーー　バナー　ここから　ーーーーーーーーー */
+
+/*スライド画像の横幅可変*/
+
+.banner ul{
+	z-index: -1;
+	position: absolute;
+	width: 100%;
+	height: 530px;
+	top:0;
+	left: 0;
+	margin: auto;
+}
+.banner ul li{
+	height: 530px;
+}
+.banner ul li.slider1{
+	background-image: url("../images/slider1.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	
+}
+.banner ul li.slider2{
+	background-image: url("../images/slider2.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+.banner ul li.slider3{
+	background-image: url("../images/slider3.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
 .clear{
     clear: both;
 }
 .banner{
     height: 530px;
+	box-sizing: border-box;
     clear: both;
-    background-image: url('../images/car.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     position: relative;
     top: 0;
     left: 0;
+	overflow: hidden;
 }
-.banner-slogan{
-    color: #fff;
-    font-weight: 500px;
-    position:absolute;
-    font-size: 130%;
-    top: 70px;
-    right: 20px;
-    height: 100px;
-    text-align: center;
-    line-height: 30px;
-}
+
 .banner-slogan .banner-werent{
     line-height: 75px;
     margin-top: 70px;
 }
 .banner .banner-center{
-
     max-width: 1000px;
     position: relative;
     margin: auto;
@@ -42,9 +66,9 @@
     max-width: 410px;
     height: auto;
     background-color: #fff;
-    
      padding: 25px 15px; 
      box-sizing: border-box;
+	z-index: 5;
 }
 .banner-form-search-title{
     text-align: center;
@@ -86,7 +110,6 @@ select{
     position: absolute;
     top:17px;
     right: 6px;
-
 }
 .banner-form-search-input td.form-content{
     text-align: left;
@@ -104,7 +127,7 @@ select{
 } 
 .banner-form-search-input .banner-form-search-td select{
     width: 100%;
-    margin: 10px 0;
+    margin: 7px 0;
     padding: 5px 3px;
     height: 32px;
     cursor: pointer;
@@ -394,6 +417,7 @@ select{
 	transform:scale(1.15);
 }
 /*  ーーーーーーーーーーーーー　会社概要　ここまでーーーーーーーーーーーーーーーー */
+
 @media screen and (min-width:767px){
     .list-car .car-line-img{
         width: 100%;
@@ -435,11 +459,30 @@ select{
 
 }
 @media screen and (max-width:767px){
-      .banner-slogan{
-          display: none;
-      }
+	.banner ul li{
+	height: 210px;
+}
+	.banner ul li.slider1{
+	background-image: url("../images/slider1.jpg");
+	background-repeat: no-repeat;
+		background-position: center;
+	background-size: cover;
+}
+.banner ul li.slider2{
+	background-image: url("../images/slider2.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+.banner ul li.slider3{
+	background-image: url("../images/slider3.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
       .banner{
           height: 210px;
+		  
       }
       .introtouse{
         margin-top: 535px;
@@ -450,9 +493,7 @@ select{
           background-color: transparent;
       }
       /* end hamburger menu */
-      .use{
-        padding-top: 485px;
-      }
+
       .banner .banner-center{
           padding:10px 0px 0px 0px;
       }

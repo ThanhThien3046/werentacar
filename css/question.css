@@ -1,14 +1,39 @@
+.main{
+	width: 100%;
+	padding: 12px;
+	max-width: 1024px;
+	box-sizing: border-box;
+	margin: auto;
+}
+.about-top{
+	font-family: YuGothic, "Yu Gothic medium", "Hiragino Sans", Meiryo, "sans-serif";
+	font-size:75%;
+	margin-top: 5px;
+}
+.about-top a{
+	text-decoration: underline;
+}
+.about-top i{
+	margin: 0 10px;
+	color:hsla(0,0%,31%,1.00);
+}
+.main h1{
+	font-size: 110%;
+	font-weight: 600;
+	border-bottom: 1px solid #edad3e;
+	padding-bottom: 5px;
+	margin-top: 20px;
+}
 .title_question{
     text-align: center;
     width: 100%;
     font-weight: 600;
-    font-size: 14px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+
     margin: 25px auto;
 }
 
 .collapsible{
-    background-color: rgb(224, 219, 219);
+    background-color:hsla(0,0%,93%,1.00);
     cursor: pointer;
     transition: 0.4s;
     padding: 18px;
@@ -16,7 +41,6 @@
     border: none;
     text-align: left;
     outline: none;
-    font-size: 13px;
     display: flex;
     justify-content: space-between;
     box-sizing: border-box;
@@ -37,11 +61,10 @@
 .collapsible span:nth-child(1){
     color: #edad3e;
     font-size: 19px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .open, .collapsible:hover {
-    background-color: rgb(192, 187, 187);
+    background-color: hsla(0,0%,77%,1.00);
 }
 
 .collapse_content{
@@ -73,6 +96,15 @@
 }
 
 @media screen and (min-width:767px){
+	.about-top{
+		font-size: 90%;
+		margin-top: 10px;
+	}
+	.main h1{
+		font-size: 120%;
+		margin-bottom: 50px;
+		margin-top: 30px;
+	}
     .title_question{
         font-size: 20px;
         margin: 35px auto;
