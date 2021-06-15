@@ -1,8 +1,10 @@
 .main{
 	width: 100%;
-	max-width: 1000px;
+	max-width: 1024px;
 	margin: 0 auto;
 	box-sizing: border-box;
+	padding: 12px;
+	
 }
 .contact-top{
 	font-family: YuGothic, "Yu Gothic medium", "Hiragino Sans", Meiryo, "sans-serif";
@@ -19,7 +21,6 @@
 	padding-bottom: 5px;
 	margin:20px 0px 30px 0px;
 }
-
 .bar{
     background-color: #0067b6;
     border-left: 10px solid #edad3e;
@@ -27,34 +28,33 @@
     padding: 10px 10px;
     box-sizing: border-box;
     /* margin-top: 30px; */
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     color: #fff;
-    box-shadow: 2px 2px 2px hsl(0deg 0% 49%);
 }
-
 .list_link{
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
-    font-size: 12px;
+    font-size: 95%;
 }
 .list_link li{
     background-color: #e4f1f6;
-
-    width: 30%;
+    width: 100%;
     margin-bottom: 20px;
-    padding: 15px 5px;
     box-sizing: border-box;
+	position: relative;
+	border: 1px solid hsla(206,36%,84%,1.00)
 }
-.list_link li:nth-child(2){
-    margin-right: 15px;
+.list_link li i{
+	position: absolute;
+	right: 10px;
+	top:18px;
+	font-size: 100%;
 }
-.list_link li:nth-child(3n+1){
-    margin-right: 15px;
-}
-
-.list_link li:nth-child(3n+2){
-    margin-right: 15px;
+.list_link li a{
+	display: block;
+	padding: 10px 10px;
+	
 }
 
 .list_link li:hover{
@@ -62,25 +62,20 @@
     color : #03747f ;
     cursor: pointer;
 }
-@media screen and (min-width: 786px) {
+@media screen and (min-width: 768px) {
     .contact-top{
         font-family: YuGothic, "Yu Gothic medium", "Hiragino Sans", Meiryo, "sans-serif";
         font-size:100%;
         margin-top: 5px;
     }
-
     .bar{
         background-color: #0067b6;
         border-left: 15px solid #edad3e;
         display: block;
         padding: 15px 15px;
         box-sizing: border-box;
-        /* margin-top: 50px; */
-        /* margin-bottom: 30px; */
         color: #fff;
-        box-shadow: 2px 2px 2px hsl(0deg 0% 49%);
     }
-
     .list_link{
         font-size: 100%;
     }
@@ -88,9 +83,12 @@
         background-color: #e4f1f6;
         width: 30%;
         margin-bottom: 35px;
-        padding: 15px 25px;
         box-sizing: border-box;
     }
+	.list_link li a{
+		display: block;
+		padding: 15px 25px;
+	}
     .list_link li:nth-child(2){
         margin-right: 50px;
     }
@@ -101,6 +99,7 @@
     .list_link li:nth-child(3n+2){
         margin-right: 50px;
     }
+
 
 
 }
