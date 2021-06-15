@@ -1,23 +1,17 @@
-hsla(0,0%,93%,1.00);hsla(0,0%,93%,1.00);hsla(0,0%,93%,1.00);hsla(0,0%,93%,1.00);hsla(0,0%,93%,1.00);hsla(0,0%,93%,1.00);hsla(0,0%,93%,1.00);hsla(0,0%,93%,1.00);.banner_bar{
+.banner_bar{
 	width: 100%;
 	padding: 12px;
 	box-sizing: border-box;
 	background-color: #edad3e;
 	box-shadow: 0px 3px 3px hsl(0deg 0% 49%);
 }
-.banner_bar h1{
-	box-sizing: border-box;
 
-	margin: auto;
-	text-align: center;
-	color: #fff;
-}
 .booking-text{
 	font-size: 16px;
 	padding: 15px 0px;
 	text-align: center;
 }
-.booking-text p{
+.booking-text h1{
 	font-weight: 600;
 	padding-bottom: 15px;
 }
@@ -88,7 +82,7 @@ hsla(0,0%,93%,1.00);hsla(0,0%,93%,1.00);hsla(0,0%,93%,1.00);hsla(0,0%,93%,1.00);
 	font-size: 14px;
 }
 .step1_content>span:nth-child(2) > a:hover{
-	background-color:hsla(41,100%,43%,1.00);
+	background-color:#0067b6;
 }
 .step1_content>span:nth-child(2) > a:nth-child(1){
 	margin-right: 25px;
@@ -278,9 +272,11 @@ hsla(0,0%,93%,1.00);hsla(0,0%,93%,1.00);hsla(0,0%,93%,1.00);hsla(0,0%,93%,1.00);
 	.booking-text{
 		text-align: center;
 		padding: 30px 0px;
+		padding-top: 20px;
 	}
-	.booking-text p{
+	.booking-text h1{
 		font-size: 120%;
+		
 	}
 	.booking-text h2{
 		font-size: 100%;
@@ -371,10 +367,10 @@ hsla(0,0%,93%,1.00);hsla(0,0%,93%,1.00);hsla(0,0%,93%,1.00);hsla(0,0%,93%,1.00);
 	}
 
 	.navbar{
-		background-color: #edad3e;
+		
 		width: 100%;
 		padding: 12px 0px 12px 10px;
-		box-sizing: border-box;
+		
 		margin-top: 20px;
 		margin-bottom: 20px;
 	}
@@ -440,7 +436,6 @@ hsla(0,0%,93%,1.00);hsla(0,0%,93%,1.00);hsla(0,0%,93%,1.00);hsla(0,0%,93%,1.00);
 		display: inline-flex;
 		margin: auto;
 		padding: 15px 30px;
-		background-color: #edad3e;
 		color: #fff;
 		box-shadow: 3px 3px 3px hsl(0deg 0% 49%);
 		justify-content: space-around;
@@ -448,10 +443,10 @@ hsla(0,0%,93%,1.00);hsla(0,0%,93%,1.00);hsla(0,0%,93%,1.00);hsla(0,0%,93%,1.00);
 		margin-bottom: 35px;
 	}
 	.btn_lastct:hover{
-		background-color:hsla(41,100%,43%,1.00);
+		background-color:#0067b6;
 	}
 	.list_image_slider{
-		height: 330px;
+		height: 400px;
 	}
 }
 

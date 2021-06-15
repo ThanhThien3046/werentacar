@@ -14,11 +14,6 @@
     <link rel="stylesheet" href="css/template.css">
     <link rel="shortcut icon" type="image/png" href="images/favicon.png">
     <script src="js/jquery.slim.min.js"></script>
-    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
-    <script src="js/jquery-timepicker-1.3.5/jquery.timepicker.min.js"></script>
-    <link rel="stylesheet" href="css/jquery.timepicker.min.css">
     <link rel="stylesheet" href="fontawesome-free-5.15.3-web/css/all.min.css" />
 	<link href="slick-theme.css" rel="stylesheet" type="text/css">
 <link href="slick.css" rel="stylesheet" type="text/css">
@@ -485,7 +480,7 @@
         <div class="footer">
             <div class="footer-bar">
                 <a href="index.html"><img src="images/logo.png" alt=""></a>
-                <span>「 旅をもっと自由に車に乗れば、楽しみはもっと広がる！ 」</span>
+                <span>「 レンタカー予約ならWE・RENTACARでもっと楽しみに使用！ 」</span>
             </div>
             <hr>
             <ul class="ul-footer footer-pc">
@@ -541,32 +536,6 @@
             <div class="copyright">Copyright &copy; 2021 WE・RENTACAR Co.,Ltd. All rights reserved</div>
         </div>
     
-    <!-- JS for banner -->
-    <script>
-        $(function() {
-            $('.slider').slick({
-                  infinite: true,
-                  dots:true,
-                  autoplaySpeed:3000,
-                  slidesToShow: 1,
-                  centerMode: true, //要素を中央寄せ
-                  centerPadding:'0', //両サイドの見えている部分のサイズ
-                  autoplay:true, //自動再生
-                  responsive: [
-                      {
-                        breakpoint: 1024,
-                        settings: {
-                          arrows: false,
-                        centerMode:false, 
-                        centerPadding:false,
-                    }
-                      },
-        
-            ]
-             });
-        });
-        
-    </script>
     <!-- js for hamburger menu -->
     <script>
         $("#js-hamburger").click(function () {
@@ -577,35 +546,5 @@
 			$("body").toggleClass("show");
         });
     </script>
-    <!-- calendarの処理-->
-    <script>
-        var coeff = 1000 * 60 * 60;
-        $(document).ready(function() {
-        $("#start_datepicker").datepicker({ dateFormat: "dd/mm/yy"}).datepicker("setDate", new Date());
-            $("#end_datepicker").datepicker({ dateFormat: "dd/mm/yy"}).datepicker("setDate", new Date());
-            $('#end_timepicker,#start_timepicker,#startundecided_timepicker,#endundecided_timepicker').timepicker({
-                timeFormat: 'h:mm p',
-                interval: 60,
-                minTime: '10',
-                maxTime: '8:00pm',
-                defaultTime: new Date(Math.ceil(new Date().getTime() / coeff) * coeff),
-                startTime: '10:00',
-                dynamic: false,
-                dropdown: true,
-                scrollbar: false
-            });
-        });
-    </script>
-    <!-- <script>
-        $(document).ready(function() {
-            var startDate = document.getElementById("start_datepicker").value;
-            var endDate = document.getElementById("end_datepicker").value;
-            $("#end_datepicker").clickOutsideThisElement(function (e) {
-                if(startDate > endDate)
-                    alert("ngay bat dau phai truoc ngay ket thuc...vui long nhap lai");   
-            });
-        });   
-    </script> -->
-
 </body>
 <!-- InstanceEnd --></html>
