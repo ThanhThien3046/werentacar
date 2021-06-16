@@ -11,8 +11,12 @@
 	font-size:75%;
 	margin-top: 5px;
 }
+.contact-top a{
+	text-decoration: underline;
+}
 .contact-top i{
-    margin: 0 10px;
+	margin: 0 10px;
+	color:hsla(0,0%,31%,1.00);
 }
 .title_contact{
 	font-size: 110%;
@@ -62,11 +66,24 @@
     color : #03747f ;
     cursor: pointer;
 }
+@media screen and (min-width: 480px) {
+	.list_link{
+		display: flex;
+		justify-content:space-between;
+		flex-wrap: wrap;
+		font-size: 95%;
+	}
+	 .list_link li{
+        background-color: #e4f1f6;
+        width: 48%;
+        margin-bottom: 35px;
+        box-sizing: border-box;
+    }
+}
 @media screen and (min-width: 768px) {
     .contact-top{
-        font-family: YuGothic, "Yu Gothic medium", "Hiragino Sans", Meiryo, "sans-serif";
-        font-size:100%;
-        margin-top: 5px;
+        font-size: 90%;
+        margin-top: 10px;
     }
     .bar{
         background-color: #0067b6;
@@ -85,21 +102,11 @@
         margin-bottom: 35px;
         box-sizing: border-box;
     }
+	.list_link li.policy{
+		margin-right: 35%;
+	}
 	.list_link li a{
 		display: block;
 		padding: 15px 25px;
 	}
-    .list_link li:nth-child(2){
-        margin-right: 50px;
-    }
-    .list_link li:nth-child(3n+1){
-        margin-right: 50px;
-    }
-    
-    .list_link li:nth-child(3n+2){
-        margin-right: 50px;
-    }
-
-
-
 }

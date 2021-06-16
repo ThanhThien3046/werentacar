@@ -241,9 +241,10 @@ table {
     background-color: #edad3e;
     color: #fff;
     text-decoration: none;
+	transition: .5s;
 }
 .contact-content a:hover{
-    background:#df9412;
+    background:#0067b6;
 }
 /*  ーーーーーーーーーーーーー　CONTACT　ここまでーーーーーーーーーーーーーーーー */
 
