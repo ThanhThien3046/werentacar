@@ -1,0 +1,90 @@
+.main{
+	width: 100%;
+	padding: 12px;
+	max-width: 1024px;
+	box-sizing: border-box;
+	margin: 20px auto 30px auto;
+    font-size: 16px;
+}
+
+.main > h1{
+	padding-bottom: 5px;
+	border-bottom: 1px solid #edad3e;
+	font-weight: 600;
+}
+
+.main > p > span{
+	font-weight: 600;
+}
+
+.pagrap{
+	line-height: 35px;
+	margin-top: 30px;
+}
+
+.about-top{
+	font-family: YuGothic, "Yu Gothic medium", "Hiragino Sans", Meiryo, "sans-serif";
+	font-size:75%;
+	margin-top: 5px;
+}
+
+.about-top i{
+	margin: 0 10px;
+	color:hsla(0,0%,31%,1.00);
+}
+
+.title{
+	text-align: center;
+}
+
+.title > span:nth-child(1)
+{
+	font-size: 20px;
+	font-weight: 600;
+}
+
+.title span:nth-child(3)
+{
+	font-size: 12px;
+}
+
+.toTopBtn {
+	display: none;
+	position: fixed;
+	bottom: 5px;
+	right: 30px;
+	z-index: 99;
+	font-size: 18px;
+	border: none;
+	outline: none;
+	background-color: #edad3e;
+	color: white;
+	cursor: pointer;
+	padding: 15px;
+	border-radius: 4px;
+  }
+  
+  .toTopBtn:hover {
+	background-color: #0067b6;
+  }
+@media Screen and (min-width:768px){
+	.about-top{
+		font-size: 90%;
+		margin-top: 10px;
+	}
+
+	.main > h1{
+		font-size: 120%;
+		margin-bottom: 50px;
+		margin-top: 30px;
+	}
+
+	.title > span:nth-child(1)
+	{
+		font-size: 24px;
+	}
+
+	.title span:nth-child(3){
+		font-size: 20px;
+	}
+}
