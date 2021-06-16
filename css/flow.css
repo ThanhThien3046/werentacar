@@ -58,6 +58,8 @@
     position: relative;
     text-align: center;
     color: white;
+	overflow: hidden;
+	cursor: pointer;
 }
 .block_content > span:nth-child(1) > img{
 	display: block;
@@ -65,6 +67,12 @@
     height: auto;
     background-size: cover;
     mix-blend-mode: darken;
+	transition: 1s;
+}
+.block_content > span:nth-child(1) img:hover{
+	transform: scale(1.15);
+	color: red;
+	display: block;
 }
 .space{
     margin: 40px 0;

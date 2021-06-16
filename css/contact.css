@@ -3,12 +3,9 @@
 	font-size:75%;
 	margin-top: 5px;
 }
-.contact-top a:nth-child(1){
-	text-decoration: underline;
-}
 
 .contact-top a{
-	text-decoration: none;
+	text-decoration: underline;
 }
 .contact-top i{
 	margin: 0 10px;
@@ -22,7 +19,6 @@
 	padding-bottom: 5px;
 	margin-top: 20px;
 }
-
 .bar{
     background-color: #0067b6;
     border-left: 12px solid #edad3e;
@@ -33,7 +29,6 @@
     margin-bottom: 15px;
 	color: white;
 }
-
 .pagrap{
     margin-bottom: 20px;
     font-size: 15px;
