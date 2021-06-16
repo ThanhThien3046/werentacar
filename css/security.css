@@ -22,17 +22,6 @@
 	margin-top: 30px;
 }
 
-.about-top{
-	font-family: YuGothic, "Yu Gothic medium", "Hiragino Sans", Meiryo, "sans-serif";
-	font-size:75%;
-	margin-top: 5px;
-}
-
-.about-top i{
-	margin: 0 10px;
-	color:hsla(0,0%,31%,1.00);
-}
-
 .title{
 	text-align: center;
 }
