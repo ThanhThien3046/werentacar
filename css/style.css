@@ -15,11 +15,13 @@
 	background-size: cover;
 }
 .banner ul li.slider1{
-	background-image: url("../images/slider1.jpg");
+	background-image: url("../images/slider2.jpg");
+	background-position:right;
+
 }
 .banner ul li.slider2{
-	background-image: url("../images/slider2.jpg");
-	background-position: center;
+	background-image: url("../images/slider1.jpg");
+	background-position:top center
 }
 .banner ul li.slider3{
 	background-image: url("../images/slider3.jpg");
@@ -251,7 +253,7 @@ select{
 
 }
 .list-car .car-line-img{
-    width: 45%;
+    width: 55%;
 }
 .list-car .car-line-img img{
     width: 100%;
@@ -271,7 +273,7 @@ select{
 	80%{margin-left:20px;}
 }
 .car-line-type{
-    width: 49%;
+    width: 39%;
 }
 .car-line-type p{
     line-height: 1.5em;
@@ -414,6 +416,18 @@ select{
 /*  ーーーーーーーーーーーーー　会社概要　ここまでーーーーーーーーーーーーーーーー */
 
 @media screen and (min-width:767px){
+	.banner ul li.slider1{
+		background-image: url("../images/slider2.jpg");
+		background-position:top center;
+	}
+.banner ul li.slider2{
+	background-image: url("../images/slider1.jpg");
+	background-position:top center;
+}
+.banner ul li.slider3{
+	background-image: url("../images/slider3.jpg");
+	background-position: center;
+}
     .list-car .car-line-img{
         width: 100%;
     }

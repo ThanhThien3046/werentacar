@@ -297,10 +297,10 @@
 		max-width: 75px;
 		height: auto;
 		position: absolute;
-		right: 0px;
+		right: 0;
 		bottom: 7px;
-	}
 
+	}
 	.step1_content{
 		display: flex;
 		font-size: 100%;
