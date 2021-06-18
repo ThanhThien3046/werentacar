@@ -16,16 +16,15 @@
 }
 .banner ul li.slider1{
 	background-image: url("../images/slider2.jpg");
-	background-position:right;
-
+	background-position:top center;
 }
 .banner ul li.slider2{
 	background-image: url("../images/slider1.jpg");
-	background-position:top center
+	background-position:top center;
 }
 .banner ul li.slider3{
 	background-image: url("../images/slider3.jpg");
-	background-position: center;
+	background-position:center center;
 }
 .banner{
     height: 530px;
@@ -426,7 +425,7 @@ select{
 }
 .banner ul li.slider3{
 	background-image: url("../images/slider3.jpg");
-	background-position: center;
+	background-position:top;
 }
     .list-car .car-line-img{
         width: 100%;
