@@ -580,5 +580,76 @@
         </ul>
         <div class="copyright">Copyright &copy; 2021 WE・RENTACAR Co.,Ltd. All rights reserved</div>
     </div>
+<!-- calendarの処理-->
+<script>
+    var coeff = 1000 * 60 * 60;
+    $(document).ready(function() {
+    $("#start_datepicker").datepicker({dateFormat: "yy/mm/dd",defaultDate:new Date()}).datepicker("setDate",{
+        onSelect: function(e){
+        $('#end_datepicker').datepicker('option', 'minDate', new Date(e));}
+    });
+    $("#end_datepicker").datepicker({ dateFormat: "yy/mm/dd"}).datepicker("setDate", new Date());
+    $('#end_timepicker,#start_timepicker,#startundecided_timepicker,#endundecided_timepicker').timepicker({
+            timeFormat: 'h:mm p',
+            interval: 60,
+            minTime: '10',
+            maxTime: '8:00pm',
+            defaultTime: new Date(Math.ceil(new Date().getTime() / coeff) * coeff),
+            startTime: '10:00',
+            dynamic: false,
+            dropdown: true,
+            scrollbar: false
+        });
+    });
+</script>
+<!-- JS for banner -->
+<script>
+    $(function() {
+        $('.slider').slick({
+                infinite: true,
+                dots:true,
+                autoplaySpeed:3000,
+                slidesToShow: 1,
+                centerMode: true, //要素を中央寄せ
+                centerPadding:'0', //両サイドの見えている部分のサイズ
+                autoplay:true, //自動再生
+                responsive: [
+                    {
+                    breakpoint: 1024,
+                    settings: {
+                        arrows: false,
+                    centerMode:false, 
+                    centerPadding:false,
+                }},]
+            });
+    });
+  
+</script>
+<!-- js for hamburger menu -->
+<script>
+    $("#js-hamburger").click(function () {
+    $("#js-top-line").toggleClass("active");
+    $("#js-center-line").toggleClass("active");
+    $("#js-bottom-line").toggleClass("active");
+    $("#js-nav").toggleClass("show");
+        $("body").toggleClass("show");
+    });
+</script>
+
+<script type="text/javascript">
+    $('#start_datepicker').datepicker({
+    dateFormat: "yy/mm/dd",
+    onSelect: function(e){
+        $('#end_datepicker').datepicker('option', 'minDate', new Date(e));
+    },
+    });
+
+    $('#end_datepicker').datepicker({
+        dateFormat: "yy/mm/dd",
+        onSelect: function(e){
+            $('#start_datepicker').datepicker('option', 'maxDate', new Date(e));
+        }
+    });
+</script>
 </body>
 </html>
