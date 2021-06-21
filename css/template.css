@@ -48,14 +48,29 @@ table {
 }
 
 /*  ーーーーーーーーーーーーーヘッダーここからーーーーーーーーーーーーーーーー */
-/*
 .nav-bar{
-    border-color: #ecac3e;
-    height: 10px;
-    background-color: #ecac3e;
+    height: 8px;
+    background-color: #0067b6
 }
-*/
+.logo-message{
+	font-size: 90%;
+	margin-top: 10px;
+}
 
+.logo-left{
+    width: 280px;
+    margin-top: 5px;
+    background-image: url('../images/logo.png');
+    background-size: cover;
+    height: 42px;
+    background-repeat: no-repeat;
+	
+}
+.logo-message a{
+
+	display: block;
+	width: 280px;
+}
 .nav-top .logo{
     display: flex;
     justify-content: space-between;
@@ -65,7 +80,7 @@ table {
     max-width: 1024px;
     padding-left: 12px;
     margin: auto;
-    height: 90px;
+    height: 95px;
 }
 .menu{
 	width: 100%;
@@ -119,11 +134,12 @@ table {
 }
 .nav-bar2{
 	position: absolute;
-    right: 12px;
-    top: 8px;
-	font-size: 80%;
+    right: 220px;
+    top: 10px;
+	font-size: 90%;
 /*	display: none;*/
 }
+
 .nav-bar2 a:hover{
 	text-decoration: underline;
 }
@@ -132,27 +148,52 @@ table {
 }
 .header-btn{
     position: absolute;
-    right: 12px;
-    top: 40px;
+    right: 220px;
+    top: 48px;
+}
+.nav-bar3{
+	color: white;
+	transform: skewX(-23deg);
+	padding:10px 13px;
+	box-sizing: border-box;
+	font-size: 80%;
+	position: absolute;
+	right: -8px;
+	height: 95px;
+	background:hsla(0,0%,25%,1.00);
+}
+.nav-bar3 p{
+	transform: skewX(23deg);
+	text-align: center;
+}
+.nav-bar3 a{
+	color:  #edad3e;
+	text-align: center;
+	margin: auto;
+	font-size: 180%;
+}
+.nav-bar3 a:hover{
+	opacity: 0.8;
 }
 .header-btn a:nth-child(1){
     padding: 10px 20px;
     background: #edad3e;
-    border-radius: 5px;
     color: #fff;
     margin-right: 15px;
     font-size: 95%;
 	width: 200px;
-    box-shadow: 2px 2px 2px hsl(0, 0%, 49%);
+	border: 1px solid hsla(40,70%,54%,1.00)
+
 }
+
 .header-btn a:nth-child(2){
     padding: 10px 25px;
     background: #d1011b;
-    border-radius: 5px;
     color: #fff;
     font-size: 95%;
-   box-shadow: 2px 2px 2px hsl(0, 0%, 49%);
+	border: 1px solid hsla(0,100%,38%,1.00)
 }
+
 .header-btn a:hover{
     opacity: 0.8;
 }
@@ -160,14 +201,7 @@ table {
     width: 100%;
     height: auto;
 }
-.logo-left{
-    width: 310px;
-    margin-top: 20px;
-    background-image: url('../images/logo.png');
-    background-size: cover;
-    height: 45px;
-    background-repeat: no-repeat;
-}
+
 .hamburger-menu{
     display: none;
 }
@@ -319,9 +353,16 @@ table {
     line-height:1.5em;
 }
 /*  ーーーーーーーーーーーーー　FOOTER　ここまでーーーーーーーーーーーーーーーー */
-
+@media screen and (max-width:960px){
+	.nav-bar2,.header-btn{
+        right: 12px;
+    }
+	.nav-bar3{
+		display: none;
+	}
+}
 @media screen and (max-width:767px){
-    .header-btn,.nav-bar2{
+    .header-btn,.nav-bar2,.logo-message p,.nav-bar,.nav-bar3{
         display: none;
     }
     .menu{
@@ -345,16 +386,6 @@ table {
         padding-left: 10px;
     }
     .logo-left{
-        width: 80px;
-        height: 60px;
-        background-repeat: no-repeat;
-        background-position: center;   
-        padding: 0;
-        background-image: none;
-        margin: 0;  
-    }
-    .logo-left::after{
-        content: "";
         height: 60px;
         width: 60px;
         display: block;
@@ -362,10 +393,12 @@ table {
         background-size:contain;
         background-repeat: no-repeat;
         background-position: center;
+		top:-1px;
+		position: absolute;
+		left: 12px;
     }
-    .nav-bar{
-        height: 0;
-    }
+
+
     /* hamburger menu */
     .navigation{
         position: fixed;
