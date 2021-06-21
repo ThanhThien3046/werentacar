@@ -19,6 +19,7 @@
     <link rel="shortcut icon" type="image/png" href="images/favicon.png">
     <script type="text/javascript" src="js/slider.js"></script>
 	<script type="text/javascript" src="js/drawer.js"></script>
+    
 </head>
 <body>
     <div class="nav-bar"></div>
@@ -73,7 +74,7 @@
             </div>
             <div class="menu">
                 <ul class="ul-menu">
-                    <li><a href="index.html">ホーム</a></li>
+                    <li><a href="index.html"><i class="fas fa-home" style="padding-right:5px;"></i>ホーム</a></li>
                     <li class="li-menu"><a href="about.html">会社情報</a></li>
                     <li class="li-menu"><a href="index.html#list-car">車重と料金</a></li>
                     <li class="li-menu"><a href="flow.html">当日の流れ</a></li>
@@ -369,67 +370,7 @@
             </div>
             </div>
             </div>
-            <!-- <div class="list-car3">
-            <p class="type">ミニバンA</p>
-            <div class="car-line-price">
-            <div class="car-line">
-                <div class="car-line-img">
-                    <img src="images/noah.png" alt="noah-images">
-                </div>
-                <div class="car-line-type">
-                    <p><strong>定員 : </strong>  6~7名</p>
-                    <p><strong>車種 :</strong>  ノア</p>
-                    
-                    <div class="car-line-btn">
-                        <a href="">予約する　<i class="fas fa-angle-right"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="price">
-                <table width="100%">
-                    <tbody>
-                        <tr>
-                        <th scope="row">料金</th>
-                        <td>基本料金</td>
-                        <td>ハイシーズン</td>
-                        </tr>
-                        <tr>
-                        <th scope="row">24時間以内</th>
-                        <td>8,500円</td>
-                        <td>11,050円</td>
-                        </tr>
-                        <tr>
-                        <th scope="row">以降24時間</th>
-                        <td>8,500円</td>
-                        <td>11,050円</td>
-                        </tr>
-                        <tr>
-                        <th scope="row">延長1時間</th>
-                        <td>1,600円</td>
-                        <td>2,080円</td>
-                        </tr>
-                        <tr>
-                        <th scope="row">会員</th>
-                        <td colspan="2">4,250円</td>
-                        
-                        </tr>
-                        <tr>
-                        <th scope="row">マンスリー</th>
-                        <td colspan="2">60,000円</td>
-                        
-                        </tr>
-                        <tr>
-                        <th scope="row">キャンペーン</th>
-                        <td colspan="2">7,650円</td>
-                        
-                        </tr>
-                    </tbody>
-                </table>
-                <span>(税抜)</span>
-            </div>
-            </div>
-            </div> -->
-<!--
+
             <div class="list-car4">
             <p class="type">ミニバンB</p>
             <div class="car-line-price">
@@ -489,7 +430,7 @@
             </div>
             </div>
             </div>
--->
+
         </div>
     </div> 
 <!--ーーーーーーーーーーーーーー LISTーCAR　ここまでーーーーーーーー -->
@@ -580,28 +521,7 @@
         </ul>
         <div class="copyright">Copyright &copy; 2021 WE・RENTACAR Co.,Ltd. All rights reserved</div>
     </div>
-<!-- calendarの処理-->
-<script>
-    var coeff = 1000 * 60 * 60;
-    $(document).ready(function() {
-    $("#start_datepicker").datepicker({dateFormat: "yy/mm/dd",defaultDate:new Date()}).datepicker("setDate",{
-        onSelect: function(e){
-        $('#end_datepicker').datepicker('option', 'minDate', new Date(e));}
-    });
-    $("#end_datepicker").datepicker({ dateFormat: "yy/mm/dd"}).datepicker("setDate", new Date());
-    $('#end_timepicker,#start_timepicker,#startundecided_timepicker,#endundecided_timepicker').timepicker({
-            timeFormat: 'h:mm p',
-            interval: 60,
-            minTime: '10',
-            maxTime: '8:00pm',
-            defaultTime: new Date(Math.ceil(new Date().getTime() / coeff) * coeff),
-            startTime: '10:00',
-            dynamic: false,
-            dropdown: true,
-            scrollbar: false
-        });
-    });
-</script>
+
 <!-- JS for banner -->
 <script>
     $(function() {
@@ -623,7 +543,6 @@
                 }},]
             });
     });
-  
 </script>
 <!-- js for hamburger menu -->
 <script>
@@ -633,22 +552,6 @@
     $("#js-bottom-line").toggleClass("active");
     $("#js-nav").toggleClass("show");
         $("body").toggleClass("show");
-    });
-</script>
-
-<script type="text/javascript">
-    $('#start_datepicker').datepicker({
-    dateFormat: "yy/mm/dd",
-    onSelect: function(e){
-        $('#end_datepicker').datepicker('option', 'minDate', new Date(e));
-    },
-    });
-
-    $('#end_datepicker').datepicker({
-        dateFormat: "yy/mm/dd",
-        onSelect: function(e){
-            $('#start_datepicker').datepicker('option', 'maxDate', new Date(e));
-        }
     });
 </script>
 </body>

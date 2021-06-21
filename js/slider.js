@@ -37,8 +37,8 @@ $('#start_datepicker').datepicker({
 $(function() {
     var coeff = 1000 * 60 * 60;
     $(document).ready(function() {
-    $("#start_datepicker").datepicker({ dateFormat: "yy/mm/dd"}).datepicker("setDate", new Date());
-    $("#end_datepicker").datepicker({ dateFormat: "yy/mm/dd"}).datepicker("setDate", new Date());
+    $("#start_datepicker").datepicker({ dateFormat: "yy/mm/dd"}).datepicker('option', 'minDate', 0);
+    $("#end_datepicker").datepicker({ dateFormat: "yy/mm/dd"}).datepicker('option', 'minDate', 0);
     $('#end_timepicker,#start_timepicker,#startundecided_timepicker,#endundecided_timepicker').timepicker({
             timeFormat: 'h:mm p',
             interval: 60,
@@ -52,4 +52,3 @@ $(function() {
         });
     });
 });
-
