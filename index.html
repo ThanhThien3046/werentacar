@@ -4,7 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>レンタカーなら WE・RENTCAR | レンタカー予約</title>
+    <title>宮古島でレンタカー予約なら WE・RENTCAR | レンタカー予約</title>
+	<meta property="og:title" content="宮古島でレンタカー予約ならWE RENTACAR" /> 
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://www.werentacar.co.jp/">
+	<meta property="og:site_name" content="宮古島でレンタカー予約ならWE RENTACAR"/> 
+	<meta property="og:image" content="https://www.werentacar/images/use.jpg"/>
+	<meta property="og:description" content="宮古島のレンタカー予約ならWE RENTACAR へ。宮古島WE RENTACAR では、ご利用されるお客様に宮古島旅行をサポートする様々なオプションをご用意しております。" />
+	<meta name="description" content="宮古島のレンタカー予約ならWE RENTACAR へ。。宮古島WE RENTACAR では、ご利用されるお客様に宮古島旅行をサポートする様々なオプションをご用意しております。">
+	<meta name="Keywords" content="レンタカー,werentacar,宮古島レンタカー,沖縄レンタカー,トヨタ、トヨタレンタカー、宮古島,予約,プラン,格安、宮古島観光地、宮古島旅行,宮古,宮古空港,比較,安い、最安値,レンタカー予約">
     <link rel="stylesheet" href="css/style.css">
     <link href="css/slick-theme.css" rel="stylesheet" type="text/css">
     <link href="css/slick.css" rel="stylesheet" type="text/css">
@@ -26,7 +34,10 @@
     <div class="nav-top">
         <div class="menu-slogan">
             <div class="logo"> 
-                <a href="index.html"><div class="logo-left"></div></a>
+				<div class="logo-message">
+					<p>レンタカー予約ならWE・RENTACARでもっと楽しみに使用！</p>
+                	<a href="index.html"><div class="logo-left"></div></a>
+				</div>
                 <div class="icon-list">
                     <div class="iconlist_i_p"><a href="tel:050-5578-2017"><i class="fas fa-phone"></i><p>電話する</p></a></div>
                     <div class="iconlist_i_p"><a href="#"><i class="fas fa-car"></i><p>予約する</p></a></div>
@@ -64,13 +75,18 @@
                 </div>
                 <div class="nav-bar2">
                     <i class="fas fa-caret-right"></i><a href="sitemap.html">サイトマップ</a>
-                    <i class="fas fa-caret-right"></i><a href="https://wecompany.co.jp/recruit">採用情報</a>
-                    <i class="fas fa-caret-right"></i><a href="https://wecompany.co.jp/weHomes">グループ紹介</a>
+                    <i class="fas fa-caret-right"></i><a href="https://wecompany.co.jp/recruit" target="_blank">採用情報</a>
+                    <i class="fas fa-caret-right"></i><a href="https://wecompany.co.jp/weHomes" target="_blank">グループ紹介</a>
                 </div>
                 <div class="header-btn">
                     <a href="">レンタカー予約 <i class="fas fa-angle-right"></i></a>
                     <a href="contact.html">お問い合わせ <i class="fas fa-angle-right"></i></a>
                 </div>
+				<div class="nav-bar3">
+					<p>お電話でご予約はこちら</p>
+					<p><a href="tel:050-5578-2017">050-5578-2017</a></p>
+					<p>営業時間 9:00~18:00</p>
+				</div>
             </div>
             <div class="menu">
                 <ul class="ul-menu">
@@ -521,38 +537,7 @@
         </ul>
         <div class="copyright">Copyright &copy; 2021 WE・RENTACAR Co.,Ltd. All rights reserved</div>
     </div>
+<!-- calendarの処理-->
 
-<!-- JS for banner -->
-<script>
-    $(function() {
-        $('.slider').slick({
-                infinite: true,
-                dots:true,
-                autoplaySpeed:3000,
-                slidesToShow: 1,
-                centerMode: true, //要素を中央寄せ
-                centerPadding:'0', //両サイドの見えている部分のサイズ
-                autoplay:true, //自動再生
-                responsive: [
-                    {
-                    breakpoint: 1024,
-                    settings: {
-                        arrows: false,
-                    centerMode:false, 
-                    centerPadding:false,
-                }},]
-            });
-    });
-</script>
-<!-- js for hamburger menu -->
-<script>
-    $("#js-hamburger").click(function () {
-    $("#js-top-line").toggleClass("active");
-    $("#js-center-line").toggleClass("active");
-    $("#js-bottom-line").toggleClass("active");
-    $("#js-nav").toggleClass("show");
-        $("body").toggleClass("show");
-    });
-</script>
 </body>
 </html>
