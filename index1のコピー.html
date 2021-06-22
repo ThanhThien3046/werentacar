@@ -115,8 +115,8 @@
                 <h2 class="banner-form-search-title"><span>レンタル期間で検索</span></h2>
                 <table class="banner-form-search-input">
                     <tr>
-                        <td class="banner-form-search-td form-content">ご出発</td>
-                        <td class="banner-form-search-td form-content">ご返却</td>
+                        <td class="banner-form-search-td form-content">出発日時</td>
+                        <td class="banner-form-search-td form-content">返却日時</td>
                     </tr>
                     <tr>
                         <td class="banner-form-search-td">
@@ -126,10 +126,7 @@
                         <td class="banner-form-search-td">
 							<input name="data[topSearch][dateE]" type="text" class="form-control cal-arv" id="cal-arv" readonly="readonly" />
 							<i class="far fa-calendar-alt"></i>
-                    </tr>
-					<tr>
-                        <td class="banner-form-search-td form-content">ご出発時間</td>
-                        <td class="banner-form-search-td form-content">ご返却時間</td>
+						
                     </tr>
                     <tr>
                         <td class="banner-form-search-td">
@@ -189,25 +186,92 @@
                             <i class="far fa-clock"></i>
 						</td>
                     </tr>
-      
-
+                </table>
+                <h2 class="banner-form-search-title span-banner-form-search-title"><span>日付未定</span></h2>
+                <table class="banner-form-search-input">
                     <tr>
-                        <td class="banner-form-search-td form-content">車両タイプ</td>
+                        <td class="banner-form-search-td form-content">出発日時</td>
+                        <td class="banner-form-search-td form-content">ご利用期限</td>
                     </tr>
                     <tr>
                         <td class="banner-form-search-td">
-                          	<select name="time" id="pet-select">
-                                <option value="">指定なし</option>
-                                <option value="">ミニパクト</option>
-                                <option value="">ミニバン</option>
+                            <select name="data[topSearch][time]" id="data[topSearch][time]">
+								<option value="09:00">09:00</option>
+								<option value="09:30">09:30</option>
+								<option value="10:00">10:00</option>
+								<option value="10:30">10:30</option>
+								<option value="11:00">11:00</option>
+								<option value="11:30">11:30</option>
+								<option value="12:00">12:00</option>
+								<option value="12:30">12:30</option>
+								<option value="13:00">13:00</option>
+								<option value="13:30">13:30</option>
+								<option value="14:00">14:00</option>
+								<option value="14:30">14:30</option>
+								<option value="15:00">15:00</option>
+								<option value="15:30">15:30</option>
+								<option value="16:00">16:00</option>
+								<option value="16:30">16:30</option>
+								<option value="17:00">17:00</option>
+								<option value="17:30">17:30</option>
+								<option value="18:00">18:00</option>
+								<option value="18:30">18:30</option>
+								<option value="19:00">19:00</option>
+								<option value="19:30">19:30</option>
+								<option value="20:00">20:00</option>
+							</select>
+                            <i class="far fa-clock"></i>
+                        </td>
+                        <td class="banner-form-search-td">
+                            <select name="time" id="pet-select">
+                                <option value="">当日利用</option>
+                                <option value="">1泊2日</option>
+                                <option value="">2泊3日</option>
+                                <option value="">3泊4日</option>
+                                <option value="">4泊5日</option>
+                                <option value="">5泊6日</option>
+                                <option value="">6泊7日</option>
                             </select>
                             <i class="fas fa-angle-down"></i>
                         </td>
-                
                     </tr>
- 
+                    <tr>
+                        <td class="banner-form-search-td form-content">出発日時</td>
+                        <td class="banner-form-search-td"></td>
+                    </tr>
+                    <tr>
+                        <td class="banner-form-search-td">
+                             <select name="data[topSearch][timeE]" id="data[topSearch][timeE]">
+								<option value="09:00">09:00</option>
+								<option value="09:30">09:30</option>
+								<option value="10:00">10:00</option>
+								<option value="10:30">10:30</option>
+								<option value="11:00">11:00</option>
+								<option value="11:30">11:30</option>
+								<option value="12:00">12:00</option>
+								<option value="12:30">12:30</option>
+								<option value="13:00">13:00</option>
+								<option value="13:30">13:30</option>
+								<option value="14:00">14:00</option>
+								<option value="14:30">14:30</option>
+								<option value="15:00">15:00</option>
+								<option value="15:30">15:30</option>
+								<option value="16:00">16:00</option>
+								<option value="16:30">16:30</option>
+								<option value="17:00">17:00</option>
+								<option value="17:30">17:30</option>
+								<option value="18:00" selected="selected">18:00</option>
+								<option value="18:30">18:30</option>
+								<option value="19:00">19:00</option>
+								<option value="19:30">19:30</option>
+								<option value="20:00">20:00</option>
+							</select>
+                            <i class="far fa-clock"></i>
+                        </td>
+                        <td class="banner-form-search-td"></td>
+                    </tr>
                 </table>
-                <button type="submit" class="search-submit"><i class="fas fa-car"></i>空き状況を検索</button>
+                <button type="submit" class="search-submit">空き状況を検索</button>
             </div>
         </form>
     </div>
