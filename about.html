@@ -98,7 +98,7 @@
     </div>
 <!--ーーーーーーーーーーーーーー NAV　ここまでーーーーーーーー -->
 <!-- InstanceBeginEditable name="メインここから" -->
-		<main>
+	<main>
 		<div class="aboutus">
 			<div class="about-top"><a href="index.html">ホーム</a><i class="fas fa-angle-right"></i><a href="about.html">会社情報</a><i class="fas fa-angle-right"></i>WE・RENTACARについて
 			</div>
@@ -151,6 +151,7 @@
 			</div>
 			</div>
 		</div>
+        <a href="javascript:" class="return-to-top"><i class="fas fa-arrow-up"></i></a>
 	</main>
 <!--ーーーーーーーーーーーーーー　会社情報　ここまでーーーーーーーー -->
 <!-- InstanceEndEditable -->
@@ -226,5 +227,25 @@
             </ul>
             <div class="copyright">Copyright &copy; 2021 WE・RENTACAR Co.,Ltd. All rights reserved</div>
         </div>
+
+<!-- to top function -->
+<script>
+    $(window).scroll(function(){
+    if($(this).scrollTop() >= 50){
+        $('.return-to-top').fadeIn(200);
+    }
+    else
+    {
+        $('.return-to-top').fadeOut(200);
+    }
+});
+
+$('.return-to-top').click(function(){
+    $('body,html').animate({
+        scrollTop:0
+    },500);
+});
+</script>
+
 </body>
 <!-- InstanceEnd --></html>

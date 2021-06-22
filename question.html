@@ -425,6 +425,7 @@
             </div>
         </div>
 
+        <a href="javascript:" class="return-to-top"><i class="fas fa-arrow-up"></i></a>
     </div>
 <!-- JS for collapse -->
 <script>
@@ -437,10 +438,27 @@
         if (content.style.display === "block") {
             content.style.display = "none";            
         } else {
-            content.style.display = "block";
+            setTimeout(function() {
+                content.style.display = "block";
+            }, 150);     
         }
         });  
     }
+    $(window).scroll(function(){
+        if($(this).scrollTop() >= 50){
+            $('.return-to-top').fadeIn(200);
+        }
+        else
+        {
+            $('.return-to-top').fadeOut(200);
+        }
+    });
+
+    $('.return-to-top').click(function(){
+        $('body,html').animate({
+            scrollTop:0
+        },500);
+    });
 </script>
 <!-- InstanceEndEditable -->
 <!--ーーーーーーーーーーーーーー CONTACT　ここからーーーーーーーー -->

@@ -197,6 +197,8 @@
         <a href="#" class="btn_lastct">レンタカーを予約する</a>
         <a href="question.html" class="btn_lastct">よくある質問</a>
     </div>
+
+    <a href="javascript:" class="return-to-top"><i class="fas fa-arrow-up"></i></a>
 </div>
 
 <!-- InstanceEndEditable -->
@@ -272,5 +274,25 @@
             </ul>
             <div class="copyright">Copyright &copy; 2021 WE・RENTACAR Co.,Ltd. All rights reserved</div>
         </div>
+
+<!-- to top function -->
+<script>
+    $(window).scroll(function(){
+    if($(this).scrollTop() >= 50){
+        $('.return-to-top').fadeIn(200);
+    }
+    else
+    {
+        $('.return-to-top').fadeOut(200);
+    }
+});
+
+$('.return-to-top').click(function(){
+    $('body,html').animate({
+        scrollTop:0
+    },500);
+});
+</script>
+
 </body>
 <!-- InstanceEnd --></html>
