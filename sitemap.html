@@ -141,7 +141,7 @@
         <li><a href="https://wecompany.co.jp/recruit">採用情報 <i class="fas fa-angle-right"></i></a></li>
         <li><a href="https://wecompany.co.jp/">グループ紹介 <i class="fas fa-angle-right"></i></a></li>
     </ul>
-
+    <a href="javascript:" class="return-to-top"><i class="fas fa-arrow-up"></i></a>
     </div>
 <!-- InstanceEndEditable -->
 <!--ーーーーーーーーーーーーーー CONTACT　ここからーーーーーーーー -->
@@ -216,5 +216,24 @@
             </ul>
             <div class="copyright">Copyright &copy; 2021 WE・RENTACAR Co.,Ltd. All rights reserved</div>
         </div>
+
+<!-- to top function -->
+<script>
+    $(window).scroll(function(){
+    if($(this).scrollTop() >= 50){
+        $('.return-to-top').fadeIn(200);
+    }
+    else
+    {
+        $('.return-to-top').fadeOut(200);
+    }
+});
+
+$('.return-to-top').click(function(){
+    $('body,html').animate({
+        scrollTop:0
+    },500);
+});
+</script>
 </body>
 <!-- InstanceEnd --></html>

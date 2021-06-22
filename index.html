@@ -101,7 +101,6 @@
                     <li class="li-menu"><a href="flow.html">当日の流れ</a></li>
                     <li class="li-menu"><a href="use.html">ご利用について</a></li>
                     <li class="li-menu"><a href="question.html">よくある質問</a></li>
-                    
                 </ul>
             </div>
         </div>
@@ -507,6 +506,8 @@
             <li><a href="profile.html"><img src="images/profile.jpg" alt="会社概要"><span>会社概要　<i class="fas fa-angle-right"></i></span></a></li>
         </ul>
     </div>
+    <a href="javascript:" class="return-to-top"><i class="fas fa-arrow-up"></i></a>
+<!--ーーーーーーーーーーーーーー　会社情報　ここまでーーーーーーーー -->
 
 <!-- InstanceEndEditable -->
 <!--ーーーーーーーーーーーーーー CONTACT　ここからーーーーーーーー -->
@@ -581,5 +582,76 @@
             </ul>
             <div class="copyright">Copyright &copy; 2021 WE・RENTACAR Co.,Ltd. All rights reserved</div>
         </div>
+        <hr>
+        <ul class="ul-footer footer-pc">
+            <li class="ul-li-footer">
+                <p class="li-footer-title">
+                    レンタカーを使う
+                </p>
+                <p class="li-footer-content">
+                    <a href=""><i class="fas fa-angle-right"></i> 店舗を探す</a> <br>
+                    <a href=""><i class="fas fa-angle-right"></i> 車重と料金</a><br>
+                    <a href=""><i class="fas fa-angle-right"></i> レンタカーを予約</a><br>
+                </p>
+            </li>
+            <li class="ul-li-footer">
+                <p class="li-footer-title">
+                    初めてご利用案内の方へ
+                </p>
+                <p class="li-footer-content">
+                    <a href="use.html"><i class="fas fa-angle-right"></i> ご利用について</a><br>
+                    <a href="question.html"><i class="fas fa-angle-right"></i> よくある質問 </a><br>
+                    <a href="flow.html"><i class="fas fa-angle-right"></i> 当日の流れ</a><br>
+                    <a href="contact.html"><i class="fas fa-angle-right"></i> お問い合わせ</a><br>
+                </p>
+            </li>
+            <li class="ul-li-footer">
+                <p class="li-footer-title">
+                    このサイトについて
+                </p>
+                <p class="li-footer-content">
+                    <a href="sitemap.html"><i class="fas fa-angle-right"></i> サイトマップ</a><br>
+                    <a href="about.html"><i class="fas fa-angle-right"></i> 会社情報</a><br>
+                    <a href="https://wecompany.co.jp/recruit"><i class="fas fa-angle-right"></i> 採用情報</a><br>
+                    <a href="https://wecompany.co.jp"><i class="fas fa-angle-right"></i> グループ紹介</a><br>
+                    <a href="policy.html"><i class="fas fa-angle-right"></i> プライバシーポリシー</a><br>
+                </p>
+            </li>
+        </ul>
+        <ul class="footer-smt">
+            <li><a href="#"><i class="fas fa-angle-right"></i> 店舗を探す</a></li>
+            <li><a href="#"><i class="fas fa-angle-right"></i> 車重と料金</a></li>
+            <li><a href="#"><i class="fas fa-angle-right"></i> レンタカーを予約</a></li>
+            <li><a href="use.html"><i class="fas fa-angle-right"></i> ご利用について</a></li>
+            <li><a href="question.html"><i class="fas fa-angle-right"></i> よくある質問</a></li>
+            <li><a href="flow.html"><i class="fas fa-angle-right"></i> 当日の流れ</a></li>
+            <li><a href="contact.html"><i class="fas fa-angle-right"></i> お問い合わせ</a></li>
+            <li><a href="sitemap.html"><i class="fas fa-angle-right"></i> サイトマップ</a></li>
+            <li><a href="profile.html"><i class="fas fa-angle-right"></i> 会社情報</a></li>
+            <li><a href="https://wecompany.co.jp/recruit"><i class="fas fa-angle-right"></i> 採用情報</a></li>
+            <li><a href="https://wecompany.co.jp"><i class="fas fa-angle-right"></i> グループ紹介</a></li>
+            <li><a href="policy.html"><i class="fas fa-angle-right"></i> プライバシーポリシー</a></li>
+        </ul>
+        <div class="copyright">Copyright &copy; 2021 WE・RENTACAR Co.,Ltd. All rights reserved</div>
+    </div>
+<!-- calendarの処理-->
+<!-- to top function -->
+<script>
+    $(window).scroll(function(){
+    if($(this).scrollTop() >= 50){
+        $('.return-to-top').fadeIn(200);
+    }
+    else
+    {
+        $('.return-to-top').fadeOut(200);
+    }
+});
+
+$('.return-to-top').click(function(){
+    $('body,html').animate({
+        scrollTop:0
+    },500);
+});
+</script>
 </body>
 <!-- InstanceEnd --></html>

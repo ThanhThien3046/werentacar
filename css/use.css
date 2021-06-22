@@ -448,6 +448,31 @@
 	.list_image_slider{
 		height: 400px;
 	}
+
+	.return-to-top{
+		position: fixed;
+		bottom: 20px;
+		right: 20px;
+		background: #edad3e;
+		width: 50px;
+		height: 50px;
+		display: block;
+		border-radius: 35px;
+		display: none;
+	}
+	
+	.return-to-top i{
+		color: #fff;
+		margin: 0;
+		position: relative;
+		left: 16px;
+		top: 13px;
+		font-size: 19px;
+	}
+	
+	.return-to-top:hover{
+		background: rgba(231, 126, 40, 0.9);
+	}
 }
 
 @media screen and (min-width:960px){
