@@ -417,6 +417,16 @@ select{
 .about ul li:hover img{
 	transform:scale(1.15);
 }
+
+.fadein {
+    opacity: 0;
+    transform: translate(0, 100px);
+    transition : all 1000ms;
+}
+.fadein.scrollin{
+    opacity: 1;
+    transform: translate(0,0);
+}
 /*  ーーーーーーーーーーーーー　会社概要　ここまでーーーーーーーーーーーーーーーー */
 
 @media screen and (min-width:767px){
@@ -624,6 +634,10 @@ select{
         font-size: 74%;
         padding:5px 5px;
         padding-right: 0;
+    }
+    
+    .return-to-top i{
+        display: none;
     }
 }
 @media Screen and (max-width:320px){

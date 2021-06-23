@@ -223,22 +223,22 @@
         <span class="title">ご利用案内</span>
         <h2>はじめてご利用になられる方はこちらをご覧ください。</h2>
         <ul>
-            <li>
+            <li class="fadein">
                 <a href="flow.html">
                     <dt>
-                <img src="images/flow.jpg" alt="当日の流れ"></dt>
+                <img src="images/flow.jpg" alt="当日の流れ" ></dt>
                 <span>当日の流れ</span>
                 <p>出発日当日ご来店時に必要なものや、当日の手続きの流れから、レンタカーご利用中〜ご返却までをご説明します。</p> 
                 </a>
             </li>
-            <li>
+            <li class="fadein">
                 <a href="use.html">
                 <dt><img src="images/use.jpg" alt="ご利用について"></dt>
                 <span>ご利用について</span>
                 <p> 車の選び方やレンタカーの使い方など、ご利用方法をわかりやすく説明します！</p>
                 </a>
             </li>
-            <li>
+            <li class="fadein">
                 <a href="question.html">
                     <dt><img src="images/faq.jpg" alt="よくある質問"></dt>
                 <span>よくある質問</span>
@@ -582,76 +582,54 @@
             </ul>
             <div class="copyright">Copyright &copy; 2021 WE・RENTACAR Co.,Ltd. All rights reserved</div>
         </div>
-        <hr>
-        <ul class="ul-footer footer-pc">
-            <li class="ul-li-footer">
-                <p class="li-footer-title">
-                    レンタカーを使う
-                </p>
-                <p class="li-footer-content">
-                    <a href=""><i class="fas fa-angle-right"></i> 店舗を探す</a> <br>
-                    <a href=""><i class="fas fa-angle-right"></i> 車重と料金</a><br>
-                    <a href=""><i class="fas fa-angle-right"></i> レンタカーを予約</a><br>
-                </p>
-            </li>
-            <li class="ul-li-footer">
-                <p class="li-footer-title">
-                    初めてご利用案内の方へ
-                </p>
-                <p class="li-footer-content">
-                    <a href="use.html"><i class="fas fa-angle-right"></i> ご利用について</a><br>
-                    <a href="question.html"><i class="fas fa-angle-right"></i> よくある質問 </a><br>
-                    <a href="flow.html"><i class="fas fa-angle-right"></i> 当日の流れ</a><br>
-                    <a href="contact.html"><i class="fas fa-angle-right"></i> お問い合わせ</a><br>
-                </p>
-            </li>
-            <li class="ul-li-footer">
-                <p class="li-footer-title">
-                    このサイトについて
-                </p>
-                <p class="li-footer-content">
-                    <a href="sitemap.html"><i class="fas fa-angle-right"></i> サイトマップ</a><br>
-                    <a href="about.html"><i class="fas fa-angle-right"></i> 会社情報</a><br>
-                    <a href="https://wecompany.co.jp/recruit"><i class="fas fa-angle-right"></i> 採用情報</a><br>
-                    <a href="https://wecompany.co.jp"><i class="fas fa-angle-right"></i> グループ紹介</a><br>
-                    <a href="policy.html"><i class="fas fa-angle-right"></i> プライバシーポリシー</a><br>
-                </p>
-            </li>
-        </ul>
-        <ul class="footer-smt">
-            <li><a href="#"><i class="fas fa-angle-right"></i> 店舗を探す</a></li>
-            <li><a href="#"><i class="fas fa-angle-right"></i> 車重と料金</a></li>
-            <li><a href="#"><i class="fas fa-angle-right"></i> レンタカーを予約</a></li>
-            <li><a href="use.html"><i class="fas fa-angle-right"></i> ご利用について</a></li>
-            <li><a href="question.html"><i class="fas fa-angle-right"></i> よくある質問</a></li>
-            <li><a href="flow.html"><i class="fas fa-angle-right"></i> 当日の流れ</a></li>
-            <li><a href="contact.html"><i class="fas fa-angle-right"></i> お問い合わせ</a></li>
-            <li><a href="sitemap.html"><i class="fas fa-angle-right"></i> サイトマップ</a></li>
-            <li><a href="profile.html"><i class="fas fa-angle-right"></i> 会社情報</a></li>
-            <li><a href="https://wecompany.co.jp/recruit"><i class="fas fa-angle-right"></i> 採用情報</a></li>
-            <li><a href="https://wecompany.co.jp"><i class="fas fa-angle-right"></i> グループ紹介</a></li>
-            <li><a href="policy.html"><i class="fas fa-angle-right"></i> プライバシーポリシー</a></li>
-        </ul>
-        <div class="copyright">Copyright &copy; 2021 WE・RENTACAR Co.,Ltd. All rights reserved</div>
     </div>
 <!-- calendarの処理-->
 <!-- to top function -->
 <script>
     $(window).scroll(function(){
-    if($(this).scrollTop() >= 50){
-        $('.return-to-top').fadeIn(200);
-    }
-    else
-    {
-        $('.return-to-top').fadeOut(200);
-    }
-});
+        if($(this).scrollTop() >= 50){
+            $('.return-to-top').fadeIn(200);
+        }
+        else
+        {
+            $('.return-to-top').fadeOut(200);
+        }
+    });
 
-$('.return-to-top').click(function(){
-    $('body,html').animate({
-        scrollTop:0
-    },500);
-});
+    $('.return-to-top').click(function(){
+        $('body,html').animate({
+            scrollTop:0
+        },500);
+    });
+</script>
+<script>
+    $(function(){
+    $(window).scroll(function (){
+        $('.fadein').each(function(){
+            var targetElement = $(this).offset().top;
+            var scroll = $(window).scrollTop();
+            var windowHeight = $(window).height();
+            if (scroll > targetElement - windowHeight + 40){
+                $(this).css('opacity','1');
+                $(this).css('transform','translateX(0)');
+            }
+        });
+		});	
+	$(window).scroll(function (){
+        $('.fadeinzoom').each(function(){
+            var targetElement = $(this).offset().top;
+            var scroll = $(window).scrollTop();
+            var windowHeight = $(window).height();
+            if (scroll > targetElement - windowHeight + 40){
+                $(this).css('opacity','1');
+                $(this).css('transform','translateX(0)');
+            }
+        });
+		});	
+    });
 </script>
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+
+
+</html>

@@ -66,6 +66,9 @@
     color : #03747f ;
     cursor: pointer;
 }
+.return-to-top i{
+    display: none;
+}
 @media screen and (min-width: 480px) {
 	.list_link{
 		display: flex;
@@ -129,6 +132,7 @@
 		left: 16px;
 		top: 13px;
 		font-size: 19px;
+        display: inline;
 	}
 	
 	.return-to-top:hover{

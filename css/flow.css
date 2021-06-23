@@ -54,7 +54,7 @@
     width:100%;
     background: rgba(0, 0, 0, 0.3);
     background-size: cover;
-    background-blend-mode: darken;
+	filter: brightness(95%);
     position: relative;
     text-align: center;
     color: white;
@@ -122,6 +122,14 @@
 .btn_lastct{
 	font-size: 12px;
 }
+
+.return-to-top{
+	display: none;
+}
+
+.return-to-top i{
+	display: none;
+}
 @media screen and (min-width:600px){
 	.block_content > span:nth-child(1){
         width: 40%;
@@ -136,6 +144,10 @@
 		margin-top: 0;
 		font-size: 100%;
     }
+
+	.return-to-top{
+		display: none;
+	}
 }
 @media screen and (min-width:768px) {
 	.booking-text{
@@ -241,6 +253,7 @@
 		left: 16px;
 		top: 13px;
 		font-size: 19px;
+		display: inline;
 	}
 	
 	.return-to-top:hover{

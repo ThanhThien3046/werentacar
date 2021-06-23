@@ -95,31 +95,9 @@
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-.return-to-top{
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: #edad3e;
-    width: 50px;
-    height: 50px;
-    display: block;
-    border-radius: 35px;
+.return-to-top i{
     display: none;
 }
-
-.return-to-top i{
-    color: #fff;
-    margin: 0;
-    position: relative;
-    left: 16px;
-    top: 13px;
-    font-size: 19px;
-}
-
-.return-to-top:hover{
-    background: rgba(231, 126, 40, 0.9);
-}
-
 @media screen and (min-width:767px){
 	.about-top{
 		font-size: 90%;
@@ -141,5 +119,31 @@
     .content_collapse_detail{
         display: flex;
         font-size: 100%;
+    }
+
+    .return-to-top{
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: #edad3e;
+        width: 50px;
+        height: 50px;
+        display: block;
+        border-radius: 35px;
+        display: none;
+    }
+    
+    .return-to-top i{
+        color: #fff;
+        margin: 0;
+        position: relative;
+        left: 16px;
+        top: 13px;
+        font-size: 19px;
+        display: inline;
+    }
+    
+    .return-to-top:hover{
+        background: rgba(231, 126, 40, 0.9);
     }
 }

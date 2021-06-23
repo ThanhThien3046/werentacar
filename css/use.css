@@ -219,6 +219,10 @@
 	background-position: center;
 }
 
+.return-to-top i{
+	display: none;
+}
+
 @media screen and (max-width:320px){
 	.booking-text h2{
 		line-height: 20px;
@@ -252,7 +256,11 @@
 	}
 	.btn_lastct{
 	font-size: 12px;
-}
+	}
+
+	.return-to-top i{
+		display: none;
+	}
 
 }
 
@@ -468,6 +476,7 @@
 		left: 16px;
 		top: 13px;
 		font-size: 19px;
+		display: inline;
 	}
 	
 	.return-to-top:hover{
