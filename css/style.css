@@ -218,124 +218,147 @@ select{
 /*  ーーーーーーーーーーーーー　ご利用案内　ここまでーーーーーーーーーーーーーーーー */
 
 /*  ーーーーーーーーーーーーー　LIST-CAR　ここからーーーーーーーーーーーーーーーー */
-#list-car{
-    background: #e4f1f6;
-    margin-top: 15px;
-    padding-bottom: 10px;
+.car-line{
+	background: #fff6ed
 }
-.list-car{
-    width: 100%;
-    max-width: 1024px;
-    margin: auto;
-    padding: 12px;
-    box-sizing: border-box;
+.car-background{
 }
-.list-car .type{
-	background: #0067b6;
-    color: #fff;
-    border-left: 15px solid #edad3e;
-    display: block;
-    padding: 15px 15px;
-    box-sizing: border-box;
-    margin-bottom: 20px;
+.car-background img{
+	width: 100%;
+	height: auto;
 }
-.list-car-title{
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    margin: auto;
-    box-sizing: border-box;
-    display: block;
-    width: 100%;
-    max-width: 1024px;
-    padding-top: 30px;
-    padding-bottom: 20px;
-    font-size: 28px;
+.car-title{
+	background:white;
+	height: 100px;
+	width: 90%;
+	margin: auto;
+	position: relative;
+	margin-top: -50px;
+	z-index: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 }
-.list-car .car-line{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-
+.car-title h2{
+	color: #0067b4;
+	margin-bottom: 5px;
+	font-size: 190%;
+	font-family: "Times New Roman", Times, "serif"
 }
-.list-car .car-line-img{
-    width: 55%;
-}
-.list-car .car-line-img img{
-    width: 100%;
-    height: auto;
-	cursor: pointer;
-}
-.list-car .car-line-img img:hover{
-	animation: car 1s infinite;
-}
-@keyframes car {
-	5%{transform: rotate(.3deg);
-	margin-left: 0;
-	}
-	10%{transform: rotate(-.3deg)}
-	15%{transform: rotate(.3deg)}
-	20%{transform: rotate(-.3deg)}
-	80%{margin-left:20px;}
-}
-.car-line-type{
-    width: 39%;
-}
-.car-line-type p{
-    line-height: 1.5em;
-    font-size: 90%;
-    letter-spacing: .07em; 
-}
-.car-line-type p strong{
-    font-weight: 600;
-    font-size: 100%;
-}
-.list-car .car-line-type .car-line-btn a{
-    width: 100%;
-	padding: 8px 5px;
-    border-radius: 6px;
-    box-sizing: border-box;
-	font-size: 96%;
+.car-title p{
 	font-family: YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "serif";
-  	text-align: center;
-  	color: white;
-    margin-top: 10px;
-    background: #edad3e;
-    display: block;
-    box-shadow: 2px 2px 2px hsl(0, 0%, 49%);
-	transition: .5s
 }
-.list-car .car-line-type .car-line-btn a:hover{
-    background: #0067b6;
+.car-list{
+	background: #fff6ed;
+	padding: 12px;
+	box-sizing: border-box;
+	padding-bottom: 20px;
 }
-.list-car .price{
-    margin-bottom: 30px;
-    margin-top: 15px;
+.car-about h3{
+	width: 100%;
+	border-bottom: 2px solid #0067b4;
+	font-family:"Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, "sans-serif";
+	margin-bottom: 10px;
+	margin-top: 5px;
 }
-.list-car .price p{
-    text-align: center;
-    margin: 10px 0;
-    font-weight: 600;
-    font-size: 90%;
-    color: hsl(0, 0%, 13%);
+.car-about p{
+	font-size: 95%;
+	color: hsla(0,0%,14%,1.00);
+	margin-bottom: 10px;
 }
-.list-car table tr{
-    width: 100%;
-    background: white;
-    border:1px solid hsl(0, 0%, 84%);
+.car-img img{
+	width: 100%;
+	height: auto;
 }
-.list-car table tr th{
-    background: hsl(39, 100%, 94%);
-    padding: 9px 4px;
+.car-img ul{
+	display: flex;
+	justify-content: space-between;
 }
-.list-car table tr td{
-    padding: 9px 4px;
-    border:1px solid hsl(0, 0%, 84%);
-    text-align: center;
+.car-img ul li{
+	margin: 2% 0;
+	width: 31%;
 }
-.list-car .price span{
-    margin-top: 5px;
-    font-size: 80%;
-    display: block;
-    text-align: right;
+.car-detail table{
+	margin-bottom: 10px;
+}
+.car-detail table tr{
+	border: 1px solid hsla(0,0%,65%,1.00);
+}
+.car-detail table th{
+	background: #f9d5a5;
+	border-right: 1px solid hsla(0,0%,65%,1.00);
+	padding: 10px 15px;
+	text-align: left;
+	box-sizing: border-box;
+}
+.car-detail table td{
+	padding: 10px;
+	box-sizing: border-box;
+	background: white;
+}
+.car-detail p{
+	font-size: 85%;
+	color: hsla(0,0%,14%,1.00);
+}
+.car-detail a{
+	display: block;
+	padding: 8px;
+	text-align: center;
+	width: 250px;
+	margin:10px auto;
+	background: #0067b4;
+	color: white;
+}
+.car-detail a:hover{
+	opacity: 0.8;
+}
+.car-detail a i{
+	margin-left: 7px;
+}
+.car-fee{
+	width: 100%;
+	
+}
+.car-fee h3{
+	width: 100%;
+	border-bottom: 2px solid #0067b4;
+	font-family:"Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, "sans-serif";
+	margin-bottom: 10px;
+	margin-top: 5px;
+}
+.table-fee{
+	overflow-x: scroll
+}
+.car-fee table{
+	width: 820px;
+	font-size: 90%;
+}
+.car-fee table tr{
+	border: 1px solid hsla(0,0%,65%,1.00);
+	text-align: center;
+}
+.car-fee table th{
+	background: #f9d5a5;
+	border: 1px solid hsla(0,0%,65%,1.00);
+	padding: 8px ;
+	width: 130px;
+	box-sizing: border-box;
+	text-align: center;
+}
+.car-fee table td{
+	text-align: center;
+	padding: 8px;
+	box-sizing: border-box;
+	border: 1px solid hsla(0,0%,65%,1.00);
+	background: white;
+}
+.car-fee span{
+	font-size: 60%;
+}
+.car-fee .comment{
+	color: #c90000;
+	font-size: 90%;
 }
 /*  ーーーーーーーーーーーーー　LIST-CAR　ここまでーーーーーーーーーーーーーーーー */
 
@@ -434,51 +457,96 @@ select{
 		background-image: url("../images/slider2.jpg");
 		background-position:top center;
 	}
-.banner ul li.slider2{
-	background-image: url("../images/slider1.jpg");
-	background-position:top center;
-}
-.banner ul li.slider3{
-	background-image: url("../images/slider3.jpg");
-	background-position:top;
-}
-    .list-car .car-line-img{
-        width: 100%;
-    }
-    .list-car .car-line-type{
-        width: 100%;
-    }
-    .car-line-price{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
-    .car-line{
-        width: 40%;
-        margin-bottom: 20px;
-    }
-    .list-car .price{
-        width: 55%;
-    }
-    .car-line-type p{
-        text-align: center;
-        font-size: 100%;
-    }
-    .car-line-type p strong{
-        line-height: 1.7em;
-        font-size: 110%;
-    }
-    .list-car .car-line-type .car-line-btn a{
-        margin:10px auto;
-        margin-bottom: 25px;
-        max-width: 250px;
-        padding: 10px;
-    }
-    .list-car table tr th{
-        background: hsl(39, 100%, 94%);
-        padding: 12px 4px;
-    }
-
+	.banner ul li.slider2{
+		background-image: url("../images/slider1.jpg");
+		background-position:top center;
+	}
+	.banner ul li.slider3{
+		background-image: url("../images/slider3.jpg");
+		background-position:top;
+	}
+	.car-title{
+		height: 180px;
+		max-width: 800px;
+		margin-top: -90px;
+	}
+	.car-title h2{
+		margin-bottom: 10px;
+		font-size: 300%;
+		
+	}
+	.car-title p{
+		font-size: 140%;
+	}
+	.car-list{
+		max-width: 1024px;
+		margin: auto;
+		padding: 12px;
+		margin-top: 30px;
+		box-sizing: border-box;
+		padding-bottom: 30px;
+	}
+	.car-about h3{
+		font-size: 20px;
+		margin-bottom: 10px;
+		margin-top: 0;
+	}
+	.car-about p{
+		font-size: 100%;
+		color: hsla(0,0%,14%,1.00);
+		margin-bottom: 10px;
+	}
+	.car-img{
+		width: 47%;
+		float: right
+	}
+	.car-detail{
+		width: 47%;
+		float: left
+	}
+	.car-detail p{
+		font-size: 100%;
+		color: hsla(0,0%,14%,1.00);
+	}
+	.car-detail a{
+		width: 250px;
+		margin:20px auto;
+		background: #0067b4;
+	}
+	.car-fee{
+		clear: both;
+		padding-top: 5px;
+	}
+	.car-fee h3{
+		font-size: 20px;
+		margin-bottom: 10px;
+		margin-top: 10px;
+	}
+	.table-fee{
+		overflow-x: scroll;	
+	}
+	.car-fee table{
+		width: 100%;
+		max-width: 1000px;
+		font-size: 90%;
+		margin: auto;
+		margin-top: 20px;
+	}
+	.car-fee table th{
+		padding: 12px ;
+	}
+	.car-fee table td{
+		padding: 12px;
+	}
+	.car-fee span{
+		font-size: 80%;
+		text-align: right;
+		display: block;
+		margin-top: 5px;
+	}
+	.car-fee .comment{
+		display: none;
+	}
     .return-to-top{
 		position: fixed;
 		bottom: 20px;
@@ -486,11 +554,9 @@ select{
 		background: #edad3e;
 		width: 50px;
 		height: 50px;
-		display: block;
 		border-radius: 35px;
         display: none;
 	}
-	
 	.return-to-top i{
 		color: #fff;
 		margin: 0;
@@ -509,7 +575,7 @@ select{
 		height: 210px;
 	}
 	.banner{
-        height: 660px;
+        height: 600px;
         box-sizing: border-box;
         clear: both;
         background-repeat: no-repeat;
@@ -520,16 +586,25 @@ select{
         left: 0;
         overflow: hidden;
     }
-/*	
-      .introtouse{
-        margin-top: 535px;
-      }
-*/
 	.banner-form-search{
 		border: none;
 		max-width: 700px;
 		margin: 200px auto;
 		background-color: transparent;
+	}
+	.banner-form-search-input .last-child{
+		width: 100%;
+	}
+	.banner-form-search-input td.form-content{
+		text-align: left;
+		font-weight: 600;
+		margin-top: 5px;
+	}
+	.search-submit{
+
+		margin: 20px auto;
+		width: 180px;
+
 	}
 	.banner .banner-center{
 		padding:10px 0px 0px 0px;
@@ -562,14 +637,7 @@ select{
 		width: 48%;
 		margin-bottom: 15px;
 	}
-    #list-car{
-        background: #e4f1f6;
-        margin-top: 0px;
-        padding-bottom: 5px;
-    }
-    .list-car ul li{
-        width: 48%;
-    }
+
     .about ul li {
         width: 48%;
         margin-bottom: 15px;
@@ -602,24 +670,7 @@ select{
     .use ul li:last-child{
         margin-bottom: 0;
     }
-    #list-car{
-        margin-top: 10px;
-        padding-bottom: 0;
-    }
-    .list-car{
-        padding-top: 0;
-        margin-top: 0;
-    }
-    .list-car-title{
-        margin-top: 0;
-        padding-top: 20px;
-        font-size: 140%;
-    }
-    .list-car .type{
-        border-left: 12px solid #edad3e;
-        padding: 10px;
-        margin-bottom: 20px;
-    }
+
     .about{
         padding-top: 0px;
         padding-bottom: 0px;
