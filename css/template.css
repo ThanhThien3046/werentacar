@@ -354,6 +354,16 @@ table {
     line-height:1.5em;
 }
 /*  ーーーーーーーーーーーーー　FOOTER　ここまでーーーーーーーーーーーーーーーー */
+.fadeinzoom {
+	opacity: 0;
+	transform: scale(.7);
+	transition : all 1600ms;
+}
+.fadeinzoom.scrollin{
+	opacity: 1;
+	transform: scale(1);
+}
+
 @media screen and (max-width:960px){
 	.nav-bar2,.header-btn{
         right: 12px;
@@ -361,6 +371,7 @@ table {
 	.nav-bar3{
 		display: none;
 	}
+
 }
 @media screen and (max-width:767px){
     .header-btn,.nav-bar2,.logo-message p,.nav-bar,.nav-bar3{
@@ -386,6 +397,7 @@ table {
         height: 58px;
         padding-left: 10px;
 		box-sizing: border-box;
+		
     }
     .logo-left{
         height: 60px;
