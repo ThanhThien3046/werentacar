@@ -101,9 +101,9 @@
             </div>
             <div class="menu">
                 <ul class="ul-menu">
-                    <li class="li-menu tabcolor"><a href="index.html"><i class="fas fa-home" style="padding-right:5px;"></i>ホーム</a></li>
+                    <li class="li-menu tabcolor" id="tab1" onclick="loadtab()"><a href="index.html"><i class="fas fa-home" style="padding-right:5px;"></i>ホーム</a></li>
                     <li class="li-menu"><a href="about.html">会社情報</a></li>
-                    <li class="li-menu"><a href="index.html#list-car">車重と料金</a></li>
+                    <li class="li-menu" id="tab3" onclick="loadtab()"><a href="index.html#list-car">車重と料金</a></li>
                     <li class="li-menu"><a href="flow.html">当日の流れ</a></li>
                     <li class="li-menu"><a href="use.html">ご利用について</a></li>
                     <li class="li-menu"><a href="question.html">よくある質問</a></li>
@@ -111,6 +111,32 @@
             </div>
         </div>
     </div>
+	<script>
+		function loadtab(){
+			if ( $('#tab1').hasClass("tabcolor"))
+			{
+				// alert("tab1");
+				$('#tab3').addClass('tabcolor');
+				$('#tab1').removeClass('tabcolor');
+			}
+			else
+			if ( $('#tab3').hasClass("tabcolor"))
+			{
+				// alert("tab3");
+				$('#tab1').addClass('tabcolor');
+				$('#tab3').removeClass('tabcolor');
+			}
+			// else
+			// {
+			// 	if ( $('#tab3').hasClass(""))
+			// 	{
+			// 		// alert("tab3");
+			// 		$('#tab1').addClass('tabcolor');
+			// 		$('#tab3').removeClass('tabcolor');
+			// 	}
+			// }
+		}
+	</script>
 <!--ーーーーーーーーーーーーーー NAV　ここまでーーーーーーーー -->
 <!-- InstanceBeginEditable name="メインここから" -->
 <div class="banner">    

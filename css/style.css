@@ -475,6 +475,10 @@ select{
 	display: none;
 }
 
+
+.subtabcolor{
+	background-color: #edad3e;
+}
 /*  ーーーーーーーーーーーーー　会社概要　ここまでーーーーーーーーーーーーーーーー */
 
 @media screen and (min-width:767px){
@@ -589,6 +593,8 @@ select{
 		justify-content: space-around;
 		flex-direction: column;
 		text-align: center;
+		/* transition: .5s; */
+		animation:to-top .4s infinite alternate;
 	}
 	@keyframes to-top {
 		from{
