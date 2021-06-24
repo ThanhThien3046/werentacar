@@ -17,6 +17,9 @@
 	<link href="css/normalize.css" rel="stylesheet" type="text/css">
 	<link href="css/datepicker3.css" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" href="css/style.css">
+	<link href="css/goods.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="css/slider-pro.min.css"  type="text/css">
+	<link href="css/slider-pro.css" rel="stylesheet" type="text/css">
 <!-- InstanceEndEditable -->
     <link rel="stylesheet" href="css/template.css">
     <link rel="shortcut icon" type="image/png" href="images/favicon.png">
@@ -24,6 +27,8 @@
 	<script type="text/javascript" src="js/jquery360.min.js"></script>
 	<script type="text/javascript" src="js/drawer.js"></script>
 <!-- InstanceBeginEditable name="head" -->
+	
+	<script src="js/jquery.sliderPro.min.js"></script>
 	<script type="text/javascript" src="js/moment-with-locales.min.js"></script>
 	<script type="text/javascript" src="js/date.js"></script>
 	<script type="text/javascript" src="js/bootstrap-datepicker.js"></script>
@@ -197,14 +202,14 @@
                         <td class="banner-form-search-td last-child">
                           	<select name="time" id="pet-select">
                                 <option value="">指定なし</option>
-                                <option value="">ミニパクト</option>
-                                <option value="">ミニバン</option>
+                                <option value="">コンパクト</option>
+								<option value="">普通</option>
+                                <option value="">ミニバンＡ</option>
+                                <option value="">ミニバンB</option>
                             </select>
                             <i class="fas fa-angle-down"></i>
                         </td>
-                
                     </tr>
- 
                 </table>
                 <button type="submit" class="search-submit"><i class="fas fa-car"></i>空き状況を検索</button>
             </div>
@@ -235,7 +240,7 @@
                 <a href="use.html">
                 <dt><img src="images/use.jpg" alt="ご利用について"></dt>
                 <span>ご利用について</span>
-                <p> 車の選び方やレンタカーの使い方など、ご利用方法をわかりやすく説明します！</p>
+                <p>ご予約から出発、返却までの流れをご説明いたします。 車の選び方やレンタカーの使い方など、ご利用方法をわかりやすく説明します！</p>
                 </a>
             </li>
             <li class="fadein">
@@ -250,12 +255,12 @@
 <!--ーーーーーーーーーーーーーー ご利用案内　ここまでーーーーーーーー -->
 <!--ーーーーーーーーーーーーーー LISTーCAR　ここからーーーーーーーー -->
     <div id="list-car"> 
-       <div class="car-line">
+		<div class="car-line">
 			<div class="car-background fadein">
-				<img src="images/list-car1.jpg" width="2560" height="1136" alt=""/>
+				<img src="images/list-car/aqua-background.jpg" width="2560" height="1136" alt="aqua-background"/>
 			</div>
 			<div class="car-title">
-				<h2>AQUA</h2>
+				<h2 class="fadeinzoom">AQUA</h2>
 			  <p>走りを存分に楽しめる車でもある。</p>
 			</div>
 			<div class="car-list">
@@ -264,12 +269,19 @@
 			  <p>運転しやすいコンパクトボディとゆとりある室内空間が技ありのパッケージングで両立し、キビキビ走れてゆったり過ごせるハイブリッドカーです。</p>
 			</div>
 			<div class="car-img">
-		    	<img src="images/flow6.jpg" width="800" height="500" alt=""/>
-				<ul>
-					<li><img src="images/flow6.jpg" width="800" height="500" alt=""/></li>
-					<li><img src="images/flow6.jpg" width="800" height="500" alt=""/></li>
-					<li><img src="images/flow6.jpg" width="800" height="500" alt=""/></li>
-				</ul>
+		    	<div class="cp_cssslider">
+					<input type="radio" name="cp_switch" id="photo1" checked/>
+					<label for="photo1"><img src="images/list-car/aqua1.jpg" width="800" height="500" alt="aqua-img"/></label>
+					<img src="images/list-car/aqua1.jpg" width="800" height="500" alt="aqua-img"/>
+
+					<input type="radio" name="cp_switch" id="photo2"/>
+					<label for="photo2"><img src="images/list-car/aqua2.jpg" width="800" height="500" alt="aqua-img"/></label>
+					<img src="images/list-car/aqua2.jpg" width="800" height="500" alt="aqua"/>
+
+					<input type="radio" name="cp_switch" id="photo3"/>
+					<label for="photo3"><img src="images/list-car/aqua3.jpg" width="800" height="500" alt="aqua-img"/></label>
+					<img src="images/list-car/aqua3.jpg" width="800" height="500" alt="aqua-img"/>
+				</div>
 			</div>
 			<div class="car-detail">
 				<table width="100%" border="0" cellpadding="10">
@@ -342,11 +354,109 @@
 			</div>
       </div>
 		<div class="car-line">
-			<div class="car-background">
-				<img src="images/car-line2.jpg" width="2560" height="1136" alt=""/>
+			<div class="car-background fadein">
+				<img src="images/list-car/prius-background.jpg" width="2560" height="1136" alt="prius-background"/>
 			</div>
 			<div class="car-title">
-				<h2>VELLFIRE</h2>
+				<h2 class="fadeinzoom">PRIUS</h2>
+			  <p>走りを存分に楽しめる車でもある。</p>
+			</div>
+			<div class="car-list">
+			<div class="car-about">
+			  <h3>プリウスについて</h3>
+			  <p>低重心パッケージが生み出す気持ちの良い走り。トヨタが誇る未来の骨格「TNGA」の1号車です。デザインも安全性も走りのよさも、乗れば全てがわかります！</p>
+			</div>
+			<div class="car-img">
+		    	<div class="cp_cssslider">
+					<input type="radio" name="prius" id="prius1" checked/>
+					<label for="prius1"><img src="images/list-car/prius1.jpg" width="800" height="500" alt="prius-img"/></label>
+					<img src="images/list-car/prius1.jpg" width="800" height="500" alt="prius-img"/>
+
+					<input type="radio" name="prius" id="prius2">
+					<label for="prius2"><img src="images/list-car/prius2.jpg" width="800" height="500" alt="prius-img"/></label>
+					<img src="images/list-car/prius2.jpg" width="800" height="500" alt="prius-img"/>
+
+					<input type="radio" name="prius" id="prius3"/>
+					<label for="prius3"><img src="images/list-car/prius3.jpg" width="800" height="500" alt="prius-img"/></label>
+					<img src="images/list-car/prius3.jpg" width="800" height="500" alt="prius-img"/>
+				</div>
+			</div>
+			<div class="car-detail">
+				<table width="100%" border="0" cellpadding="10">
+				  <tbody>
+					<tr>
+					  <th scope="row">車種名</th>
+					  <td>プリウス</td>
+					</tr>
+					<tr>
+					  <th scope="row">定員数</th>
+					  <td>5名</td>
+					</tr>
+					<tr>
+					  <th scope="row">排気量</th>
+					  <td>1,800cc</td>
+					</tr>
+					<tr>
+					  <th scope="row">燃費（注）</th>
+					  <td>37.2km/L</td>
+					</tr>
+					<tr>
+					  <th scope="row">寸法 </th>
+					  <td>4,540/1,760/1,470mm <br> (全長/全幅/全高)</td>
+					</tr>
+				  </tbody>
+				</table>
+				<p>（注）JC08モード走行(国土交通省審査値)</p>
+				<p>※車両の仕様(排気量等)は店舗によって異なる場合があります。</p>
+				<p>※貸渡車両は写真と異なる場合があります。</p>
+				<a href="">予約する<i class="fas fa-angle-right"></i></a>
+			</div>
+			<div class="car-fee">
+				<h3>レンタル料金</h3>
+				
+				<div class="table-fee">
+				<table width="100%" border="0">
+				  <tbody>
+					<tr>
+					  <th scope="col">料金</th>
+					  <th scope="col">24時間以内</th>
+					  <th scope="col">以降24時間</th>
+					  <th scope="col">延長1時間</th>
+					  <th scope="col">会員</th>
+					  <th scope="col">マンスリー</th>
+					  <th scope="col">キャンペーン</th>
+					</tr>
+					<tr>
+					  <td>基本料金</td>
+					  <td>4,800円</td>
+					  <td>4,800円</td>
+					  <td>1,000円</td>
+					  <td rowspan="2">2,400円</td>
+					  <td rowspan="2">29,800円</td>
+					  <td rowspan="2">4,320円</td>
+					</tr>
+					<tr>
+					  <td>ハイシーズン</td>
+					  <td>6,240円</td>
+					  <td>6,240円</td>
+					  <td>1300円</td>
+					</tr>
+				  </tbody>
+				</table>
+					</div>
+				<span>( 税抜 )</span>
+				<div class="comment">
+					※この表は横にスクロルして閲覧できます。
+				</div>
+			</div>
+			</div>
+      </div>
+		<div class="car-line">
+			<div class="car-background fadein">
+				<img src="images/list-car/vellfire-background.jpg" width="2560" height="1136" alt="vellfire-background"/>
+			</div>
+			<div class="car-title">
+				<h2 class="fadeinzoom">VELLFIRE</h2>
 			  <p>走りを存分に楽しめる車でもある。</p>
 			</div>
 			<div class="car-list">
@@ -355,12 +465,19 @@
 			  <p>運転しやすいコンパクトボディとゆとりある室内空間が技ありのパッケージングで両立し、キビキビ走れてゆったり過ごせるハイブリッドカーです。</p>
 			</div>
 			<div class="car-img">
-		    	<img src="images/flow6.jpg" width="800" height="500" alt=""/>
-				<ul>
-					<li><img src="images/flow6.jpg" width="800" height="500" alt=""/></li>
-					<li><img src="images/flow6.jpg" width="800" height="500" alt=""/></li>
-					<li><img src="images/flow6.jpg" width="800" height="500" alt=""/></li>
-				</ul>
+		    	<div class="cp_cssslider">
+					<input type="radio" name="cp_switch1" id="photo4" checked/>
+					<label for="photo4"><img src="images/list-car/vellfire1.jpg" width="800" height="500" alt="vellfire-img"/></label>
+					<img src="images/list-car/vellfire1.jpg" width="800" height="500" alt="vellfire-img"/>
+
+					<input type="radio" name="cp_switch1" id="photo5"/>
+					<label for="photo5"><img src="images/list-car/vellfire2.jpg" width="800" height="500" alt="vellfire-img"/></label>
+					<img src="images/list-car/vellfire2.jpg" width="800" height="500" alt="vellfire-img"/>
+
+					<input type="radio" name="cp_switch1" id="photo6"/>
+					<label for="photo6"><img src="images/list-car/vellfire3.jpg" width="800" height="500" alt="vellfire-img"/></label>
+					<img src="images/list-car/vellfire3.jpg" width="800" height="500" alt="vellfire-img"/>
+				</div>
 			</div>
 			<div class="car-detail">
 				<table width="100%" border="0" cellpadding="10">
@@ -447,7 +564,8 @@
             <li><a href="profile.html"><img src="images/profile.jpg" alt="会社概要"><span>会社概要　<i class="fas fa-angle-right"></i></span></a></li>
         </ul>
     </div>
-    <a href="javascript:" class="return-to-top"><i class="fas fa-arrow-up"></i></a>
+	<div class="to-top">
+    <a href="javascript:" class="return-to-top"><i class="fas fa-arrow-up"></i></a></div>
 <!--ーーーーーーーーーーーーーー　会社情報　ここまでーーーーーーーー -->
 
 <!-- InstanceEndEditable -->

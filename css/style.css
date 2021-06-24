@@ -115,6 +115,9 @@ select{
     display: block; 
 	color: hsla(0,0%,20%,1.00);
 } 
+.banner-form-search-input .last-child{
+		width: 100%;
+	}
 .banner-form-search-input .banner-form-search-td select{
     width: 100%;
     margin: 6px 0;
@@ -153,6 +156,7 @@ select{
     box-sizing: border-box;
     padding-top:35px;
     max-width: 1024px;
+	padding-bottom: 60px;
 }
 .use h2{
     font-size: 95%;
@@ -175,6 +179,10 @@ select{
 .use ul a:hover{
     opacity: 0.8;
 }
+.use ul a{
+	display: block;
+	padding-bottom: 30px;
+}
 .use ul{
     display: flex;
     justify-content: space-between;
@@ -182,10 +190,10 @@ select{
     margin: 0 auto;
     margin-top:35px;
 }
-
 .use ul li{
     width: 31%;
     position: relative;
+	border: 1px solid hsla(0,0%,66%,1.00);
 }
 .use ul li dt{
 	overflow: hidden;
@@ -200,20 +208,24 @@ select{
 	transform: scale(1.15);
 }
 .use ul li span{
-    border-left: 3px solid #edad3e;
+	border-bottom: 1.5px solid #edad3e;
+	width: 150px;
     padding:1px 6px;
+	margin: auto;
     margin-top: 10px;
     display: block;
     color: #edad3e;
+	text-align: center;
     font-weight: 600;
-    text-align: left;
+
     font-size: 105%;
 }
 .use ul p{
     text-align: left;
     line-height: 1.4em;
-    padding: 10px 0;
+    padding: 10px 10px;
     font-size: 95%;
+	
 }
 /*  ーーーーーーーーーーーーー　ご利用案内　ここまでーーーーーーーーーーーーーーーー */
 
@@ -267,6 +279,9 @@ select{
 	color: hsla(0,0%,14%,1.00);
 	margin-bottom: 10px;
 }
+.car-img{
+	position: relative;
+}
 .car-img img{
 	width: 100%;
 	height: auto;
@@ -309,6 +324,16 @@ select{
 	margin:10px auto;
 	background: #0067b4;
 	color: white;
+	animation: car .8s infinite alternate;
+}
+@keyframes car{
+	from {
+		background: #0067b4;
+	}
+	to{
+		background: hsla(238,80%,49%,1.00);
+		transform: scale(1.04)
+	}
 }
 .car-detail a:hover{
 	opacity: 0.8;
@@ -450,6 +475,7 @@ select{
     opacity: 1;
     transform: translate(0,0);
 }
+
 /*  ーーーーーーーーーーーーー　会社概要　ここまでーーーーーーーーーーーーーーーー */
 
 @media screen and (min-width:767px){
@@ -549,13 +575,23 @@ select{
 	}
     .return-to-top{
 		position: fixed;
-		bottom: 20px;
+		bottom: 10px;
 		right: 20px;
 		background: #edad3e;
 		width: 50px;
 		height: 50px;
 		border-radius: 35px;
-        display: none;
+		z-index: 2;
+		transition: .5s;
+		animation:to-top 1.5s infinite alternate;
+	}
+	@keyframes to-top {
+		from{
+			bottom: 10px;
+		}
+		to{
+			bottom: 25px;
+		}
 	}
 	.return-to-top i{
 		color: #fff;
@@ -565,9 +601,8 @@ select{
 		top: 13px;
 		font-size: 19px;
 	}
-	
 	.return-to-top:hover{
-		background: rgba(231, 126, 40, 0.9);
+		background:#0067b6;
 	}
 }
 @media screen and (max-width:767px){
@@ -601,10 +636,8 @@ select{
 		margin-top: 5px;
 	}
 	.search-submit{
-
 		margin: 20px auto;
 		width: 180px;
-
 	}
 	.banner .banner-center{
 		padding:10px 0px 0px 0px;
@@ -633,6 +666,9 @@ select{
 		margin-right: 9px;
 		font-size: 11px;
 	}
+	.use{
+		padding-bottom: 20px;
+	}
 	.use ul li{
 		width: 48%;
 		margin-bottom: 15px;
@@ -642,20 +678,36 @@ select{
         width: 48%;
         margin-bottom: 15px;
     }
+	.to-top{
+		display: none;
+	}
 }
 @media Screen and (max-width:480px){
     .use ul li{
         width: 100%;
     }
     .use{
-        padding-bottom: 0;
+		padding-top: 25px;
+        padding-bottom: 15px;
     }
+	.use h2{
+		font-size: 86%;
+		margin-bottom: 0;
+	}
     .use ul{
         padding-bottom:0;
     }
+	.use ul a{
+		padding-bottom: 0;
+	}
+	.use ul li{
+		border: none;
+	}
 	.use ul li span{
 		border-left: 3px solid #edad3e;
 		padding: 5px;
+		width: 100%;
+		border-bottom: none;
 		margin-top: 10px;
 		display: block;
 		color: #edad3e;
@@ -666,11 +718,11 @@ select{
 	.use ul li p{
 		font-size: 95%;
 		color: hsla(0,0%,24%,1.00);
+		padding: 10px 0;
 	}
     .use ul li:last-child{
         margin-bottom: 0;
     }
-
     .about{
         padding-top: 0px;
         padding-bottom: 0px;
@@ -686,8 +738,7 @@ select{
         padding:5px 5px;
         padding-right: 0;
     }
-    
-    .return-to-top i{
+    .return-to-top{
         display: none;
     }
 }
