@@ -148,6 +148,10 @@
 	.return-to-top{
 		display: none;
 	}
+
+	.tabcolor{
+		background-color: #edad3e;
+	}
 }
 @media screen and (min-width:768px) {
 	.booking-text{

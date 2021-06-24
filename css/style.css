@@ -450,6 +450,10 @@ select{
     opacity: 1;
     transform: translate(0,0);
 }
+
+.tabcolor{
+	background-color: #edad3e;
+}
 /*  ーーーーーーーーーーーーー　会社概要　ここまでーーーーーーーーーーーーーーーー */
 
 @media screen and (min-width:767px){

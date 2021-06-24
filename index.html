@@ -32,6 +32,7 @@
     <link href="css/slick.css" rel="stylesheet" type="text/css">
 	<script type="text/javascript" src="js/slick.min.js"></script>
     <script type="text/javascript" src="js/slider.js"></script>
+    <script type="text/javascript" src="js/lazyload.js"></script>
 	<!-- InstanceEndEditable -->
 </head>
 <body>
@@ -95,7 +96,7 @@
             </div>
             <div class="menu">
                 <ul class="ul-menu">
-                    <li><a href="index.html"><i class="fas fa-home" style="padding-right:5px;"></i>ホーム</a></li>
+                    <li class="li-menu tabcolor"><a href="index.html"><i class="fas fa-home" style="padding-right:5px;"></i>ホーム</a></li>
                     <li class="li-menu"><a href="about.html">会社情報</a></li>
                     <li class="li-menu"><a href="index.html#list-car">車重と料金</a></li>
                     <li class="li-menu"><a href="flow.html">当日の流れ</a></li>
@@ -254,7 +255,7 @@
 			<div class="car-background fadein">
 				<img src="images/list-car1.jpg" width="2560" height="1136" alt=""/>
 			</div>
-			<div class="car-title">
+			<div class="car-title fadein">
 				<h2>AQUA</h2>
 			  <p>走りを存分に楽しめる車でもある。</p>
 			</div>
@@ -342,10 +343,10 @@
 			</div>
       </div>
 		<div class="car-line">
-			<div class="car-background">
+			<div class="car-background fadein">
 				<img src="images/car-line2.jpg" width="2560" height="1136" alt=""/>
 			</div>
-			<div class="car-title">
+			<div class="car-title fadein">
 				<h2>VELLFIRE</h2>
 			  <p>走りを存分に楽しめる車でもある。</p>
 			</div>
@@ -439,12 +440,12 @@
         <h2 class="about-title">会社情報</h2>
         <h3>ABOUT US</h3>
         <ul>
-            <li><a href="about.html"><img src="images/about-us.jpg" al="E・RENTACARについて"><span>WE・RENTACARについて　<i class="fas fa-angle-right"></i></span></a></li>
-            <li><a href="message.html"><img src="images/message.jpg" alt="代表メッセージ"><span>代表メッセージ　<i class="fas fa-angle-right"></i></span></a></li>
-            <li><a href="manage.html"><img src="images/manage.jpg" alt="経営理念"><span>経営理念　<i class="fas fa-angle-right"></i></span></a></li>
-            <li><a href="corporate.html"><img src="images/corporate.jpg" alt="企業理念"><span>企業理念　<i class="fas fa-angle-right"></i></span></a></li>
-            <li><a href="credo.html"><img src="images/credo.jpg" alt="行動指針"><span>行動指針　<i class="fas fa-angle-right"></i></span></a></li>
-            <li><a href="profile.html"><img src="images/profile.jpg" alt="会社概要"><span>会社概要　<i class="fas fa-angle-right"></i></span></a></li>
+            <li class="fadein"><a href="about.html"><img src="images/about-us.jpg" al="E・RENTACARについて"><span>WE・RENTACARについて　<i class="fas fa-angle-right"></i></span></a></li>
+            <li class="fadein"><a href="message.html"><img src="images/message.jpg" alt="代表メッセージ"><span>代表メッセージ　<i class="fas fa-angle-right"></i></span></a></li>
+            <li class="fadein"><a href="manage.html"><img src="images/manage.jpg" alt="経営理念"><span>経営理念　<i class="fas fa-angle-right"></i></span></a></li>
+            <li class="fadein"><a href="corporate.html"><img src="images/corporate.jpg" alt="企業理念"><span>企業理念　<i class="fas fa-angle-right"></i></span></a></li>
+            <li class="fadein"><a href="credo.html"><img src="images/credo.jpg" alt="行動指針"><span>行動指針　<i class="fas fa-angle-right"></i></span></a></li>
+            <li class="fadein"><a href="profile.html"><img src="images/profile.jpg" alt="会社概要"><span>会社概要　<i class="fas fa-angle-right"></i></span></a></li>
         </ul>
     </div>
     <a href="javascript:" class="return-to-top"><i class="fas fa-arrow-up"></i></a>
@@ -525,50 +526,6 @@
         </div>
     </div>
 <!-- calendarの処理-->
-<!-- to top function -->
-<script>
-    $(window).scroll(function(){
-        if($(this).scrollTop() >= 50){
-            $('.return-to-top').fadeIn(200);
-        }
-        else
-        {
-            $('.return-to-top').fadeOut(200);
-        }
-    });
-
-    $('.return-to-top').click(function(){
-        $('body,html').animate({
-            scrollTop:0
-        },500);
-    });
-</script>
-<script>
-    $(function(){
-    $(window).scroll(function (){
-        $('.fadein').each(function(){
-            var targetElement = $(this).offset().top;
-            var scroll = $(window).scrollTop();
-            var windowHeight = $(window).height();
-            if (scroll > targetElement - windowHeight + 40){
-                $(this).css('opacity','1');
-                $(this).css('transform','translateX(0)');
-            }
-        });
-		});	
-	$(window).scroll(function (){
-        $('.fadeinzoom').each(function(){
-            var targetElement = $(this).offset().top;
-            var scroll = $(window).scrollTop();
-            var windowHeight = $(window).height();
-            if (scroll > targetElement - windowHeight + 40){
-                $(this).css('opacity','1');
-                $(this).css('transform','translateX(0)');
-            }
-        });
-		});	
-    });
-</script>
 </body>
 <!-- InstanceEnd -->
 
