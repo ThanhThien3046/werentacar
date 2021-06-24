@@ -223,6 +223,9 @@
 	display: none;
 }
 
+.tabcolor{
+	background-color: #edad3e;
+}
 @media screen and (max-width:320px){
 	.booking-text h2{
 		line-height: 20px;

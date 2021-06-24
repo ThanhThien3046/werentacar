@@ -105,6 +105,10 @@
 .return-to-top i{
 	display: none;
 }
+
+.tabcolor{
+	background-color: #edad3e;
+}
 @media Screen and (min-width:768px){
 	.aboutus {
 		width: 100%;

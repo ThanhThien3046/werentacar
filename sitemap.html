@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="fontawesome-free-5.15.3-web/css/all.min.css" />
 	<script type="text/javascript" src="js/jquery360.min.js"></script>
 	<script type="text/javascript" src="js/drawer.js"></script>
+    <script type="text/javascript" src="js/lazyload.js"></script>
 <!-- InstanceBeginEditable name="head" -->
 <!-- InstanceEndEditable -->
 </head>
@@ -216,24 +217,5 @@
             </ul>
             <div class="copyright">Copyright &copy; 2021 WE・RENTACAR Co.,Ltd. All rights reserved</div>
         </div>
-
-<!-- to top function -->
-<script>
-    $(window).scroll(function(){
-    if($(this).scrollTop() >= 50){
-        $('.return-to-top').fadeIn(200);
-    }
-    else
-    {
-        $('.return-to-top').fadeOut(200);
-    }
-});
-
-$('.return-to-top').click(function(){
-    $('body,html').animate({
-        scrollTop:0
-    },500);
-});
-</script>
 </body>
 <!-- InstanceEnd --></html>
