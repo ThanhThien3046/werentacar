@@ -354,16 +354,27 @@ table {
     line-height:1.5em;
 }
 /*  ーーーーーーーーーーーーー　FOOTER　ここまでーーーーーーーーーーーーーーーー */
-.fadeinzoom {
+
+@media screen and (min-width:768px){
+	.fadeinzoom {
 	opacity: 0;
 	transform: scale(.7);
 	transition : all 1600ms;
+	}
+	.fadeinzoom.scrollin{
+		opacity: 1;
+		transform: scale(1);
+	}
+	.fadein {
+		opacity: 0;
+		transform: translate(0, 100px);
+		transition : all 1000ms;
+	}
+	.fadein.scrollin{
+		opacity: 1;
+		transform: translate(0,0);
+	}
 }
-.fadeinzoom.scrollin{
-	opacity: 1;
-	transform: scale(1);
-}
-
 @media screen and (max-width:960px){
 	.nav-bar2,.header-btn{
         right: 12px;
