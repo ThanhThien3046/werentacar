@@ -479,6 +479,10 @@ select{
 .tabcolor{
 	background-color: #edad3e;
 }
+
+.subtabcolor{
+	background-color: #edad3e;
+}
 /*  ーーーーーーーーーーーーー　会社概要　ここまでーーーーーーーーーーーーーーーー */
 
 @media screen and (min-width:767px){
@@ -585,8 +589,8 @@ select{
 		height: 50px;
 		border-radius: 35px;
 		z-index: 2;
-		transition: .5s;
-		animation:to-top 1.5s infinite alternate;
+		/* transition: .5s; */
+		animation:to-top .4s infinite alternate;
 	}
 	@keyframes to-top {
 		from{
