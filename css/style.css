@@ -14,12 +14,12 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 }
+.banner ul li.slider0{
+	background-image: url("../images/slider.jpg");
+	background-position:center;
+}
 .banner ul li.slider1{
 	background-image: url("../images/slider2.jpg");
-	background-position:top center;
-}
-.banner ul li.slider2{
-	background-image: url("../images/slider1.jpg");
 	background-position:top center;
 }
 .banner ul li.slider3{
@@ -486,10 +486,7 @@ select{
 		background-image: url("../images/slider2.jpg");
 		background-position:top center;
 	}
-	.banner ul li.slider2{
-		background-image: url("../images/slider1.jpg");
-		background-position:top center;
-	}
+
 	.banner ul li.slider3{
 		background-image: url("../images/slider3.jpg");
 		background-position:top;
