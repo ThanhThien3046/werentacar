@@ -56,6 +56,8 @@
   .toTopBtn:hover {
 	background-color: #0067b6;
   }
+
+  
 @media Screen and (min-width:768px){
 	.about-top{
 		font-size: 90%;

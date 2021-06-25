@@ -374,6 +374,46 @@ table {
 		opacity: 1;
 		transform: translate(0,0);
 	}
+    .return-to-top{
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	background: #edad3e;
+	width: 50px;
+	height: 50px;
+	border-radius: 35px;
+	z-index: 2;
+	transition: .5s;
+	animation:to-top 1.5s infinite alternate;
+	display: block;
+    display: none;
+	justify-content: space-around;
+	flex-direction: column;
+	text-align: center;
+	/* transition: .5s; */
+	animation:to-top .4s infinite alternate;
+}
+@keyframes to-top {
+	from{
+		bottom: 10px;
+	}
+	to{
+		bottom: 25px;
+	}
+}
+
+.return-to-top i{
+	color: #fff;
+	margin: 0;
+	position: relative;
+	top: 14px;
+	font-size: 19px;
+	display: inline;
+}
+
+.return-to-top:hover{
+	background: rgba(231, 126, 40, 0.9);
+}
 }
 @media screen and (max-width:960px){
 	.nav-bar2,.header-btn{
