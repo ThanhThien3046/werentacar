@@ -1,4 +1,3 @@
-
 /* ーーーーーーーーーーーーーーーーー　バナー　ここから　ーーーーーーーーー */
 .banner ul{
 	z-index: -1;
@@ -14,17 +13,18 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 }
+
 .banner ul li.slider0{
-	background-image: url("../images/slider.jpg");
+	background-image: url("../images/slider/slider.jpg");
 	background-position:center;
 }
 .banner ul li.slider1{
-	background-image: url("../images/slider2.jpg");
+	background-image: url("../images/slider/slider7.jpg");
 	background-position:top center;
 }
-.banner ul li.slider3{
-	background-image: url("../images/slider3.jpg");
-	background-position:center center;
+.banner ul li.slider2{
+	background-image: url("../images/slider/slider6.jpg");
+	background-position: center;
 }
 .banner{
     height: 530px;
@@ -456,7 +456,6 @@ select{
     height: 80px;
     z-index: -1;
 }
-
 .about ul li img{
     width: 100%;
     height: auto;
@@ -465,32 +464,19 @@ select{
 .about ul li:hover img{
 	transform:scale(1.15);
 }
-
-
-
 .tabcolor{
 	background-color: #edad3e;
 }
 .return-to-top{
 	display: none;
 }
-
-
 .subtabcolor{
 	background-color: #edad3e;
 }
 /*  ーーーーーーーーーーーーー　会社概要　ここまでーーーーーーーーーーーーーーーー */
 
 @media screen and (min-width:767px){
-	.banner ul li.slider1{
-		background-image: url("../images/slider2.jpg");
-		background-position:top center;
-	}
-
-	.banner ul li.slider3{
-		background-image: url("../images/slider3.jpg");
-		background-position:top;
-	}
+	
 	.car-title{
 		height: 180px;
 		max-width: 800px;
@@ -575,11 +561,24 @@ select{
 	}
 }
 @media screen and (max-width:767px){
+	.banner ul li.slider2{
+		background-image: url("../images/slider/slider6.1.jpg");
+		background-position:top center;
+	}
+	.banner ul li.slider0{
+		background-image: url("../images/slider/slider.jpg");
+		background-position: center right ;
+	}
+	.banner ul li.slider1{
+		background-image: url("../images/slider/slider7.jpg");
+		background-position:center right;
+	}
+
 	.banner ul li{
-		height: 210px;
+		height: 230px;
 	}
 	.banner{
-        height: 600px;
+        height: 610px;
         box-sizing: border-box;
         clear: both;
         background-repeat: no-repeat;
@@ -589,11 +588,12 @@ select{
         top: 0;
         left: 0;
         overflow: hidden;
+
     }
 	.banner-form-search{
 		border: none;
 		max-width: 700px;
-		margin: 200px auto;
+		margin: 220px auto;
 		background-color: transparent;
 	}
 	.banner-form-search-input .last-child{
@@ -652,6 +652,14 @@ select{
 	}
 }
 @media Screen and (max-width:480px){
+	.banner ul li.slider2{
+		background-image: url("../images/slider/slider6.1.jpg");
+		background-position: center;
+	}
+	.banner ul li.slider1{
+		background-image: url("../images/slider/slider7.jpg");
+		background-position:center right -60px;
+	}
     .use ul li{
         width: 100%;
     }
