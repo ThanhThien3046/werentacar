@@ -101,42 +101,17 @@
             </div>
             <div class="menu">
                 <ul class="ul-menu">
-                    <li class="li-menu tabcolor" id="tab1" onclick="loadtab()"><a href="index.html"><i class="fas fa-home" style="padding-right:5px;"></i>ホーム</a></li>
+                    <li><a href="index.html"><i class="fas fa-home" style="padding-right:5px;"></i>ホーム</a></li>
                     <li class="li-menu"><a href="about.html">会社情報</a></li>
-                    <li class="li-menu" id="tab3" onclick="loadtab()"><a href="index.html#list-car">車重と料金</a></li>
+                    <li class="li-menu"><a href="index.html#list-car">車重と料金</a></li>
                     <li class="li-menu"><a href="flow.html">当日の流れ</a></li>
                     <li class="li-menu"><a href="use.html">ご利用について</a></li>
                     <li class="li-menu"><a href="question.html">よくある質問</a></li>
+                    
                 </ul>
             </div>
         </div>
     </div>
-	<script>
-		function loadtab(){
-			if ( $('#tab1').hasClass("tabcolor"))
-			{
-				// alert("tab1");
-				$('#tab3').addClass('tabcolor');
-				$('#tab1').removeClass('tabcolor');
-			}
-			else
-			if ( $('#tab3').hasClass("tabcolor"))
-			{
-				// alert("tab3");
-				$('#tab1').addClass('tabcolor');
-				$('#tab3').removeClass('tabcolor');
-			}
-			else
-			{
-				if ( $('#tab3').hasClass(""))
-				{
-					// alert("tab3");
-					$('#tab1').addClass('tabcolor');
-					$('#tab3').removeClass('tabcolor');
-				}
-			}
-		}
-	</script>
 <!--ーーーーーーーーーーーーーー NAV　ここまでーーーーーーーー -->
 <!-- InstanceBeginEditable name="メインここから" -->
 <div class="banner">    
@@ -647,8 +622,8 @@
                     <p class="li-footer-content">
                         <a href="sitemap.html"><i class="fas fa-angle-right"></i> サイトマップ</a><br>
                         <a href="about.html"><i class="fas fa-angle-right"></i> 会社情報</a><br>
-                        <a href="https://wecompany.co.jp/recruit"><i class="fas fa-angle-right"></i> 採用情報</a><br>
-                        <a href="https://wecompany.co.jp"><i class="fas fa-angle-right"></i> グループ紹介</a><br>
+                        <a href="https://wecompany.co.jp/recruit" target="_blank"><i class="fas fa-angle-right"></i> 採用情報</a><br>
+                        <a href="https://wecompany.co.jp" target="_blank"><i class="fas fa-angle-right"></i> グループ紹介</a><br>
                         <a href="policy.html"><i class="fas fa-angle-right"></i> プライバシーポリシー</a><br>
                     </p>
                 </li>
@@ -664,16 +639,11 @@
                 <li><a href="contact.html"><i class="fas fa-angle-right"></i> お問い合わせ</a></li>
                 <li><a href="sitemap.html"><i class="fas fa-angle-right"></i> サイトマップ</a></li>
                 <li><a href="profile.html"><i class="fas fa-angle-right"></i> 会社情報</a></li>
-                <li><a href="https://wecompany.co.jp/recruit"><i class="fas fa-angle-right"></i> 採用情報</a></li>
-                <li><a href="https://wecompany.co.jp"><i class="fas fa-angle-right"></i> グループ紹介</a></li>
+                <li><a href="https://wecompany.co.jp/recruit" target="_blank"><i class="fas fa-angle-right"></i> 採用情報</a></li>
+                <li><a href="https://wecompany.co.jp/weHomes" target="_blank"><i class="fas fa-angle-right"></i> グループ紹介</a></li>
                 <li><a href="policy.html"><i class="fas fa-angle-right"></i> プライバシーポリシー</a></li>
             </ul>
             <div class="copyright">Copyright &copy; 2021 WE・RENTACAR Co.,Ltd. All rights reserved</div>
         </div>
-    </div>
-<!-- calendarの処理-->
 </body>
-<!-- InstanceEnd -->
-
-
-</html>
+<!-- InstanceEnd --></html>

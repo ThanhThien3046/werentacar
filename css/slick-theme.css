@@ -26,7 +26,7 @@
     top: 50%;
 
     display: block;
-
+	
     width: 20px;
     height: 20px;
     padding: 0;
@@ -123,7 +123,7 @@
 {
     position: absolute;
     bottom: -25px;
-
+	
     display: block;
 
     width: 100%;
@@ -184,7 +184,6 @@
     position: absolute;
     top: 0;
     left: 0;
-
     width: 20px;
     height: 20px;
 
@@ -193,7 +192,7 @@
 
     opacity: .25;
     color: black;
-
+	
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
