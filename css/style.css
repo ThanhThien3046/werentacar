@@ -242,7 +242,7 @@ select{
 .car-title{
 	background:white;
 	height: 100px;
-	width: 90%;
+	width: 95%;
 	margin: auto;
 	position: relative;
 	margin-top: -50px;
@@ -251,15 +251,17 @@ select{
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	text-align: center;
 }
 .car-title h2{
 	color: #0067b4;
 	margin-bottom: 5px;
-	font-size: 190%;
+	font-size: 180%;
 	font-family: "Times New Roman", Times, "serif"
 }
 .car-title p{
 	font-family: YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "serif";
+	font-size: 95%;
 }
 .car-list{
 	background: #fff6ed;
@@ -739,4 +741,16 @@ select{
     .use{
         padding-top:0px;
     }
+	.car-title{
+		height: 90px;
+		max-width: 800px;
+		margin-top: -45px;
+	}
+	.car-title h2{
+		font-size: 165%;
+	}
+	.car-title p{
+		font-size: 86%;
+	}
+	
 }
