@@ -47,7 +47,7 @@
 
 .block_content > span:nth-child(2){
     width: 100%;
-    font-size: 16px;
+    font-size: 13px;
 	margin-top: 7px;
 }
 .block_content > span:nth-child(1){
@@ -201,8 +201,15 @@
 		padding: 0 0 0 20px;
 		box-sizing: border-box;
 		margin:0;
-		font-size: 100%;
+		font-size: 16px;
+		margin-top: 7px;
     }
+
+	.block_content > span:nth-child(2){
+		/* width: 100%; */
+		font-size: 16px;
+		margin-top: 7px;
+	}
 
     .centered{
         font-size: 22px;
@@ -237,5 +244,6 @@
 	.btn_lastct:hover{
 		background-color:#0067b6;
 	}
+
 
 }

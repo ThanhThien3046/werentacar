@@ -18,7 +18,7 @@
 	color:hsla(0,0%,31%,1.00);
 }
 .main h1{
-	font-size: 110%;
+	font-size: 100%;
 	font-weight: 600;
 	border-bottom: 1px solid #edad3e;
 	padding-bottom: 5px;
@@ -30,17 +30,17 @@
     font-weight: 600;
     background-color: #0067b6;
 	border-left: 10px solid #edad3e;
-    margin: 25px auto;
-    padding: 18px 0;
+    margin: 20px auto;
+    padding: 10px 0;
     color: #fff;
-	font-size: 110%;
+	font-size: 80%;
 	box-sizing: border-box;
 }
 .collapsible{
     background-color:hsla(0,0%,93%,1.00);
     cursor: pointer;
     transition: 0.4s;
-    padding: 18px;
+    padding: 10px;
     width: 100%;
     border: none;
     text-align: left;
@@ -48,6 +48,7 @@
     display: flex;
     justify-content: space-between;
     box-sizing: border-box;
+    font-size: 12px;
 }
 
 .collapsible::after{
@@ -64,7 +65,7 @@
 
 .collapsible span:nth-child(1){
     color:#d1011b;
-    font-size: 19px;
+    font-size: 15px;
 }
 
 .open, .collapsible:hover {
@@ -72,21 +73,20 @@
 }
 
 .collapse_content{
-
     display: none;
     overflow: hidden;
     background-color: #f1f1f1;
     box-sizing: border-box;
-    padding: 20px 0px 20px 20px;
+    padding: 20px 0px 20px 10px;
 }
 .content_collapse_detail{
     display: flex;
-    font-size: 13px;
+    font-size: 12px;
 }
 
 .content_collapse_detail span:nth-child(1){
     color: #edad3e;
-    font-size: 19px;
+    font-size: 15px;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
@@ -123,6 +123,7 @@
     }
     .collapsible{
         font-size: 15px;
+        padding: 18px;
     }
 
     .content_collapse_detail{
@@ -130,5 +131,26 @@
         font-size: 100%;
     }
 
+    .title_question{
+        margin: 25px auto;
+        padding: 18px 0;
+        font-size: 110%;
+    }
 
+    .collapsible span:nth-child(1){
+        color:#d1011b;
+        font-size: 19px;
+    }
+
+    .collapse_content{
+        padding: 20px 0px 20px 20px;
+    }
+
+    .content_collapse_detail span:nth-child(1){
+        font-size: 19px;
+    }
+
+    .main h1{
+        font-size: 110%;
+    }
 }
