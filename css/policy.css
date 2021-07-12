@@ -5,26 +5,37 @@
 	box-sizing: border-box;
 	margin: 20px auto 30px auto;
     font-size: 16px;
+
 }
 
-
-.main > span{
+.main p span.bold{
     font-weight:bold;
+	margin: 6px 0;
+	display: block;
+	color:black;
+	
 }
-
+.main p{
+	color: hsla(0,0%,20%,1.00);
+}
+.main p span.strong{
+	font-weight:bold;
+	color:black;
+	font-family:YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "serif";
+}
 .main h2{
     text-align: center;
-
 }
-
 .policy_title{
     text-align: center;
     font-size: 25px;
     font-weight: 600;
 }
-
 @media screen and (min-width:768px) {
     .main{
         font-size: 100%;
     }
+	.main p span.bold{
+		margin-top: 15px;
+	}
 }

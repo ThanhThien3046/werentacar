@@ -3,7 +3,6 @@
 	font-size:75%;
 	margin-top: 5px;
 }
-
 .contact-top a{
 	text-decoration: underline;
 }
@@ -11,7 +10,6 @@
 	margin: 0 10px;
 	color:hsla(0,0%,31%,1.00);
 }
-
 .title_contact{
 	font-size: 110%;
 	font-weight: 600;
@@ -41,19 +39,16 @@
     margin: 0 auto;
     width: 100%;
 }
-
 .person_info{
     width: 100%;
     max-width: 1024px;
     height: auto;
 }
-
-
 .person_info  tr td{
     box-sizing: border-box;
     display: block;
+	overflow: hidden;
 }
-
 .person_info  tr:nth-child(1) td:nth-child(2){
     border-right: none;
 }
@@ -62,7 +57,6 @@
     border-left: none;
     padding-left: 0px;
 }
-
 .person_info  tr td input{
     width: 100%;
     /* max-width: 670px; */
@@ -73,12 +67,6 @@
     outline: none;
 	padding-left: 7px;
 }
-
-.person_info  tr td input:focus{
-    outline: none !important;
-    box-shadow: 0 0 7px #719ECE;
-}
-
 .person_info  tr td textarea{
     height: 200px;
     margin: 10px 0;
@@ -86,21 +74,16 @@
     border: 1px solid #939393;
 	box-sizing: border-box;
 	padding: 7px;
-	
+	outline: none;
 }
-.person_info  tr td textarea:focus{
-    outline: none !important;
-    box-shadow: 0 0 7px #719ECE;
-}
-
 .person_info tr td:nth-child(1){
     background-color:hsla(0,0%,91%,1.00);
     width: 100%;
     padding: 10px 10px;
     box-sizing: border-box;
-    vertical-align: top;margin: 5px 0;
+    vertical-align: top;
+	margin: 5px 0;
 }
-
 .type{
     background-color: #d1011b;
     font-size: 10px;
@@ -116,6 +99,12 @@
     margin-bottom: 30px;
     font-size: 14px;
 }
+.verify input{
+	cursor: pointer;
+}
+.verify label{
+	cursor: pointer;
+}
 .verify button{
     font-family: YuGothic, "Yu Gothic medium", "Hiragino Sans", Meiryo, "sans-serif";
 	border: none;
@@ -128,7 +117,6 @@
 	display: block;
 	padding: 8px 95px;
     font-size: 15px;
-	
 }
 .verify button:hover{
 	background: #0067b6;
@@ -139,7 +127,6 @@
 		margin-bottom: 50px;
 		margin-top: 30px;
 	}
-
     .contact-top{
         font-size: 90%;
         margin-top: 10px;
