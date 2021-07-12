@@ -109,7 +109,7 @@
  <!--ーーーーーーーーーーーーーー FOOTER　ここからーーーーーーーー -->
         <div class="footer">
             <div class="footer-bar">
-                <a href="index.html"><img src="images/logo.png" alt=""></a>
+                <a href="index.html"><img src="images/logo.png" width="1172" height="176" alt="rentacarlogo"/></a>
                 <span>「 宮古島でレンタカー予約ならWE・RENTACAR 」</span>
             </div>
             <hr>
@@ -119,7 +119,7 @@
                         レンタカーを使う
                     </p>
                     <p class="li-footer-content">
-                        <a href=""><i class="fas fa-angle-right"></i> 店舗を探す</a> <br>
+						<a href="sitemap.html"><i class="fas fa-angle-right"></i> サイトマップ</a><br>
                         <a href="index.html#list-car"><i class="fas fa-angle-right"></i> 車重と料金</a><br>
                         <a href=""><i class="fas fa-angle-right"></i> レンタカーを予約</a><br>
                     </p>
@@ -140,7 +140,7 @@
                         このサイトについて
                     </p>
                     <p class="li-footer-content">
-                        <a href="sitemap.html"><i class="fas fa-angle-right"></i> サイトマップ</a><br>
+                        
                         <a href="about.html"><i class="fas fa-angle-right"></i> 会社情報</a><br>
                         <a href="https://wecompany.co.jp/recruit" target="_blank"><i class="fas fa-angle-right"></i> 採用情報</a><br>
                         <a href="https://wecompany.co.jp" target="_blank"><i class="fas fa-angle-right"></i> グループ紹介</a><br>
@@ -150,7 +150,6 @@
                 
             </ul>
             <ul class="footer-smt">
-                <li><a href="#"><i class="fas fa-angle-right"></i> 店舗を探す</a></li>
                 <li><a href="index.html#list-car"><i class="fas fa-angle-right"></i> 車重と料金</a></li>
                 <li><a href="#"><i class="fas fa-angle-right"></i> レンタカーを予約</a></li>
                 <li><a href="use.html"><i class="fas fa-angle-right"></i> ご利用について</a></li>

@@ -26,6 +26,9 @@
 .cp_cssslider input[name='prius']{
 	display: none;
 }
+.cp_cssslider input[name='prius@']{
+	display: none;
+}
 .cp_cssslider label {
 	margin-bottom: 10px;
 	border: 2px solid white;
@@ -72,6 +75,16 @@
 	opacity: 0;
 }
 .cp_cssslider input[name='prius']:checked + label + img {
+	opacity: 1;
+}
+.cp_cssslider input[name='prius@']:checked + label {
+	border: 2px solid #0067b6;
+	opacity: 1;
+}
+.cp_cssslider input[name='prius@'] ~ img {
+	opacity: 0;
+}
+.cp_cssslider input[name='prius@']:checked + label + img {
 	opacity: 1;
 }
 @media screen and (min-width:768px){
