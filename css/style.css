@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* ーーーーーーーーーーーーーーーーー　バナー　ここから　ーーーーーーーーー */
 .banner ul{
 	z-index: -1;
@@ -13,19 +14,20 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 }
-
 .banner ul li.slider0{
-	background-image: url("../images/slider/slider.jpg");
+	background-image: url("../images/slider/slider1.png"),url("../images/slider/slider.jpg");
 	background-position:center;
 }
+/*
 .banner ul li.slider1{
-	background-image: url("../images/slider/slider7.jpg");
+	background-image: url("../images/slider/slider3.png"),url("../images/slider/slider3.jpg");
 	background-position:top center;
 }
 .banner ul li.slider2{
 	background-image: url("../images/slider/slider6.jpg");
 	background-position: center;
 }
+*/
 .banner{
     height: 530px;
 	box-sizing: border-box;
@@ -127,17 +129,19 @@ select{
     box-sizing: border-box;
     background: white;
 } 
+.banner-form-search a{
+	color: white;
+}
 .search-submit{
     display: block;
     text-align: center;
     cursor: pointer;
-    box-shadow: 3px 4px 0 0 hsla(229,74%,20%,1.00);
-    background-color:#0067b6;
-    border: 1px solid hsla(229,74%,30%,1.00);
+    box-shadow: 3px 3px 0 0 hsla(229,79%,20%,1.00);
+    background:#0067b6;
     color: #fff;
     margin: 30px auto;
     width: 180px;
-    padding: 10px 10px;
+    padding: 8px;
     box-sizing: border-box;
 }
 .search-submit i{
@@ -148,433 +152,387 @@ select{
 }
 /* ーーーーーーーーーーーーーーーーー　バナー　ここまで　ーーーーーーーーー */
 
-/*  ーーーーーーーーーーーーー　ご利用案内　ここからーーーーーーーーーーーーーーーー */
-.use{
-    text-align: center;
-    margin:auto;
-    padding: 12px;
-    box-sizing: border-box;
-    padding-top:35px;
-    max-width: 1024px;
-	padding-bottom: 60px;
-}
-.use h2{
-    font-size: 95%;
-    color: rgb(29, 29, 29);
-    margin-top: 10px;
-}
-.use .title{
-    font-size: 140%;
-    font-weight: 600;
-    color:rgb(48, 48, 48)
-}
-.use .title:after{
-    content: "";
-    display: block;
-    width: 150px;
-	height: 1.5px;
-    margin:8px auto;
-    background-color: #ecac3e;
-}
-.use ul a:hover{
-    opacity: 0.8;
-}
-.use ul a{
-	display: block;
-	padding-bottom: 30px;
-}
-.use ul{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin: 0 auto;
-    margin-top:35px;
-}
-.use ul li{
-    width: 31%;
-    position: relative;
-	border: 1px solid hsla(0,0%,66%,1.00);
-}
-.use ul li dt{
-	overflow: hidden;
-}
-.use ul li img{
-	width: 100%;
-	height: auto;
-	display: block;
-	transition: 1s;
-}
-.use ul li img:hover {
-	transform: scale(1.15);
-}
-.use ul li span{
-	border-bottom: 1.5px solid #edad3e;
-	width: 150px;
-    padding:1px 6px;
-	margin: auto;
-    margin-top: 10px;
-    display: block;
-    color: #edad3e;
-	text-align: center;
-    font-weight: 600;
-
-    font-size: 105%;
-}
-.use ul p{
-    text-align: left;
-    line-height: 1.4em;
-    padding: 10px 10px;
-    font-size: 95%;
-	
-}
-/*  ーーーーーーーーーーーーー　ご利用案内　ここまでーーーーーーーーーーーーーーーー */
-
-/*  ーーーーーーーーーーーーー　LIST-CAR　ここからーーーーーーーーーーーーーーーー */
-.car-line{
-	background: #fff6ed
-}
-.car-background{
-}
-.car-background img{
-	width: 100%;
-	height: auto;
-}
-.car-title{
-	background:white;
-	height: 100px;
-	width: 95%;
-	margin: auto;
-	position: relative;
-	margin-top: -50px;
-	z-index: 1;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	text-align: center;
-}
-.car-title h2{
-	color: #0067b4;
-	margin-bottom: 5px;
-	font-size: 180%;
-	font-family: "Times New Roman", Times, "serif"
-}
-.car-title p{
-	font-family: YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "serif";
-	font-size: 95%;
-}
-.car-list{
-	background: #fff6ed;
+/* ーーーーーーーーーーーーーーーーー　LISTーCAR　ここまで　ーーーーーーーーー */
+.list-car{
+	background:  #fff6ed;
 	padding: 12px;
 	box-sizing: border-box;
-	padding-bottom: 20px;
 }
-.car-about h3{
-	width: 100%;
-	border-bottom: 2px solid #0067b4;
-	font-family:"Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, "sans-serif";
-	margin-bottom: 10px;
-	margin-top: 5px;
+.list-car-title{
+	font-size: 110%;
+	font-weight: 600;
+	margin: 10px 0;
+	border-left: 5px solid #edad3e; 
+	padding-left: 10px;
 }
-.car-about p{
-	font-size: 95%;
-	color: hsla(0,0%,14%,1.00);
-	margin-bottom: 10px;
-}
-.car-img{
-	position: relative;
-}
-.car-img img{
+.list-car img{
 	width: 100%;
 	height: auto;
+	margin: auto;
 }
-.car-img ul{
+.list-car img:hover{
+	animation: img-car .9s infinite alternate;
+}
+@keyframes img-car{
+	0%,20%, 40%, 60%, 80% {
+    transform:rotate(1deg) scale(1.02);
+  }
+  30%,50%, 70%,90% {
+    transform: rotate(-2deg) scale(1);
+  }
+}
+.list-car ul{
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: space-between;
 }
-.car-img ul li{
-	margin: 2% 0;
-	width: 31%;
-}
-.car-detail table{
-	margin-bottom: 10px;
-}
-.car-detail table tr{
-	border: 1px solid hsla(0,0%,65%,1.00);
-}
-.car-detail table th{
-	background: #f9d5a5;
-	border-right: 1px solid hsla(0,0%,65%,1.00);
-	padding: 10px 15px;
-	text-align: left;
-	box-sizing: border-box;
-}
-.car-detail table td{
-	padding: 10px;
-	box-sizing: border-box;
-	background: white;
-}
-.car-detail p{
-	font-size: 85%;
-	color: hsla(0,0%,14%,1.00);
-}
-.car-detail a{
-	display: block;
-	padding: 8px;
+.list-car ul li{
 	text-align: center;
-	width: 250px;
-	margin:10px auto;
+	width: 47%;
+	margin-top: 5px;
+	margin-bottom: 20px;
+	box-shadow: 0 1px 2px rgb(0 0 0 / 35%)
+}
+.list-car ul li p{
+	font-size: 80%;
+}
+.list-car ul li p:first-child{
+	font-size: 90%;
+	font-weight: 600;
+}
+.list-car .red{
+	color: hsla(359,88%,44%,1.00);
+	font-size: 110%;
+}
+.list-car .car-link{
+	font-size: 80%;
 	background: #0067b4;
 	color: white;
-	animation: car .8s infinite alternate;
-}
-@keyframes car{
-	from {
-		background: #0067b4;
-	}
-	to{
-		background: hsla(238,80%,49%,1.00);
-		transform: scale(1.04)
-	}
-}
-.car-detail a:hover{
-	opacity: 0.8;
-}
-.car-detail a i{
-	margin-left: 7px;
-}
-.car-fee{
-	width: 100%;
-	
-}
-.car-fee h3{
-	width: 100%;
-	border-bottom: 2px solid #0067b4;
-	font-family:"Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, "sans-serif";
-	margin-bottom: 10px;
+	padding: 6px 10px;
+	width: 140px;
+	border-radius: 5px;
+	display: block;
+	margin: auto;
 	margin-top: 5px;
 }
-.table-fee{
-	overflow-x: scroll
-}
-.car-fee table{
-	width: 820px;
-	font-size: 90%;
-}
-.car-fee table tr{
-	border: 1px solid hsla(0,0%,65%,1.00);
-	text-align: center;
-}
-.car-fee table th{
-	background: #f9d5a5;
-	border: 1px solid hsla(0,0%,65%,1.00);
-	padding: 8px ;
-	width: 130px;
-	box-sizing: border-box;
-	text-align: center;
-}
-.car-fee table td{
-	text-align: center;
-	padding: 8px;
-	box-sizing: border-box;
-	border: 1px solid hsla(0,0%,65%,1.00);
-	background: white;
-}
-.car-fee span{
-	font-size: 60%;
-}
-.car-fee .comment{
-	color: #c90000;
-	font-size: 90%;
-}
-/*  ーーーーーーーーーーーーー　LIST-CAR　ここまでーーーーーーーーーーーーーーーー */
+/* ーーーーーーーーーーーーーーーーー　LIST-CAR　ここまで　ーーーーーーーーー */
 
-/*  ーーーーーーーーーーーーー　会社概要　ここからーーーーーーーーーーーーーーーー */
-.about{
+/* ーーーーーーーーーーーーーーーーー　SPOT　ここまで　ーーーーーーーーー */
+.spot{
     width: 100%;
     max-width: 1024px;
     padding:12px;
     box-sizing: border-box;
     margin: auto;
-    padding-bottom: 40px;
 }
-.about h2{
-    padding-top: 30px;
-    text-align: center;
-    font-size: 150%;
-    font-weight: 600;
+.spot-title{
+	font-size: 110%;
+	font-weight: 600;
+	margin: 10px 0;
+	border-left: 5px solid #edad3e; 
+	padding-left: 8px;
 }
-.about h2::after{
-    content: "";
-    display: block;
-    width: 100px;
-    height: 1.5px;
-    margin:7px auto;
-    background: #edad3e;
-}
-.about h3 {
-    text-align: center;
-    font-family: 'Times New Roman', Times, serif;
-    margin-top: 10px;
-    margin-bottom: 40px;
-}
-.about ul{
+.spot ul{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     margin: auto;
+	margin-top: 20px;
 }
-.about ul li{
-    width: 32%;
-    margin-bottom:20px;
+.spot ul li{
     position: relative;
 	display: block;
 	overflow: hidden;
+	width: 47%;
+    margin-bottom: 20px;
 }
-.about ul {
-    text-decoration: underline;
+.spot ul li p{
+	overflow: hidden;
 }
-.about ul li a:hover{
-    text-decoration: underline;
+.spot ul li img{
+	cursor: pointer;
+	display: block;
+	width: 100%;
+	height: auto;
+	transition: all 1s;
 }
-.about ul li span{
-    position: absolute;
-    box-sizing: border-box;
-    width: 100%;
-    bottom: 0px;
-    left: 0px;
-    padding: 7px;
-    color: hsl(0, 0%, 100%);
-    z-index: 1;
+.spot ul li img:hover{
+	transform: scale(1.15);
 }
-.about ul li span::before{
-    background-image: linear-gradient(#ffffff05,black);
-    content: "";
+.spot ul li p:nth-child(2){
+	margin: auto;
+    margin-top: 10px;
     display: block;
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    height: 80px;
-    z-index: -1;
+    font-weight: 600;
+    font-size: 100%;
 }
-.about ul li img{
-    width: 100%;
-    height: auto;
-	transition: 1s;
+.spot ul li p:nth-child(3){
+	padding-top: 5px;
+    font-size: 90%;
 }
-.about ul li:hover img{
-	transform:scale(1.15);
-}
-.tabcolor{
-	background-color: #edad3e;
-}
-.return-to-top{
+/* ーーーーーーーーーーーーーーーーー　SPOT　ここまで　ーーーーーーーーー */
+.graphy p{
 	display: none;
 }
-.subtabcolor{
-	background-color: #edad3e;
-}
-/*  ーーーーーーーーーーーーー　会社概要　ここまでーーーーーーーーーーーーーーーー */
 
-@media screen and (min-width:767px){
+/* ーーーーーーーーーーーーーーーーー　USE　ここから　ーーーーーーーーー */
+.use{
+	padding: 12px;
+	box-sizing: border-box;
+	background:  #fff6ed;
+}
+.use-title{
+	font-size: 110%;
+	font-weight: 600;
+	margin: 10px auto;
+	border-left: 5px solid #edad3e; 
+	padding-left: 8px;
+	max-width: 1000px;
+}
+.use span{
+	font-size: 90%;
+	display: block;
+	max-width: 1000px;
+	margin: auto;
+	margin-bottom: 20px;
+}
+.use ul{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	max-width: 1000px;
+	margin: auto;
+}
+.use ul li{
+	margin-bottom: 20px;
+}
+.use ul li p:nth-child(1){
+	overflow: hidden;
+}
+.use img{
+	width: 100%;
+	height: auto;
+	transition: all 1s;
+	display: block;
+}
+.use img:hover{
+	transform: scale(1.15);
+}
+.use ul li p:nth-child(2){
+	margin: auto;
+    margin-top: 10px;
+    display: block;
+    font-weight: 600;
+    font-size: 100%;
+}
+.use ul li p:nth-child(3){
+	padding-top: 5px;
+    font-size: 90%;
+}
+.use-link{
+	text-decoration: underline;
+	font-size: 90%;
+	color:#0067b4;
+}
+.use-link i{
+	margin-left: 5px;
 	
-	.car-title{
-		height: 180px;
-		max-width: 800px;
-		margin-top: -90px;
+}
+/* ーーーーーーーーーーーーーーーーー　USE　ここまで　ーーーーーーーーー */
+
+/* ーーーーーーーーーーーーーーーーー　アクセス　ここから　ーーーーーーーーー */
+.access{
+	padding: 12px;
+	max-width: 1024px;
+	margin: auto;
+	box-sizing: border-box;
+}
+.access-title{
+	font-size: 110%;
+	font-weight: 600;
+	margin: 10px auto;
+	border-left: 5px solid #edad3e; 
+	padding-left: 8px;
+	max-width: 1000px;
+}
+.access p{
+	font-size: 90%;
+	display: block;
+	max-width: 1000px;
+	margin: auto;
+}
+.access-map{
+	width: 100%;
+	height: auto;
+}
+.access-map iframe{
+	width: 100%;
+	height: 250px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+
+
+/* ーーーーーーーーーーーーーーーーー　アクセス　ここまで　ーーーーーーーーー */
+@media screen and (min-width:480px){
+	.list-car ul{
+		max-width: 1000px;
+		box-sizing: border-box;
+		margin: auto;
 	}
-	.car-title h2{
-		margin-bottom: 10px;
-		font-size: 300%;
-		
+	.list-car ul li{
+		background: white;
+		padding: 0;
+		margin-bottom: 24px;
+		border: 1px solid hsla(0,0%,80%,1.00);
 	}
-	.car-title p{
+	.list-car ul li a{
+		display: block;
+		padding: 13px 5px;
+		box-sizing: border-box;
+	}
+	.list-car ul li a:hover{
+		opacity: .8;
+		box-shadow: 3px 3px 2px hsla(0,0%,80%,1.00)
+	}
+	.list-car ul li p{
+		font-size: 100%;
+	}
+	.list-car ul li p:first-child{
+		font-size: 110%;
+	}
+	.list-car ul li:last-child{
+		margin-right: 34.3%;
+	}
+	.list-car .car-link{
+		display: block;
+		margin:10px auto;
+		font-size: 100%;
+		width: 180px;
+	}
+	.graphy{
+
+		background:rgba(0,0,0,0) url("../images/graphy.jpg") no-repeat fixed center center / cover;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 200px;
+		padding: 15px;
+		position: relative;
+	}
+
+	.graphy p{
+		display: block;
+		 font-size: 180%;
+		font-family: 凸版文久見出しゴシック;
+		color: black;
+		-webkit-text-fill-color: white;
+		-webkit-text-stroke-width: 1px;
+		-webkit-text-stroke-color: rgb(74, 74, 74);
+		text-shadow: 1px 3px 2px rgb(74 74 74);
+		text-align: center;
+	}
+	.list-car .car-link:hover{
+		opacity: .8;
+	}
+	.use ul li{
+		width: 47%;
+		margin-bottom: 25px;
+	}
+}
+@media screen and (min-width:767px){
+	.list-car-title{
+		max-width: 1000px;
+		margin:30px auto;
+		margin-bottom: 20px;
+		font-size: 140%;
+		box-sizing: border-box;
+	}
+	.list-car ul li{
+		width: 31.3%;
+	}
+	.list-car .car-link{	
+		width: 220px;
+	}
+	.spot-title{
+		margin:30px auto;
+		margin-bottom: 20px;
 		font-size: 140%;
 	}
-	.car-list{
-		max-width: 1024px;
-		margin: auto;
-		padding: 12px;
-		margin-top: 30px;
-		box-sizing: border-box;
-		padding-bottom: 30px;
-	}
-	.car-about h3{
-		font-size: 20px;
-		margin-bottom: 10px;
-		margin-top: 0;
-	}
-	.car-about p{
-		font-size: 100%;
-		color: hsla(0,0%,14%,1.00);
-		margin-bottom: 10px;
-	}
-	.car-img{
-		width: 47%;
-		float: right
-	}
-	.car-detail{
-		width: 47%;
-		float: left
-	}
-	.car-detail p{
-		font-size: 100%;
-		color: hsla(0,0%,14%,1.00);
-	}
-	.car-detail a{
-		width: 250px;
-		margin:20px auto;
-		background: #0067b4;
-	}
-	.car-fee{
-		clear: both;
-		padding-top: 5px;
-	}
-	.car-fee h3{
-		font-size: 20px;
-		margin-bottom: 10px;
-		margin-top: 10px;
-	}
-	.table-fee{
-		overflow-x: scroll;	
-	}
-	.car-fee table{
-		width: 100%;
-		max-width: 1000px;
-		font-size: 90%;
-		margin: auto;
-		margin-top: 20px;
-	}
-	.car-fee table th{
-		padding: 12px ;
-	}
-	.car-fee table td{
-		padding: 12px;
-	}
-	.car-fee span{
-		font-size: 80%;
-		text-align: right;
+	.spot ul li{
+		position: relative;
 		display: block;
-		margin-top: 5px;
+		overflow: hidden;
+		width: 31.3%;
+		margin-bottom: 35px;
 	}
-	.car-fee .comment{
-		display: none;
+	.spot ul li p:nth-child(2){
+		font-size: 110%;
+	}
+	.spot ul li p:nth-child(3){
+		font-size: 95%;
+		padding-bottom: 10px;
+	}
+	.graphy{
+		height: 250px;
+	}
+	.graphy p{
+		font-size: 250%;
+	}
+	.use ul li{
+		width: 31.3%;
+	}
+	.use-title{
+		margin:30px auto;
+		font-size: 140%;
+		margin-bottom: 10px;
+	}
+	.use span{
+		font-size: 100%;
+	}
+	.use ul li p:nth-child(2){
+		font-size: 110%;
+	}
+	.use ul li p:nth-child(3){
+		font-size: 95%;
+		margin-bottom: 10px;
+	}
+	.use-link{
+		text-align: right;
+	}
+	.use-link:hover{
+		opacity: .7;
+	}
+	.access-title{
+		margin:30px auto;
+		font-size: 140%;
+		margin-bottom: 10px;
+	}
+	.access p{
+		font-size: 100%;
+	}
+	.access-map iframe{
+		height: 350px;
 	}
 }
 @media screen and (max-width:767px){
+/*
 	.banner ul li.slider2{
 		background-image: url("../images/slider/slider6.1.jpg");
 		background-position:top center;
 	}
+*/
 	.banner ul li.slider0{
-		background-image: url("../images/slider/slider.jpg");
+		background-image: url("../images/slider/slider1.png"),url("../images/slider/slider.jpg");
 		background-position: center right ;
 	}
+/*
 	.banner ul li.slider1{
 		background-image: url("../images/slider/slider7.jpg");
 		background-position:center right;
 	}
+*/
 
 	.banner ul li{
 		height: 230px;
@@ -590,7 +548,6 @@ select{
         top: 0;
         left: 0;
         overflow: hidden;
-
     }
 	.banner-form-search{
 		border: none;
@@ -608,17 +565,18 @@ select{
 	}
 	.search-submit{
 		margin: 20px auto;
+		padding: 6px;
 		width: 180px;
 	}
 	.banner .banner-center{
 		padding:10px 0px 0px 0px;
 	}
 	.banner-form-search-title >span{
-		background: #e4f1f6;
+/*		background: #e4f1f6;*/
 	}
 	.form-search{
 		position: relative;
-		background-color: #e4f1f6;
+/*		background-color: #e4f1f6;*/
 	}
 	.icon-list{
 		display: flex;
@@ -637,120 +595,4 @@ select{
 		margin-right: 9px;
 		font-size: 11px;
 	}
-	.use{
-		padding-bottom: 20px;
-	}
-	.use ul li{
-		width: 48%;
-		margin-bottom: 15px;
-	}
-
-    .about ul li {
-        width: 48%;
-        margin-bottom: 15px;
-    }
-	.to-top{
-		display: none;
-	}
-}
-@media Screen and (max-width:480px){
-	.banner ul li.slider2{
-		background-image: url("../images/slider/slider6.1.jpg");
-		background-position: center;
-	}
-	.banner ul li.slider1{
-		background-image: url("../images/slider/slider7.jpg");
-		background-position:center right -60px;
-	}
-    .use ul li{
-        width: 100%;
-    }
-    .use{
-		padding-top: 25px;
-        padding-bottom: 15px;
-    }
-	.use h2{
-		font-size: 86%;
-		margin-bottom: 0;
-	}
-    .use ul{
-        padding-bottom:0;
-    }
-	.use ul a{
-		padding-bottom: 0;
-	}
-	.use ul li{
-		border: none;
-	}
-	.use ul li span{
-		border-left: 3px solid #edad3e;
-		padding: 5px;
-		width: 100%;
-		border-bottom: none;
-		margin-top: 10px;
-		display: block;
-		color: #edad3e;
-		font-weight: 600;
-		text-align: left;
-		font-size: 100%;
-	}
-	.use ul li p{
-		font-size: 95%;
-		color: hsla(0,0%,24%,1.00);
-		padding: 10px 0;
-	}
-    .use ul li:last-child{
-        margin-bottom: 0;
-    }
-    .about{
-        padding-top: 0px;
-        padding-bottom: 0px;
-    }
-    .about h2{
-        font-size: 120%;
-    }
-    .about h3{
-        margin-bottom: 20px;
-    }
-    .about ul li span {
-        font-size: 74%;
-        padding:5px 5px;
-        padding-right: 0;
-    }
-    .return-to-top{
-        display: none;
-    }
-}
-@media Screen and (max-width:320px){
-    .about ul li span {
-        font-size: 60%;
-    }
-    .banner{
-        height: 700px;
-        box-sizing: border-box;
-        clear: both;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        position: relative;
-        top: 0;
-        left: 0;
-        overflow: hidden;
-        margin-bottom: -20px;
-    }
-    .use{
-        padding-top:0px;
-    }
-	.car-title{
-		height: 90px;
-		max-width: 800px;
-		margin-top: -45px;
-	}
-	.car-title h2{
-		font-size: 165%;
-	}
-	.car-title p{
-		font-size: 86%;
-	}
-	
 }

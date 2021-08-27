@@ -16,6 +16,18 @@ $(function(){
             scrollTop:0
         },500);
     });
+	$(function(){
+        // #で始まるリンクをクリックしたら実行
+        $('a[href^="/#"]').click(function() {
+          // スクロールの速度
+          var speed = 600; // ミリ秒で記述
+          var href= $(this).attr("href");
+          var target = $(href == "#" || href == "" ? 'index.html' : href);
+          var position = target.offset().top;
+          $('body,html').animate({scrollTop:position}, speed, 'swing');
+          return false;
+        });
+      });
 
     $(window).scroll(function (){
         $('.fadein').each(function(){

@@ -20,15 +20,20 @@
 	box-shadow:0px 0px 5px 0px rgba(0,0,0,0.3);
 	z-index: 1
 }
-.cp_cssslider input[name='cp_switch'],.cp_cssslider input[name='cp_switch1'] {
+.cp_cssslider input[name='cp_switch']{
 	display: none;
 }
+/*
 .cp_cssslider input[name='prius']{
 	display: none;
 }
 .cp_cssslider input[name='prius@']{
 	display: none;
 }
+.cp_cssslider input[name='serena']{
+	display: none;
+}
+*/
 .cp_cssslider label {
 	margin-bottom: 10px;
 	border: 2px solid white;
@@ -56,6 +61,7 @@
 	opacity: 1;
 }
 
+/*
 .cp_cssslider input[name='cp_switch1']:checked + label {
 	border: 2px solid #0067b6;
 	opacity: 1;
@@ -77,6 +83,7 @@
 .cp_cssslider input[name='prius']:checked + label + img {
 	opacity: 1;
 }
+
 .cp_cssslider input[name='prius@']:checked + label {
 	border: 2px solid #0067b6;
 	opacity: 1;
@@ -87,6 +94,18 @@
 .cp_cssslider input[name='prius@']:checked + label + img {
 	opacity: 1;
 }
+
+.cp_cssslider input[name='serena']:checked + label {
+	border: 2px solid #0067b6;
+	opacity: 1;
+}
+.cp_cssslider input[name='serena'] ~ img {
+	opacity: 0;
+}
+.cp_cssslider input[name='serena']:checked + label + img {
+	opacity: 1;
+}
+*/
 @media screen and (min-width:768px){
 	.cp_cssslider label{
 		height: auto;

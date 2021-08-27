@@ -46,7 +46,14 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+body {
+  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro",
+  "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic,
+  "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
 
+}
 /*  ーーーーーーーーーーーーーヘッダーここからーーーーーーーーーーーーーーーー */
 .nav-bar{
     height: 8px;
@@ -99,23 +106,81 @@ table {
     bottom: 0;
     left: 0;
     color: #000;
+	
 }
 .ul-menu li {
     border-left: 1px solid white;
     width:16.67%;
     box-sizing: border-box;
     text-align: center;
+	cursor: pointer;
 }
 .ul-menu li a{
     display: block;
 	padding: 13px 5px;
 	color: white;
+	position: relative;
 }
-.ul-menu li a:hover{
+.ul-menu .li-menu:hover{
 	background:#edad3e;
 }
 .ul-menu li:last-child{
     border-right:1px solid white;
+}
+.menu{
+	display: block;
+	position: relative;
+	
+}
+.ul-menu li:hover .menu-drow{
+	display: block;
+}
+.ul-menu li i.fa-angle-down{
+	position: absolute;
+	right: 12px;
+	top: 17px;
+}
+.menu .menu-drow{
+	display: none;
+	position: absolute;
+	left: 0;
+	width: 100%;
+	z-index: 1;
+	background:white;
+	border-bottom: 1px solid hsla(0,0%,81%,1);
+}
+.menu .menu-drow img{
+	width: 100%;
+	height: auto;
+
+}
+.menu .menu-drow img:hover{
+	opacity: .7;
+}
+.menu .menu-drow ul{
+	background: white;
+	width: 100%;
+	max-width: 1000px;
+	padding-top: 3px;
+	box-sizing: border-box;
+	margin: auto;
+	display: flex;
+	
+	flex-wrap: wrap;
+	align-items: center;
+	text-align: center;
+}
+.menu .menu-drow ul li{
+	display: block;	
+	width: 16.2%;
+	margin-right:0.5%;
+}
+.menu .menu-drow ul li a{
+	color: black;
+	font-size: 95%;
+}
+.menu .menu-drow ul li:nth-child(6){
+	margin-right:0;
 }
 .menu-slogan{
     position: relative;
@@ -225,6 +290,7 @@ table {
 	background-position: center;
 	filter:brightness(80%);
 }
+
 .contact{
     width: 100%;
     height: 420px;
@@ -319,7 +385,7 @@ table {
     font-weight:600;
     font-size: 20px;
     padding: 1px 6px;
-    
+    color: #0067b4;
     margin-top: 30px;
 }
 .ul-footer{
@@ -348,7 +414,7 @@ table {
     color: #fff;
     font-size: 90%;
     text-align: center;
-    padding: 20px 10px;
+    padding: 15px 10px;
     overflow: hidden;
     box-sizing: border-box;
     line-height:1.5em;
@@ -379,8 +445,8 @@ table {
 	bottom: 20px;
 	right: 20px;
 	background: #edad3e;
-	width: 50px;
-	height: 50px;
+	width: 40px;
+	height: 40px;
 	border-radius: 35px;
 	z-index: 2;
 	transition: .5s;
@@ -391,26 +457,24 @@ table {
 	flex-direction: column;
 	text-align: center;
 	/* transition: .5s; */
-	animation:to-top .4s infinite alternate;
+	animation:to-top .8s infinite alternate;
 }
 @keyframes to-top {
 	from{
 		bottom: 10px;
 	}
 	to{
-		bottom: 25px;
+		bottom: 20px;
 	}
 }
-
 .return-to-top i{
 	color: #fff;
 	margin: 0;
 	position: relative;
-	top: 14px;
+	top: 10px;
 	font-size: 19px;
 	display: inline;
 }
-
 .return-to-top:hover{
 	background: rgba(231, 126, 40, 0.9);
 }
@@ -593,7 +657,7 @@ table {
           right: 55px;
           text-align: center;
       }
-      .icon-list:hover{
+      .icon-list a:hover{
           color: #edad3e;
       }
       .iconlist_i_p i{
@@ -601,7 +665,6 @@ table {
         margin: 0 auto;
         margin-bottom:5px; 
         text-align: center;
-        
       }
       .iconlist_i_p a:hover{
         color: #edad3e;
@@ -610,11 +673,9 @@ table {
       .iconlist_i_p p{
         margin-right: 13px;
         font-size: 11px;
-
       }
     .contact{
         height: 340px;
-        
     }
     .contact:before{
         filter:brightness(70%);
