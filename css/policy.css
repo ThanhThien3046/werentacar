@@ -19,9 +19,11 @@
 	color: hsla(0,0%,20%,1.00);
 }
 .main p span.strong{
+/*
 	font-weight:bold;
 	color:black;
 	font-family:YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "serif";
+*/
 }
 .main h2{
     text-align: center;

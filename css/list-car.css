@@ -1,0 +1,314 @@
+@charset "UTF-8";
+.car-line{
+	background: #fff6ed
+}
+.car-background img{
+	width: 100%;
+	object-fit: cover;
+	height: 190px;
+}
+.car-title{
+	background:white;
+	height: 100px;
+	width: 95%;
+	margin: auto;
+	position: relative;
+	margin-top: -50px;
+	z-index: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+.car-title h2{
+	color: #0067b4;
+	margin-bottom: 5px;
+	font-size: 180%;
+	font-family: "Times New Roman", Times, "serif"
+}
+.car-title p{
+	font-family: YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "serif";
+	font-size: 95%;
+}
+.car-list{
+	background: #fff6ed;
+	padding: 12px;
+	box-sizing: border-box;
+	padding-bottom: 20px;
+}
+.car-about h3{
+	width: 100%;
+	border-bottom: 2px solid #0067b4;
+	font-family:"Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, "sans-serif";
+	margin-bottom: 10px;
+	margin-top: 5px;
+}
+.car-about p{
+	font-size: 95%;
+	color: hsla(0,0%,14%,1.00);
+	margin-bottom: 10px;
+}
+.car-img{
+	position: relative;
+}
+.car-img img{
+	width: 100%;
+	height: auto;
+}
+.car-img ul{
+	display: flex;
+	justify-content: space-between;
+}
+.car-img ul li{
+	margin: 2% 0;
+	width: 31%;
+}
+.car-detail table{
+	margin-bottom: 10px;
+}
+.car-detail table tr{
+	border: 1px solid hsla(0,0%,65%,1.00);
+}
+.car-detail table th{
+	background: #f9d5a5;
+	border-right: 1px solid hsla(0,0%,65%,1.00);
+	padding: 10px 15px;
+	text-align: left;
+	box-sizing: border-box;
+}
+.car-detail table td{
+	padding: 10px;
+	box-sizing: border-box;
+	background: white;
+}
+.car-detail p{
+	font-size: 85%;
+	color: hsla(0,0%,14%,1.00);
+}
+.car-detail a{
+	display: block;
+	padding: 8px;
+	text-align: center;
+	width: 250px;
+	margin:10px auto;
+	background: #0067b4;
+	color: white;
+	animation: car .8s infinite alternate;
+}
+@keyframes car{
+	from {
+		background: #0067b4;
+	}
+	to{
+		background: hsla(238,80%,49%,1.00);
+		transform: scale(1.04)
+	}
+}
+.car-detail a:hover{
+	opacity: 0.8;
+}
+.car-detail a i{
+	margin-left: 7px;
+}
+.car-fee{
+	width: 100%;
+	display: none;
+	
+}
+.car-fee h3{
+	width: 100%;
+	border-bottom: 2px solid #0067b4;
+	font-family:"Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, "sans-serif";
+	margin-bottom: 10px;
+	margin-top: 5px;
+}
+.table-fee{
+	overflow-x: scroll;
+}
+.car-fee table{
+	width: 820px;
+	font-size: 90%;
+}
+.car-fee table tr{
+	border: 1px solid hsla(0,0%,65%,1.00);
+
+}
+.car-fee table th{
+	background: #f9d5a5;
+	border: 1px solid hsla(0,0%,65%,1.00);
+	padding: 8px ;
+	width: 130px;
+	box-sizing: border-box;
+	text-align: center;
+	align-items: center;
+}
+.car-fee table td{
+	text-align: center;
+	align-items: center;
+	padding: 8px;
+	box-sizing: border-box;
+	border: 1px solid hsla(0,0%,65%,1.00);
+	background: white;
+}
+.car-fee span{
+	font-size: 60%;
+}
+.car-fee .comment{
+	color: #c90000;
+	font-size: 90%;
+}
+
+/*------------------------------------------CAR-SMT------------*/
+.car-fee-smt{
+	width: 100%;
+	margin-top: 20px;
+	
+}
+.car-fee-smt h3{
+	width: 100%;
+	border-bottom: 2px solid #0067b4;
+	font-family:"Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, "sans-serif";
+	margin-bottom: 10px;
+	margin-top: 5px;
+}
+.car-fee-smt table{
+	width: 100%;
+	font-size: 80%;
+}
+.car-fee-smt table tr{
+	border: 1px solid hsla(0,0%,65%,1.00);
+
+}
+.car-fee-smt table th{
+	background: #f9d5a5;
+	border: 1px solid hsla(0,0%,65%,1.00);
+	padding: 8px 4px;
+	width: 90px;
+	box-sizing: border-box;
+	text-align: center;
+	align-items: center;
+}
+
+.car-fee-smt table td{
+	text-align: center;
+	align-items: center;
+	padding: 8px 4px;
+	box-sizing: border-box;
+	border: 1px solid hsla(0,0%,65%,1.00);
+	background: white;
+}
+.car-fee-smt span{
+	font-size: 70%;
+	text-align: right;
+	display: block;
+	margin-top: 4px;
+}
+
+/*  ーーーーーーーーーーーーー　LIST-CAR　ここまでーーーーーーーーーーーーーーーー */
+@media screen and (min-width:767px){
+	.car-background img{
+		width: 100%;
+		height: 100%;
+	}
+	.car-title{
+		height: 180px;
+		max-width: 800px;
+		margin-top: -90px;
+	}
+	.car-title h2{
+		margin-bottom: 10px;
+		font-size: 300%;
+		
+	}
+	.car-title p{
+		font-size: 140%;
+	}
+	.car-list{
+		max-width: 1024px;
+		margin: auto;
+		padding: 12px;
+		margin-top: 30px;
+		box-sizing: border-box;
+		padding-bottom: 30px;
+	}
+	.car-about h3{
+		font-size: 20px;
+		margin-bottom: 10px;
+		margin-top: 0;
+	}
+	.car-about p{
+		font-size: 100%;
+		color: hsla(0,0%,14%,1.00);
+		margin-bottom: 10px;
+	}
+	.car-img{
+		width: 47%;
+		float: right
+	}
+	.car-detail{
+		width: 47%;
+		float: left
+	}
+	.car-detail p{
+		font-size: 100%;
+		color: hsla(0,0%,14%,1.00);
+	}
+	.car-detail a{
+		width: 250px;
+		margin:20px auto;
+		background: #0067b4;
+	}
+	.car-fee{
+		clear: both;
+		padding-top: 5px;
+		display: block;
+	}
+	.car-fee h3{
+		font-size: 20px;
+		margin-bottom: 10px;
+		margin-top: 10px;
+	}
+	.table-fee{
+		overflow-x: scroll;	
+	}
+	.car-fee table{
+		width: 100%;
+		max-width: 1000px;
+		font-size: 90%;
+		margin: auto;
+		margin-top: 20px;
+	}
+	.car-fee table th{
+		padding: 12px ;
+	}
+	.car-fee table td{
+		padding: 12px;
+	}
+	.car-fee span{
+		font-size: 80%;
+		text-align: right;
+		display: block;
+		margin-top: 5px;
+	}
+	.car-fee .comment{
+		display: none;
+	}
+	.car-fee-smt{
+		display: none;
+	}
+}
+@media Screen and (max-width:320px){
+	.car-title{
+		height: 90px;
+		max-width: 800px;
+		margin-top: -45px;
+	}
+	.car-title h2{
+		font-size: 165%;
+	}
+	.car-title p{
+		font-size: 86%;
+	}
+	
+}

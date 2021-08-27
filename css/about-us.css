@@ -37,11 +37,13 @@
 .about-left p.mrg-top{
 	margin-top: 15px;
 }
+/*
 .about-left strong{
 	font-weight:700;
 	color: black;
 	font-family:YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "serif";
 }
+*/
 .about-right{
 	margin-top: 20px;
 	margin-bottom: 20px;
