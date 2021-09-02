@@ -152,34 +152,87 @@ select{
 }
 /* ーーーーーーーーーーーーーーーーー　バナー　ここまで　ーーーーーーーーー */
 
-/* ーーーーーーーーーーーーーーーーー　LISTーCAR　ここまで　ーーーーーーーーー */
-.list-car{
-	background:  #fff6ed;
+/* ーーーーーーーーーーーーーーーーー　LISTーCAR　ここから　ーーーーーーーーー */
+.reasons{
 	padding: 12px;
 	box-sizing: border-box;
+	background: white;
+	padding-bottom: 30px;
 }
-.list-car-title{
+.reasons .reasons-title{
 	font-size: 110%;
+	text-align: center;
+	margin-top: 15px;
+	color: #0E66B6;
 	font-weight: 600;
-	margin: 10px 0;
-	border-left: 5px solid #edad3e; 
-	padding-left: 10px;
+	font-family: 游ゴシック体;
+}
+.reasons .reasons-title .orange{
+	color: #edad3e;
+	font-size: 120%;
+	margin: 0 0px 0 2px;
+}
+.reasons ul{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.reasons ul li{
+	width: 47%;
+	margin-top: 20px;
+}
+.reasons ul li p:nth-child(1){
+	text-align: center;
+	color: #0E66B6;
+	font-weight: 600;
+	margin-bottom: 10px;
+}
+.reasons ul li p:nth-child(2){
+	background: #0E66B6;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	width: 70px;
+	height: 70px;
+	margin: auto;
+	margin-bottom: 10px;
+}
+.reasons ul li p i{
+	color: white;
+	font-size: 220%;
+}
+.reasons ul li p:nth-child(3){
+	font-size: 85%;
+}
+/* ーーーーーーーーーーーーーーーーー　LISTーCAR　ここまで　ーーーーーーーーー */
+
+/* ーーーーーーーーーーーーーーーーー　LISTーCAR　ここから　ーーーーーーーーー */
+.list-car{
+	background:  #FFFAF2;
+	padding: 12px;
+	box-sizing: border-box;
+	border-top: .1px solid hsla(0,0%,89%,1.00);
+	border-bottom: .1px solid hsla(0,0%,89%,1.00);
+}
+.list-car .list-car-title{
+	font-size: 110%;
+	text-align: center;
+	margin-top: 15px;
+	color: #0E66B6;
+	font-weight: 600;
+	font-family: 游ゴシック体;
+	margin-bottom: 15px;
+}
+.list-car .list-car-title p{
+	font-size: 85%;
+	color: black;
+	font-weight: 500;
 }
 .list-car img{
 	width: 100%;
 	height: auto;
 	margin: auto;
-}
-.list-car img:hover{
-	animation: img-car .9s infinite alternate;
-}
-@keyframes img-car{
-	0%,20%, 40%, 60%, 80% {
-    transform:rotate(1deg) scale(1.02);
-  }
-  30%,50%, 70%,90% {
-    transform: rotate(-2deg) scale(1);
-  }
 }
 .list-car ul{
 	display: flex;
@@ -192,8 +245,7 @@ select{
 	margin-top: 5px;
 	margin-bottom: 20px;
 	background: white;
-	box-shadow: 0 1px 2px rgb(0 0 0 / 35%);
-	padding: 14px 0;
+	box-shadow: 0px 0px 2px rgb(0 0 0 / 35%);
 }
 .list-car ul li p{
 	font-size: 80%;
@@ -201,6 +253,9 @@ select{
 .list-car ul li p:first-child{
 	font-size: 90%;
 	font-weight: 600;
+}
+.list-car ul li p:nth-child(3){
+	display: none;
 }
 .list-car .red{
 	color: hsla(359,88%,44%,1.00);
@@ -216,6 +271,7 @@ select{
 	display: block;
 	margin: auto;
 	margin-top: 5px;
+	margin-bottom: 15px;
 }
 /* ーーーーーーーーーーーーーーーーー　LIST-CAR　ここまで　ーーーーーーーーー */
 
@@ -227,13 +283,21 @@ select{
     box-sizing: border-box;
     margin: auto;
 }
-.spot-title{
+.spot .spot-title{
 	font-size: 110%;
+	text-align: center;
+	margin-top: 15px;
+	color: #0E66B6;
 	font-weight: 600;
-	margin: 10px 0;
-	border-left: 5px solid #edad3e; 
-	padding-left: 8px;
+	font-family: 游ゴシック体;
+	margin-bottom: 15px;
 }
+.spot .spot-title p{
+	font-size: 85%;
+	color: black;
+	font-weight: 500;
+}
+
 .spot ul{
     display: flex;
     flex-wrap: wrap;
@@ -252,7 +316,6 @@ select{
 	overflow: hidden;
 }
 .spot ul li img{
-	cursor: pointer;
 	display: block;
 	width: 100%;
 	height: auto;
@@ -270,7 +333,7 @@ select{
 }
 .spot ul li p:nth-child(3){
 	padding-top: 5px;
-    font-size: 90%;
+    font-size: 85%;
 }
 /* ーーーーーーーーーーーーーーーーー　SPOT　ここまで　ーーーーーーーーー */
 .graphy p{
@@ -281,15 +344,24 @@ select{
 .use{
 	padding: 12px;
 	box-sizing: border-box;
-	background:  #fff6ed;
+	background: #FFFAF2;
+	border-top: .1px solid hsla(0,0%,89%,1.00);
+	border-bottom: .1px solid hsla(0,0%,89%,1.00);
 }
-.use-title{
+
+.use .use-title{
 	font-size: 110%;
+	text-align: center;
+	margin-top: 15px;
+	color: #0E66B6;
 	font-weight: 600;
-	margin: 10px auto;
-	border-left: 5px solid #edad3e; 
-	padding-left: 8px;
-	max-width: 1000px;
+	font-family: 游ゴシック体;
+	margin-bottom: 15px;
+}
+.use .use-title p{
+	font-size: 85%;
+	color: black;
+	font-weight: 500;
 }
 .use span{
 	font-size: 90%;
@@ -329,14 +401,15 @@ select{
 }
 .use ul li p:nth-child(3){
 	padding-top: 5px;
-    font-size: 90%;
+	padding-bottom: 4px;
+    font-size: 85%;
 }
-.use-link{
+.use .use-link{
 	text-decoration: underline;
 	font-size: 90%;
 	color:#0067b4;
 }
-.use-link i{
+.use .use-link i{
 	margin-left: 5px;
 	
 }
@@ -349,19 +422,19 @@ select{
 	margin: auto;
 	box-sizing: border-box;
 }
-.access-title{
+.access .access-title{
 	font-size: 110%;
+	text-align: center;
+	margin-top: 15px;
+	color: #0E66B6;
 	font-weight: 600;
-	margin: 10px auto;
-	border-left: 5px solid #edad3e; 
-	padding-left: 8px;
-	max-width: 1000px;
+	font-family: 游ゴシック体;
+	margin-bottom: 15px;
 }
-.access p{
-	font-size: 90%;
-	display: block;
-	max-width: 1000px;
-	margin: auto;
+.access .access-title p{
+	font-size: 85%;
+	color: black;
+	font-weight: 500;
 }
 .access-map{
 	width: 100%;
@@ -370,14 +443,22 @@ select{
 .access-map iframe{
 	width: 100%;
 	height: 250px;
-	margin-top: 20px;
 	margin-bottom: 20px;
 }
-
-
-
 /* ーーーーーーーーーーーーーーーーー　アクセス　ここまで　ーーーーーーーーー */
 @media screen and (min-width:480px){
+	.reasons .reasons-title{
+		font-size: 150%;
+	}
+	.list-car .list-car-title{
+		max-width: 1000px;
+		margin:20px auto;
+		box-sizing: border-box;
+		font-size: 150%;
+	}
+	.list-car .list-car-title p{
+		font-size: 80%;
+	}
 	.list-car ul{
 		max-width: 1000px;
 		box-sizing: border-box;
@@ -391,12 +472,12 @@ select{
 	}
 	.list-car ul li a{
 		display: block;
-		padding: 13px 5px;
+
 		box-sizing: border-box;
 	}
-	.list-car ul li a:hover{
-		opacity: .8;
-		box-shadow: 3px 3px 2px hsla(0,0%,80%,1.00)
+	.list-car ul li:hover{
+		opacity: .9;
+		box-shadow: 1px 1px 2px hsla(0,0%,80%,1.00)
 	}
 	.list-car ul li p{
 		font-size: 100%;
@@ -409,12 +490,20 @@ select{
 	}
 	.list-car .car-link{
 		display: block;
-		margin:10px auto;
 		font-size: 100%;
 		width: 180px;
+		padding: 5px;
+	}
+	.spot .spot-title{
+		max-width: 1000px;
+		margin:20px auto;
+		box-sizing: border-box;
+		font-size: 150%;
+	}
+	.spot .spot-title p{
+		font-size: 80%;
 	}
 	.graphy{
-
 		background:rgba(0,0,0,0) url("../images/graphy.jpg") no-repeat fixed center center / cover;
 		display: flex;
 		justify-content: center;
@@ -423,7 +512,6 @@ select{
 		padding: 15px;
 		position: relative;
 	}
-
 	.graphy p{
 		display: block;
 		 font-size: 180%;
@@ -438,24 +526,89 @@ select{
 	.list-car .car-link:hover{
 		opacity: .8;
 	}
+	.use .use-title{
+		max-width: 1000px;
+		margin:20px auto;
+		box-sizing: border-box;
+		font-size: 150%;
+	}
+	.use .use-title p{
+		font-size: 80%;
+	}
 	.use ul li{
 		width: 47%;
 		margin-bottom: 25px;
 	}
+	.access .access-title{
+		max-width: 1000px;
+		margin:20px auto;
+		box-sizing: border-box;
+		font-size: 140%;
+	}
+	.access .access-title p{
+		font-size: 80%;
+	}
 }
 @media screen and (min-width:767px){
-	.list-car-title{
+	.reasons{
+		padding-top: 30px;
+		padding-bottom: 35px;
+	}
+	.reasons ul{
 		max-width: 1000px;
-		margin:30px auto;
-		margin-bottom: 20px;
-		font-size: 140%;
-		box-sizing: border-box;
+		margin: auto;
+	}
+	
+	.reasons ul li{
+		width: 31.4%;
+		margin-bottom: 15px;
+		margin-top: 35px;
+	}
+	.reasons ul li p:nth-child(1){
+		font-size: 110%;
+	}
+	.reasons ul li p:nth-child(2){
+		width: 80px;
+		height: 80px;
+		margin-bottom: 17px;
+	}
+	.reasons ul li p i{
+		color: white;
+		font-size: 260%;
+	}
+	.reasons ul li p:nth-child(3){
+		font-size: 95%;
+		width: 93%;
+		margin: auto;
+	}
+	.list-car{
+		padding-top:25px;
+		padding-bottom: 30px;
 	}
 	.list-car ul li{
 		width: 31.3%;
 	}
+	.list-car ul li p{
+		margin-top: 5px;
+	}
+	.list-car ul li p:nth-child(2){
+		font-weight: 600;
+		width: 100px;
+		margin: 5px auto;
+		margin-bottom: 10px;
+		padding-bottom: 3px;
+		border-bottom: 1px solid #edad3e;
+	}
+	.list-car ul li p:nth-child(3){
+		display: block;
+		width: 85%;
+		margin:5px auto;
+	}
 	.list-car .car-link{	
 		width: 220px;
+	}
+	.spot{
+		padding-top: 25px;
 	}
 	.spot-title{
 		margin:30px auto;
@@ -482,15 +635,21 @@ select{
 	.graphy p{
 		font-size: 250%;
 	}
+	
+	.use{
+		padding-top: 20px;
+		padding-bottom: 30px;
+	}
 	.use ul li{
 		width: 31.3%;
 	}
-	.use-title{
+	.use .use-title{
 		margin:30px auto;
 		font-size: 140%;
-		margin-bottom: 10px;
+		margin-top: 20px;
+		margin-bottom: 30px;
 	}
-	.use span{
+	.use .use-title span{
 		font-size: 100%;
 	}
 	.use ul li p:nth-child(2){
@@ -500,11 +659,11 @@ select{
 		font-size: 95%;
 		margin-bottom: 10px;
 	}
-	.use-link{
-		text-align: right;
+	.use .use-link:hover{
+		text-decoration: none;
 	}
-	.use-link:hover{
-		opacity: .7;
+	.access{
+		padding-bottom: 30px;
 	}
 	.access-title{
 		margin:30px auto;
@@ -515,7 +674,7 @@ select{
 		font-size: 100%;
 	}
 	.access-map iframe{
-		height: 350px;
+		height: 390px;
 	}
 }
 @media screen and (max-width:767px){
@@ -574,11 +733,11 @@ select{
 		padding:10px 0px 0px 0px;
 	}
 	.banner-form-search-title >span{
-/*		background: #e4f1f6;*/
+		background: #F5FBFE;
 	}
 	.form-search{
 		position: relative;
-/*		background-color: #e4f1f6;*/
+		background-color: #F5FBFE;
 	}
 	.icon-list{
 		display: flex;
