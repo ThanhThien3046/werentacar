@@ -419,6 +419,9 @@ body {
     box-sizing: border-box;
     line-height:1.5em;
 }
+.to-top{
+	display: none;
+}
 /*  ーーーーーーーーーーーーー　FOOTER　ここまでーーーーーーーーーーーーーーーー */
 
 @media screen and (min-width:768px){
@@ -439,6 +442,9 @@ body {
 	.fadein.scrollin{
 		opacity: 1;
 		transform: translate(0,0);
+	}
+	.to-top{
+		display: block;
 	}
     .return-to-top{
 	position: fixed;

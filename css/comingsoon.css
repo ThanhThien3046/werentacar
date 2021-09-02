@@ -1,0 +1,100 @@
+@charset "UTF-8";
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body{
+    font-family: "segoe UI", 'Noto Sans JP', "游ゴシック", 
+    YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", 
+    Verdana, "メイリオ", Meiryo, sans-serif;
+}
+body a{
+    text-decoration: none;
+    color: black;
+}
+ol, ul{
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+body {
+  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro",
+  "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic,
+  "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+
+}
+
+main{
+	overflow: hidden;
+	width: 100%;
+	height: 100vh;
+	background: url("../images/car-bg.jpg") no-repeat center/ cover;
+	box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+main img{
+	position: absolute;
+	top:20px;
+	right: 20px;
+	width: 70px;
+	height: auto;
+}
+main h1{
+	font-family: ヒラギノ角ゴ StdN;
+	font-size: 200%;
+	color: #0E66B6;
+}
+main p{
+	margin-top: 10px;
+	font-size: 110%;
+}
+@media Screen and (min-width:768px){
+	main img{
+		width: 90px;
+
+	}
+	main h1{
+		font-family: ヒラギノ角ゴ StdN;
+		font-size: 300%;
+		color: #0E66B6;
+	}
+	main p{
+		margin-top: 10px;
+		font-size: 120%;
+	}
+}
