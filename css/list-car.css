@@ -83,7 +83,7 @@
 	background: white;
 }
 .car-detail p{
-	font-size: 85%;
+	font-size: 13px;
 	color: hsla(0,0%,14%,1.00);
 }
 .car-detail a{
@@ -123,9 +123,7 @@
 	margin-bottom: 10px;
 	margin-top: 5px;
 }
-.table-fee{
-	overflow-x: scroll;
-}
+
 .car-fee table{
 	width: 820px;
 	font-size: 90%;
@@ -199,8 +197,7 @@
 	background: white;
 }
 .car-fee-smt span{
-	font-size: 70%;
-	text-align: right;
+	font-size: 13px;
 	display: block;
 	margin-top: 4px;
 }
@@ -251,7 +248,7 @@
 		float: left
 	}
 	.car-detail p{
-		font-size: 100%;
+		font-size: 14px;
 		color: hsla(0,0%,14%,1.00);
 	}
 	.car-detail a{
@@ -269,9 +266,7 @@
 		margin-bottom: 10px;
 		margin-top: 10px;
 	}
-	.table-fee{
-		overflow-x: scroll;	
-	}
+
 	.car-fee table{
 		width: 100%;
 		max-width: 1000px;
@@ -286,8 +281,7 @@
 		padding: 12px;
 	}
 	.car-fee span{
-		font-size: 80%;
-		text-align: right;
+		font-size: 14px;
 		display: block;
 		margin-top: 5px;
 	}
