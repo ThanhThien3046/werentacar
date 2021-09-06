@@ -34,7 +34,29 @@ $(function(){
             var targetElement = $(this).offset().top;
             var scroll = $(window).scrollTop();
             var windowHeight = $(window).height();
-            if (scroll > targetElement - windowHeight + 40){
+            if (scroll > targetElement - windowHeight + 30){
+                $(this).css('opacity','1');
+                $(this).css('transform','translateX(0)');
+            }
+        });
+        });	
+	$(window).scroll(function (){
+        $('.fadein2').each(function(){
+            var targetElement = $(this).offset().top;
+            var scroll = $(window).scrollTop();
+            var windowHeight = $(window).height();
+            if (scroll > targetElement - windowHeight + 30){
+                $(this).css('opacity','1');
+                $(this).css('transform','translateX(0)');
+            }
+        });
+        });	
+	$(window).scroll(function (){
+        $('.fadein3').each(function(){
+            var targetElement = $(this).offset().top;
+            var scroll = $(window).scrollTop();
+            var windowHeight = $(window).height();
+            if (scroll > targetElement - windowHeight + 30){
                 $(this).css('opacity','1');
                 $(this).css('transform','translateX(0)');
             }
