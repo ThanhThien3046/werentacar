@@ -365,11 +365,14 @@ body {
     padding: 12px ;
     box-sizing: border-box;
     margin: auto;
+
 }
 .footer-bar img{
     width: 100%;
     max-width: 200px;
     height: auto;
+	display: block;
+
 }
 .footer-bar span{
     position: absolute;
