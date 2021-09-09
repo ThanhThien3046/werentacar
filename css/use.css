@@ -225,6 +225,17 @@
 .tabcolor{
 	background-color: #edad3e;
 }
+
+.ol-style{
+	list-style-type: decimal;
+	padding-left: 18px;
+}
+
+.ul-style{
+	list-style-type:disc; 
+	padding-left: 15px;
+}
+
 @media screen and (max-width:320px){
 	.booking-text h2{
 		line-height: 20px;
@@ -301,6 +312,7 @@
 		text-align: center;
 		justify-content: space-around;
 		font-family: 'Times New Roman', Times, serif;
+		font-size: 17px;
 	}
 	.step1 p img{
 		width: 100%;
@@ -448,6 +460,7 @@
 	.table-content table tr td:nth-child(1)
 	{
 		width: 180px;
+		text-align: center;
 	}
 
 	.table-content table tr td{
