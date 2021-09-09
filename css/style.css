@@ -604,6 +604,10 @@ select{
 		display: block;
 		width: 85%;
 		margin:5px auto;
+		display: -webkit-box;
+		-webkit-box-orient:vertical;
+		-webkit-line-clamp:1;
+		overflow: hidden;
 	}
 	.list-car .car-link{	
 		width: 220px;
