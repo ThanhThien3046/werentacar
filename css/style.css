@@ -382,13 +382,20 @@ select{
 }
 .use ul li{
 	margin-bottom: 20px;
+	padding-bottom: 20px;
+	border-bottom: 1px solid hsla(0,0%,85%,1.00);
+}
+.use ul li:nth-child(3){
+	border-bottom: none;
+	padding-bottom: 0;
 }
 .use ul li p:nth-child(1){
 	overflow: hidden;
 }
 .use img{
 	width: 100%;
-	height: auto;
+	height: 150px;
+	object-fit: cover;
 	transition: all 1s;
 	display: block;
 }
@@ -536,9 +543,14 @@ select{
 	.use .use-title p{
 		font-size: 80%;
 	}
+	.use img{
+		width: 100%;
+		height: 150px;
+	}
 	.use ul li{
 		width: 47%;
 		margin-bottom: 25px;
+		border-bottom: none;
 	}
 	.access .access-title{
 		max-width: 1000px;
@@ -744,21 +756,5 @@ select{
 		position: relative;
 		background-color: #F5FBFE;
 	}
-	.icon-list{
-		display: flex;
-		margin-top: 15px;
-		position: absolute;
-		right: 55px;
-		text-align: center;
-	}
-	.iconlist_i_p i{
-		font-size: 21px;
-		margin: 0 auto;
-		margin-bottom:5px; 
-		text-align: center;
-	}
-	.iconlist_i_p p{
-		margin-right: 9px;
-		font-size: 11px;
-	}
+
 }

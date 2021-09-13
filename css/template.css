@@ -697,8 +697,11 @@ body {
         color: #edad3e;
         display: block;
       }
+	.iconlist_i_p{
+		 margin-right: 13px;
+	}
       .iconlist_i_p p{
-        margin-right: 13px;
+       
         font-size: 11px;
       }
     .contact{

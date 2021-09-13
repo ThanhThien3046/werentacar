@@ -110,14 +110,16 @@
 	border: none;
 	background-color: #edad3e;
 	margin-top: 10px;
-	box-shadow: 2px 2px 2px hsla(0,0%,47%,1.00)
-}
-.verify button a{
+	box-shadow: 2px 2px 2px hsla(0,0%,47%,1.00);
 	color: white;
 	display: block;
+	margin: auto;
+	margin-top: 14px;
 	padding: 8px 95px;
     font-size: 15px;
+	cursor: pointer;
 }
+
 .verify button:hover{
 	background: #0067b6;
 }

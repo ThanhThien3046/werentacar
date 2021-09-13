@@ -1,3 +1,63 @@
+<?php
+if(isset($_POST['email'])) {
+ 
+// EDIT THE 2 LINES BELOW AS REQUIRED
+$email_to = "thachvu9197@gmail.com";
+$email_subject = "ホームページからお問合せが届きました。";
+ 
+function died($error) {
+// your error code can go here
+echo $error."<br /><br />";
+echo "確認して再度お試しください。<br /><br />";
+die();
+}
+ 
+// validation expected data exists
+if(!isset($_POST['first_name']) ||
+!isset($_POST['last_name']) ||
+!isset($_POST['email']) ||
+!isset($_POST['telephone']) ||
+!isset($_POST['comments'])) {
+died('We are sorry, but there appears to be a problem with the form you submitted.');
+}
+ 
+$first_name = $_POST['first_name']; // required
+$last_name = $_POST['last_name']; // required
+$email_from = $_POST['email']; // required
+$telephone = $_POST['telephone']; // not required
+$comments = $_POST['comments']; // required
+ 
+$error_message = "";
+	
+$email_exp = '/^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/';
+if(!preg_match($email_exp,$email_from)) {
+$error_message .= '入力されたメールアドレスに間違いがあります。<br />';
+}
+if(strlen($error_message) > 0) {
+died($error_message);
+}
+$email_message = "お問合せの内容.\n\n";
+ 
+function clean_string($string) {
+$bad = array("content-type","bcc:","to:","cc:","href");
+return str_replace($bad,"",$string);
+}
+ 
+$email_message .= "名前: ".clean_string($first_name)."\n";
+$email_message .= "ふりがな: ".clean_string($last_name)."\n";
+$email_message .= "メールアドレス: ".clean_string($email_from)."\n";
+$email_message .= "電話番号: ".clean_string($telephone)."\n";
+$email_message .= "お問合せ内容: ".clean_string($comments)."\n";
+ 
+// create email headers
+$headers = 'From: '.$email_from."\r\n".
+'Reply-To: '.$email_from."\r\n" .
+'X-Mailer: PHP/' . phpversion();
+@mail($email_to, $email_subject, $email_message, $headers);
+	
+?>
+<!-- include your own success html here -->
+ 
 <!DOCTYPE html>
 <html lang="en"><!-- InstanceBegin template="/Templates/index.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
@@ -191,13 +251,13 @@
     </p>
 
     <div class="person_info_form">
-        <form name="contactform" method="post" action="contactform.php">
+        <form name="contactform" method="post" action="send_form_email.php">
             <table class="person_info">
                 <tbody>
                     <tr>
                         <td><span class="type">必須</span>お名前</td>
-                        <td><input type="text" name="first_name" id="" required="required" placeholder="セイ"　></td>
-                        <td><input type="text" name="last_name" id="" required="required" placeholder="メイ"></td>
+                        <td><input type="text" name="last_name" id="" required="required" placeholder="セイ"　></td>
+                        <td><input type="text" name="first_name" id="" required="required" placeholder="メイ"></td>
                     </tr>
                     <tr>
                         <td><span class="type">必須</span>電話番号</td>
@@ -209,7 +269,7 @@
                     </tr>
                     <tr>
                         <td>予約番号</td>
-                        <td colspan="2"><input type="text" name="order" id="" placeholder=""></td>  
+                        <td colspan="2"><input type="text" name="" id="" placeholder=""></td>  
                     </tr>
                     <tr>
                         <td><span class="type">必須</span>お問い合わせ内容</td>
@@ -221,7 +281,7 @@
             <p>
 				<input type="checkbox" name="" id="check"><label for="check">個人情報の取り扱いに同意します。</label>
             </p>
-            <button type="submit" name="confirm" value="確認" class="button">送信します</button>
+            <button type="submit">送信します</button>
         </div>
         </form>
        
@@ -310,3 +370,8 @@
         </div>
 </body>
 <!-- InstanceEnd --></html>
+
+ 
+<?php
+}
+?>

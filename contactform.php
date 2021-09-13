@@ -1,3 +1,82 @@
+<?php
+  session_start();
+  $mode = 'input';
+  $errmessage = array();
+  if( isset($_POST['back']) && $_POST['back'] ){
+    // 何もしない
+  } else if( isset($_POST['confirm']) && $_POST['confirm'] ){
+      // 確認画面
+    if( !$_POST['last_name'] ) {
+        $errmessage[] = "名前を入力してください";
+    } else if( mb_strlen($_POST['last_name']) > 100 ){
+        $errmessage[] = "名前は100文字以内にしてください";
+    }
+      $_SESSION['last_name'] = htmlspecialchars($_POST['last_name'], ENT_QUOTES);
+	  
+	  
+	   if( !$_POST['first_name'] ) {
+        $errmessage[] = "名前を入力してください";
+    } else if( mb_strlen($_POST['first_name']) > 100 ){
+        $errmessage[] = "名前は100文字以内にしてください";
+    }
+      $_SESSION['first_name'] = htmlspecialchars($_POST['first_name'], ENT_QUOTES);
+	  
+	  
+	   if( !$_POST['telephone'] ) {
+        $errmessage[] = "電話番号を入力してください";
+    } else if( mb_strlen($_POST['telephone']) > 12 ){
+        $errmessage[] = "新しい電話番号を入力してください";
+    }
+
+	  
+	  
+      if( !$_POST['email'] ) {
+          $errmessage[] = "Eメールを入力してください";
+      } else if( mb_strlen($_POST['email']) > 200 ){
+          $errmessage[] = "Eメールは200文字以内にしてください";
+    } else if( !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL) ){
+        $errmessage[] = "メールアドレスが不正です";
+      }
+      $_SESSION['email']    = htmlspecialchars($_POST['email'], ENT_QUOTES);
+
+	  
+	  
+      if( !$_POST['comments'] ){
+          $errmessage[] = "お問い合わせ内容を入力してください";
+      } else if( mb_strlen($_POST['comments']) > 500 ){
+          $errmessage[] = "お問い合わせ内容は500文字以内にしてください";
+      }
+      $_SESSION['comments'] = htmlspecialchars($_POST['comments'], ENT_QUOTES);
+
+      if( $errmessage ){
+        $mode = 'input';
+    } else {
+        $mode = 'confirm';
+    }
+  } 
+else if( isset($_POST['send']) && $_POST['send'] ){
+    // 送信ボタンを押したとき
+    $message  = "お問い合わせを受け付けました \r\n"
+            . "名前: " . $_SESSION['first_name'] . "\r\n" . $_SESSION['last_name'] . "\r\n" 
+			. "電話番号: " . $_SESSION['telephone'] . "\r\n"
+			. "予約番号: " . $_SESSION['order'] . "\r\n"
+            . "email: " . $_SESSION['email'] . "\r\n"
+            . "お問い合わせ内容:\r\n"
+            . preg_replace("/\r\n|\r|\n/", "\r\n", $_SESSION['comments']);
+      mail($_SESSION['email'],'お問い合わせありがとうございます',$message);
+    mail('thachvu9197@gmail.com','お問い合わせありがとうございます',$message);
+    $_SESSION = array();
+    $mode = 'send';
+  } else {
+	$_SESSION['first_name'] = "";
+    $_SESSION['last_name'] = "";
+	$_SESSION['telephone'] = "";
+	$_SESSION['order'] = "";
+    $_SESSION['email']    = "";
+    $_SESSION['comments']  = "";
+  }
+?>
+
 <!DOCTYPE html>
 <html lang="en"><!-- InstanceBegin template="/Templates/index.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
@@ -190,14 +269,24 @@
         お問い合わせ内容を以下のメールフォームへご入力ください。
     </p>
 
-    <div class="person_info_form">
+	
+	<?php if( $mode == 'input' ){ ?>
+    <!-- 入力画面 -->
+    <?php
+      if( $errmessage ){
+        echo '<div style="color:red;">';
+        echo implode('<br>', $errmessage );
+        echo '</div>';
+      }
+    ?>
+	 <div class="person_info_form">
         <form name="contactform" method="post" action="contactform.php">
             <table class="person_info">
                 <tbody>
                     <tr>
                         <td><span class="type">必須</span>お名前</td>
-                        <td><input type="text" name="first_name" id="" required="required" placeholder="セイ"　></td>
-                        <td><input type="text" name="last_name" id="" required="required" placeholder="メイ"></td>
+                        <td><input type="text" name="first_name" id="" required="required" placeholder="セイ"　value="<?php echo $_SESSION['first_name'] ?>"></td>
+                        <td><input type="text" name="last_name" id="" required="required" placeholder="メイ" value="<?php echo $_SESSION['last_name'] ?>"></td>
                     </tr>
                     <tr>
                         <td><span class="type">必須</span>電話番号</td>
@@ -205,7 +294,7 @@
                     </tr>
                     <tr>
                         <td><span class="type">必須</span>メールアドレス</td>
-                        <td colspan="2"><input type="text" name="email" id="" required="required" placeholder="例) info@werentacar.co.jp"></td>  
+                        <td colspan="2"><input type="text" name="email" id="" required="required" placeholder="例) info@werentacar.co.jp" value="<?php echo $_SESSION['email'] ?>"></td>  
                     </tr>
                     <tr>
                         <td>予約番号</td>
@@ -213,7 +302,7 @@
                     </tr>
                     <tr>
                         <td><span class="type">必須</span>お問い合わせ内容</td>
-                        <td colspan="2"><textarea name="comments" id="" cols="30" rows="10" required="required" placeholder="お問い合わせ内容をご入力ください"></textarea></td>  
+                        <td colspan="2"><textarea name="comments" id="" cols="30" rows="10" required="required" placeholder="お問い合わせ内容をご入力ください"  value="<?php echo $_SESSION['comments'] ?>"></textarea></td>  
                     </tr>
                 </tbody>
             </table>
@@ -226,6 +315,26 @@
         </form>
        
     </div>
+
+	
+	
+  <?php } else if( $mode == 'confirm' ){ ?>
+    <!-- 確認画面 -->
+    <form action="./contactform.php" method="post">
+      名前    <?php echo $_SESSION['fullname'] ?><br>
+      Eメール <?php echo $_SESSION['email'] ?><br>
+      お問い合わせ内容<br>
+      <?php echo nl2br($_SESSION['message']) ?><br>
+      <input type="submit" name="back" value="戻る" />
+      <input type="submit" name="send" value="送信" />
+    </form>
+  <?php } else { ?>
+    <!-- 完了画面 -->
+    送信しました。お問い合わせありがとうございました。<br>
+  <?php } ?>
+	
+	
+   
     <a href="javascript:" class="return-to-top"><i class="fas fa-arrow-up"></i></a>
 </div>
 <!-- InstanceEndEditable -->
