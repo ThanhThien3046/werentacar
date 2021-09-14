@@ -1,15 +1,15 @@
 // $(document).ready(function() {
 $(function() {
     $('.center').slick({
-        // centerMode: true,
-        // centerPadding: '10px',
+        centerMode: true,
+        centerPadding: '10px',
         infinite: true,
-        adaptiveHeight: false,
+        adaptiveHeight: true,
         // dots:true,
         prevArrow: '<button class="slide-arrow prev-arrow"></button>',
         nextArrow: '<button class="slide-arrow next-arrow"></button>',
         autoplaySpeed:3000,
-        slidesToShow: 1,
+        slidesToShow: 3,
         autoplay:true,
         responsive: [
           {
