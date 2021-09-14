@@ -484,23 +484,48 @@ select{
 	left: -40px;
 	width: 0;
 	height: 0;
-	border-left: 0 solid transparent;
+	border-left: 0 solid #fff;
 	border-right: 15px solid #0067b6;
-	border-top: 10px solid transparent;
-	border-bottom: 10px solid transparent;
+	border-top: 10px solid #fff;
+	border-bottom: 10px solid #fff;
   }
   .next-arrow{
 	right: -40px;
 	width: 0;
 	height: 0;
-	border-right: 0 solid transparent;
+	border-right: 0 solid #fff;
 	border-left: 15px solid #0067b6;
-	border-top: 10px solid transparent;
-	border-bottom: 10px solid transparent;
+	border-top: 10px solid #fff;
+	border-bottom: 10px solid #fff;
   }
 /* ーーーーーーーーーーーーーーーーー　アクセス　ここまで　ーーーーーーーーー */
-@media screen and (min-width:480px){
 
+/* @media screen and (min-width:320px) {
+	.slide-arrow{
+		position: absolute;
+		top: 50%;
+		margin-top: -15px;
+	  }
+	  .prev-arrow{
+		left: -40px;
+		width: 0;
+		height: 0;
+		border-left: 0 solid transparent;
+		border-right: 15px solid #0067b6;
+		border-top: 10px solid transparent;
+		border-bottom: 10px solid transparent;
+	  }
+	  .next-arrow{
+		right: -40px;
+		width: 0;
+		height: 0;
+		border-right: 0 solid transparent;
+		border-left: 15px solid #0067b6;
+		border-top: 10px solid transparent;
+		border-bottom: 10px solid transparent;
+	  }
+} */
+@media screen and (min-width:480px){
 	.reasons .reasons-title{
 		font-size: 150%;
 	}
@@ -837,6 +862,5 @@ select{
 	.center{
 		font-size: 12px;
 	}
-	
 	
 }
