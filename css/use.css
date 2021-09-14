@@ -42,7 +42,7 @@
 	border-radius: 50%;
 	width: 55px;
 	margin-right: 25px;
-	height: 49px;
+	height: 52px;
 	display:flex;
 	align-items: center;
 	text-align: center;
@@ -317,7 +317,7 @@
 	.step1-round{
 		border-radius: 50%;
 		width: 70px;
-		height: 70px;
+		height: 62px;
 		display:flex;
 		align-items: center;
 		text-align: center;
