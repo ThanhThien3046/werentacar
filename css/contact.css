@@ -44,20 +44,19 @@
     max-width: 1024px;
     height: auto;
 }
-.person_info  tr td{
+.person_info tr td{
     box-sizing: border-box;
     display: block;
 	overflow: hidden;
 }
-.person_info  tr:nth-child(1) td:nth-child(2){
+.person_info tr:nth-child(1) td:nth-child(2){
     border-right: none;
 }
-
-.person_info  tr:nth-child(1) td:nth-child(3){
+.person_info tr:nth-child(1) td:nth-child(3){
     border-left: none;
     padding-left: 0px;
 }
-.person_info  tr td input{
+.person_info tr td input{
     width: 100%;
     /* max-width: 670px; */
     height: 40px;
@@ -80,19 +79,23 @@
     background-color:hsla(0,0%,91%,1.00);
     width: 100%;
     padding: 10px 10px;
+
     box-sizing: border-box;
     vertical-align: top;
 	margin: 5px 0;
+	position: relative;
+	
 }
-.type{
+.person_info tr td:nth-child(1) .type{
     background-color: #d1011b;
     font-size: 10px;
     color: #fff;
-    padding: 2px 4px;
+    padding: 3px 4px;
     margin-right: 5px;
-	margin-top: 12px;
     box-sizing: border-box;
+	border-radius: 3px;
 }
+
 .verify{
     text-align: center;
     margin-top: 10px;
@@ -109,7 +112,6 @@
     font-family: YuGothic, "Yu Gothic medium", "Hiragino Sans", Meiryo, "sans-serif";
 	border: none;
 	background-color: #edad3e;
-	margin-top: 10px;
 	box-shadow: 2px 2px 2px hsla(0,0%,47%,1.00);
 	color: white;
 	display: block;
@@ -119,8 +121,41 @@
     font-size: 15px;
 	cursor: pointer;
 }
-
 .verify button:hover{
+	background: #0067b6;
+}
+
+.form-check tr td:nth-child(2){
+	padding: 10px 0;
+	width: 100%;
+	height: auto;
+	
+}
+
+.form-check p{
+
+
+}
+.submit{
+	margin:20px auto;
+	text-align: center;
+}
+
+.submit input{
+	background: #edad3e;
+	cursor: pointer;
+	color: white;
+	border: none;
+	margin:10px;
+	padding: 8px 50px;
+}
+.submit input:nth-child(1){
+	background: hsla(0,0%,60%,1.00);
+}
+.submit input:nth-child(1):hover{
+	background: hsla(0,0%,40%,1.00);
+}
+.submit input:nth-child(2):hover{
 	background: #0067b6;
 }
 @media screen and (min-width:768px) {
@@ -139,7 +174,19 @@
 	
     .person_info tr td:nth-child(1){
         width: 30%;
+		padding-top: 18px;
+		padding-bottom: 15px;
     }
+	.form-check tr{
+		width: 100%;
+
+		overflow: hidden;
+	}
+	.form-check tr td:nth-child(2){
+		padding-top: 18px;
+		padding-left: 10px;
+		width: 70px;
+	}
     .person_info{
         border: 1px solid #8f8e8d;
     }
