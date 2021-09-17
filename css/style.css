@@ -301,7 +301,6 @@ select{
 	color: black;
 	font-weight: 500;
 }
-
 .spot ul{
     display: flex;
     /* flex-wrap: wrap; */
