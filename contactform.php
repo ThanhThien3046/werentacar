@@ -24,12 +24,15 @@
 	  
 	   if( !$_POST['telephone'] ) {
         $errmessage[] = "電話番号を入力してください";
-    } else if( mb_strlen($_POST['telephone']) > 12 ){
+    } else if( mb_strlen($_POST['telephone']) < 8 ){
         $errmessage[] = "新しい電話番号を入力してください";
     }
-
+	  $_SESSION['telephone'] = htmlspecialchars($_POST['telephone'], ENT_QUOTES);
 	  
-	  
+	  if( !$_POST['order'] ) 
+	  $_SESSION['order'] = htmlspecialchars($_POST['order'], ENT_QUOTES);
+	 
+	 
       if( !$_POST['email'] ) {
           $errmessage[] = "Eメールを入力してください";
       } else if( mb_strlen($_POST['email']) > 200 ){
@@ -40,13 +43,13 @@
       $_SESSION['email']    = htmlspecialchars($_POST['email'], ENT_QUOTES);
 
 	  
+	  if( !$_POST['comments'] ) {
+        $errmessage[] = "お問い合わせ内容を入力してください";
+    } else if( mb_strlen($_POST['comments']) > 500 ){
+        $errmessage[] = "お問い合わせ内容は500文字以内にしてください";
+    }
+	  $_SESSION['comments'] = htmlspecialchars($_POST['comments'], ENT_QUOTES);
 	  
-      if( !$_POST['comments'] ){
-          $errmessage[] = "お問い合わせ内容を入力してください";
-      } else if( mb_strlen($_POST['comments']) > 500 ){
-          $errmessage[] = "お問い合わせ内容は500文字以内にしてください";
-      }
-      $_SESSION['comments'] = htmlspecialchars($_POST['comments'], ENT_QUOTES);
 
       if( $errmessage ){
         $mode = 'input';
@@ -56,15 +59,16 @@
   } 
 else if( isset($_POST['send']) && $_POST['send'] ){
     // 送信ボタンを押したとき
-    $message  = "お問い合わせを受け付けました \r\n"
-            . "名前: " . $_SESSION['first_name'] . "\r\n" . $_SESSION['last_name'] . "\r\n" 
+    $message  = "お問い合わせありがとうございます \r\n"
+            . "名前: " . $_SESSION['first_name'] . " " . $_SESSION['last_name'] . "\r\n" 
 			. "電話番号: " . $_SESSION['telephone'] . "\r\n"
 			. "予約番号: " . $_SESSION['order'] . "\r\n"
-            . "email: " . $_SESSION['email'] . "\r\n"
+            . "メールアドレス: " . $_SESSION['email'] . "\r\n"
             . "お問い合わせ内容:\r\n"
             . preg_replace("/\r\n|\r|\n/", "\r\n", $_SESSION['comments']);
-      mail($_SESSION['email'],'お問い合わせありがとうございます',$message);
-    mail('thachvu9197@gmail.com','お問い合わせありがとうございます',$message);
+      mail($_SESSION['email'],'お問い合わせありがとうございます。',$message);
+    mail('info@werentacar.jp','ホームページからお問合せが届きました。',$message);
+	mail('thachvu9197@gmail.com','ホームページからお問合せが届きました。',$message);
     $_SESSION = array();
     $mode = 'send';
   } else {
@@ -255,42 +259,35 @@ else if( isset($_POST['send']) && $_POST['send'] ){
     <h1 class="title_contact">お問い合わせ</h1>
     <p class="bar">お問い合わせメールの前に</p>
     <p class="pagrap">
-        お問合わせメールの前に
-        弊社は、お問い合わせによりいただいた <a href="security.html">個人情報の取り扱いについて</a> に基き取り扱い、適切に管理い たします。<br>
+        お問い合わせメールの前に弊社は、お問い合わせによりいただいた <a href="security.html">個人情報の取り扱いについて</a> に基き取り扱い、適切に管理いたします。<br>
         上記「個人情報の取り扱いについて」に同意のうえ、お問い合わせください。<br>
         お問い合わせに関する回答のために、お客さまのお名前、連絡先の記入をお願いいたします。<br>
         またはお問い合せの多い質問および注意いただきたい事をまとめております。<br>
         お問い合せの前にこちらの <a href="question.html">よくある質問</a> ご確認ください。
     </p>
-
-    <p class="bar">お問い合わせフォーム</p>
-    <p class="pagrap">
-        この度はWE・RENTACARのサイトをご利用いただき、ありがとうございます。 <br>
-        お問い合わせ内容を以下のメールフォームへご入力ください。
-    </p>
-
-	
+	<p class="bar">お問い合わせフォーム</p>
 	<?php if( $mode == 'input' ){ ?>
     <!-- 入力画面 -->
-    <?php
+	<?php
       if( $errmessage ){
         echo '<div style="color:red;">';
         echo implode('<br>', $errmessage );
         echo '</div>';
       }
     ?>
+	
 	 <div class="person_info_form">
         <form name="contactform" method="post" action="contactform.php">
             <table class="person_info">
                 <tbody>
                     <tr>
                         <td><span class="type">必須</span>お名前</td>
-                        <td><input type="text" name="first_name" id="" required="required" placeholder="セイ"　value="<?php echo $_SESSION['first_name'] ?>"></td>
+                        <td><input type="text" name="first_name" id="" required="required" placeholder="セイ" value="<?php echo $_SESSION['first_name'] ?>"></td>
                         <td><input type="text" name="last_name" id="" required="required" placeholder="メイ" value="<?php echo $_SESSION['last_name'] ?>"></td>
                     </tr>
                     <tr>
                         <td><span class="type">必須</span>電話番号</td>
-                        <td colspan="2"><input type="text" name="telephone" required="required" id="" placeholder="例) 09012341234 ハイフンなし"></td>  
+                        <td colspan="2"><input type="text" name="telephone" required="required" id="" placeholder="例) 09012341234 ハイフンなし" value="<?php echo $_SESSION['telephone'] ?>"></td>  
                     </tr>
                     <tr>
                         <td><span class="type">必須</span>メールアドレス</td>
@@ -298,11 +295,11 @@ else if( isset($_POST['send']) && $_POST['send'] ){
                     </tr>
                     <tr>
                         <td>予約番号</td>
-                        <td colspan="2"><input type="text" name="order" id="" placeholder=""></td>  
+                        <td colspan="2"><input type="text" name="order" id="" placeholder="" value="<?php echo $_SESSION['order'] ?>"></td>  
                     </tr>
                     <tr>
                         <td><span class="type">必須</span>お問い合わせ内容</td>
-                        <td colspan="2"><textarea name="comments" id="" cols="30" rows="10" required="required" placeholder="お問い合わせ内容をご入力ください"  value="<?php echo $_SESSION['comments'] ?>"></textarea></td>  
+                        <td colspan="2"><textarea name="comments" id="" cols="30" rows="10" required="required" placeholder="お問い合わせ内容をご入力ください" value="<?php echo $_SESSION['comments'] ?>"></textarea></td>  
                     </tr>
                 </tbody>
             </table>
@@ -310,27 +307,53 @@ else if( isset($_POST['send']) && $_POST['send'] ){
             <p>
 				<input type="checkbox" name="" id="check"><label for="check">個人情報の取り扱いに同意します。</label>
             </p>
-            <button type="submit" name="confirm" value="確認" class="button">送信します</button>
+            <button type="submit" name="confirm" value="確認" class="button">確認画面へ</button>
         </div>
         </form>
-       
     </div>
 
-	
-	
   <?php } else if( $mode == 'confirm' ){ ?>
     <!-- 確認画面 -->
+	<p>ご入力内容をご確認後、送信するボタンを押してください。</p>
     <form action="./contactform.php" method="post">
-      名前    <?php echo $_SESSION['fullname'] ?><br>
-      Eメール <?php echo $_SESSION['email'] ?><br>
-      お問い合わせ内容<br>
-      <?php echo nl2br($_SESSION['message']) ?><br>
-      <input type="submit" name="back" value="戻る" />
-      <input type="submit" name="send" value="送信" />
+		 <table class="person_info form-check">
+                <tbody>
+                    <tr>
+                        <td><span class="type">必須</span>お名前</td>
+                        <td><?php echo $_SESSION['first_name'] ?> <?php echo $_SESSION['last_name'] ?></td>
+                    </tr>
+                    <tr>
+                        <td><span class="type">必須</span>電話番号</td>
+                        <td><?php echo $_SESSION['telephone'] ?></td>  
+                    </tr>
+                    <tr>
+                        <td><span class="type">必須</span>メールアドレス</td>
+                        <td><?php echo $_SESSION['email'] ?></td>  
+                    </tr>
+                    <tr>
+                        <td>予約番号</td>
+                        <td><?php echo $_SESSION['order'] ?></td>  
+                    </tr>
+                    <tr>
+                        <td><span class="type">必須</span>お問い合わせ内容</td>
+                        <td><?php echo $_SESSION['comments'] ?></td>  
+                    </tr>
+                </tbody>
+            </table>
+		<div class="submit">
+			<input type="submit" name="back" value="修正する" />
+      		<input type="submit" name="send" value="送信する" />
+		</div>
     </form>
   <?php } else { ?>
     <!-- 完了画面 -->
-    送信しました。お問い合わせありがとうございました。<br>
+	<div class="form-end">
+		<p class="form-thank">お問い合わせが完了しました</p>
+		<p>お問い合わせいただきありがとうございました。<br>
+		お問い合わせを受け付けました。</p>
+		<p>後ほど、担当者よりご連絡をさせていただきます。<br>
+		今しばらくお待ちくださいますようよろしくお願い申し上げます。</p>
+	</div>
   <?php } ?>
 	
 	
@@ -376,7 +399,7 @@ else if( isset($_POST['send']) && $_POST['send'] ){
                 </li>
                 <li class="ul-li-footer">
                     <p class="li-footer-title">
-                        初めてご利用案内の方へ
+                        初めてご利用の方へ
                     </p>
                     <p class="li-footer-content">
                         <a href="use.html"><i class="fas fa-angle-right"></i> ご利用について</a><br>

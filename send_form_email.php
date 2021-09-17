@@ -236,8 +236,7 @@ $headers = 'From: '.$email_from."\r\n".
     <h1 class="title_contact">お問い合わせ</h1>
     <p class="bar">お問い合わせメールの前に</p>
     <p class="pagrap">
-        お問合わせメールの前に
-        弊社は、お問い合わせによりいただいた <a href="security.html">個人情報の取り扱いについて</a> に基き取り扱い、適切に管理い たします。<br>
+        お問い合わせメールの前に弊社は、お問い合わせによりいただいた <a href="security.html">個人情報の取り扱いについて</a> に基き取り扱い、適切に管理いたします。<br>
         上記「個人情報の取り扱いについて」に同意のうえ、お問い合わせください。<br>
         お問い合わせに関する回答のために、お客さまのお名前、連絡先の記入をお願いいたします。<br>
         またはお問い合せの多い質問および注意いただきたい事をまとめております。<br>
@@ -327,7 +326,7 @@ $headers = 'From: '.$email_from."\r\n".
                 </li>
                 <li class="ul-li-footer">
                     <p class="li-footer-title">
-                        初めてご利用案内の方へ
+                        初めてご利用の方へ
                     </p>
                     <p class="li-footer-content">
                         <a href="use.html"><i class="fas fa-angle-right"></i> ご利用について</a><br>
