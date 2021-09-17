@@ -29,7 +29,10 @@
     }
 	  $_SESSION['telephone'] = htmlspecialchars($_POST['telephone'], ENT_QUOTES);
 	  
-	  if( !$_POST['order'] ) 
+	  
+	  if( !$_POST['order'] ) {
+		$errmessage[] = "新しい電話番号を入力してください";
+    }
 	  $_SESSION['order'] = htmlspecialchars($_POST['order'], ENT_QUOTES);
 	 
 	 
@@ -65,10 +68,15 @@ else if( isset($_POST['send']) && $_POST['send'] ){
 			. "予約番号: " . $_SESSION['order'] . "\r\n"
             . "メールアドレス: " . $_SESSION['email'] . "\r\n"
             . "お問い合わせ内容:\r\n"
-            . preg_replace("/\r\n|\r|\n/", "\r\n", $_SESSION['comments']);
+            . preg_replace("/\r\n|\r|\n/", "\r\n", $_SESSION['comments'])
+			. "\r\n"
+			. "\r\n"
+			. "-------------------- \r\n"
+			. "株式会社 WE・RENTACAR \r\n"
+			;
       mail($_SESSION['email'],'お問い合わせありがとうございます。',$message);
-    mail('info@werentacar.jp','ホームページからお問合せが届きました。',$message);
-	mail('thachvu9197@gmail.com','ホームページからお問合せが届きました。',$message);
+    mail('info@werentacar.jp','ホームページからお問合せが届きました。');
+	mail('thachvu9197@gmail.com','ホームページからお問合せが届きました。');
     $_SESSION = array();
     $mode = 'send';
   } else {
@@ -262,8 +270,8 @@ else if( isset($_POST['send']) && $_POST['send'] ){
         お問い合わせメールの前に弊社は、お問い合わせによりいただいた <a href="security.html">個人情報の取り扱いについて</a> に基き取り扱い、適切に管理いたします。<br>
         上記「個人情報の取り扱いについて」に同意のうえ、お問い合わせください。<br>
         お問い合わせに関する回答のために、お客さまのお名前、連絡先の記入をお願いいたします。<br>
-        またはお問い合せの多い質問および注意いただきたい事をまとめております。<br>
-        お問い合せの前にこちらの <a href="question.html">よくある質問</a> ご確認ください。
+        またはお問い合わせの多い質問および注意いただきたい事をまとめております。<br>
+        お問い合わせの前にこちらの <a href="question.html">よくある質問</a> ご確認ください。
     </p>
 	<p class="bar">お問い合わせフォーム</p>
 	<?php if( $mode == 'input' ){ ?>
@@ -305,7 +313,7 @@ else if( isset($_POST['send']) && $_POST['send'] ){
             </table>
 			 <div class="verify">
             <p>
-				<input type="checkbox" name="" id="check"><label for="check">個人情報の取り扱いに同意します。</label>
+				<input type="checkbox" required="required" name="" id="check"><label for="check">個人情報の取り扱いに同意します。</label>
             </p>
             <button type="submit" name="confirm" value="確認" class="button">確認画面へ</button>
         </div>

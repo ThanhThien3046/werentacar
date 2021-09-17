@@ -107,7 +107,7 @@
 }
 
 .btn_lastct{
-	font-family: YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "serif";
+
 	width: 150px;
 	display: block;
 	margin: auto;
@@ -220,7 +220,9 @@
 		display: block;
 		margin-top: 20px;
 	}
-
+	.list_btn_lastct a:hover{
+		background-color:#0067b6;
+	}
 	.list_btn_lastct a:nth-child(1){
 		margin-right:30px;
 	}
