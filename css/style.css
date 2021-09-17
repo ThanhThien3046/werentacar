@@ -119,6 +119,7 @@ select{
     box-sizing: border-box;
     display: block; 
 	color: hsla(0,0%,20%,1.00);
+
 } 
 .banner-form-search-input .last-child{
 		width: 100%;
@@ -190,7 +191,7 @@ select{
 	font-weight: 600;
 	margin-bottom: 10px;
 }
-.reasons ul li p:nth-child(2){
+.reasons ul li p:nth-child(1){
 	background: #0E66B6;
 	display: flex;
 	justify-content: center;
@@ -203,7 +204,7 @@ select{
 }
 .reasons ul li p i{
 	color: white;
-	font-size: 220%;
+	font-size: 30px;
 }
 .reasons ul li p:nth-child(3){
 	font-size: 85%;
@@ -529,11 +530,11 @@ select{
 	text-align: center;
 	color: #0067b6;
 	font-weight: bold;
+	margin-top: 10px;
 }
 
 .reason p:nth-child(3){
     font-size: 12px;
-	font-weight: bold;
 	padding: 5px 10px;
 }
 
@@ -684,6 +685,7 @@ select{
 	.reasons ul{
 		max-width: 1000px;
 		margin: auto;
+		height: 250px;
 	}
 	
 	.reasons ul li{
@@ -692,21 +694,22 @@ select{
 		margin-top: 35px;
 	}
 	.reasons ul li p:nth-child(1){
-		font-size: 110%;
+		font-size: 70%;
 	}
-	.reasons ul li p:nth-child(2){
-		width: 80px;
-		height: 80px;
+	.reasons ul li p:nth-child(1){ 
+		width: 70px;
+		height: 70px;
 		margin-bottom: 17px;
+		margin-top: -40px;
 	}
 	.reasons ul li p i{
 		color: white;
-		font-size: 260%;
 	}
 	.reasons ul li p:nth-child(3){
-		font-size: 95%;
+		font-size: 14px;
 		width: 93%;
 		margin: auto;
+		line-height: 1.8em;
 	}
 	.list-car{
 		padding-top:25px;
@@ -831,13 +834,18 @@ select{
 
 	.reasons ul{
 		display: flex;
+		margin-top: 30px;
 	}
 	.reasons ul li{
 		border: 1px solid #0067b6;
 	}
 
-	.li-reason p:nth-child(1){
-		margin-top: -100px;
+	.li-reason p:nth-child(2){
+		text-align: center;
+		font-weight: bold;
+		color: #0067b6;
+		font-size: 18px;
+		margin-bottom: 20px;
 	}
 }
 @media screen and (max-width:767px){
