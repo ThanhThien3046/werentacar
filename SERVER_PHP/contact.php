@@ -1,1 +1,0 @@
-<?php echo"this is test for submit form"; ?>

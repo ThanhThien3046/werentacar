@@ -25,13 +25,13 @@
 	   if( !$_POST['telephone'] ) {
         $errmessage[] = "電話番号を入力してください";
     } else if( mb_strlen($_POST['telephone']) < 8 ){
-        $errmessage[] = "新しい電話番号を入力してください";
+        $errmessage[] = "正しい電話番号を入力してください";
     }
 	  $_SESSION['telephone'] = htmlspecialchars($_POST['telephone'], ENT_QUOTES);
 	  
 	  
 	  if( !$_POST['order'] ) {
-		$errmessage[] = "新しい電話番号を入力してください";
+	
     }
 	  $_SESSION['order'] = htmlspecialchars($_POST['order'], ENT_QUOTES);
 	 
@@ -48,8 +48,8 @@
 	  
 	  if( !$_POST['comments'] ) {
         $errmessage[] = "お問い合わせ内容を入力してください";
-    } else if( mb_strlen($_POST['comments']) > 500 ){
-        $errmessage[] = "お問い合わせ内容は500文字以内にしてください";
+    } else if( mb_strlen($_POST['comments']) > 1000 ){
+        $errmessage[] = "お問い合わせ内容は1000文字以内にしてください";
     }
 	  $_SESSION['comments'] = htmlspecialchars($_POST['comments'], ENT_QUOTES);
 	  
@@ -62,21 +62,56 @@
   } 
 else if( isset($_POST['send']) && $_POST['send'] ){
     // 送信ボタンを押したとき
-    $message  = "お問い合わせありがとうございます \r\n"
+    $message1  = "※このメールはシステムからの自動返信です。返信はできません。 \r\n"
+			. "\r\n"
+            . $_SESSION['first_name'] ." " . $_SESSION['last_name'] . " " . "様 " . " \r\n"
+			. "\r\n"
+			. "お世話になっております。 \r\n"
+			. "この度、お問い合わせありがとうございました。 \r\n"
+			. "\r\n"
+			. "以下の内容でお問い合わせを受け付けいたしました。 \r\n"
+			. "\r\n"
+			. "—————————————————————— \r\n"
+			. "□■□　お問い合わせ内容　□■□ \r\n"
             . "名前: " . $_SESSION['first_name'] . " " . $_SESSION['last_name'] . "\r\n" 
 			. "電話番号: " . $_SESSION['telephone'] . "\r\n"
 			. "予約番号: " . $_SESSION['order'] . "\r\n"
             . "メールアドレス: " . $_SESSION['email'] . "\r\n"
-            . "お問い合わせ内容:\r\n"
+            . "お問い合わせ内容: \r\n"
             . preg_replace("/\r\n|\r|\n/", "\r\n", $_SESSION['comments'])
 			. "\r\n"
+			. "—————————————————————— \r\n"
 			. "\r\n"
-			. "-------------------- \r\n"
-			. "株式会社 WE・RENTACAR \r\n"
+			. "後ほど、担当者よりご連絡をさせていただきます。 \r\n"
+			. "今しばらくお待ちくださいますようよろしくお願い申し上げます。\r\n"
+			. "\r\n"
+			. "—————————————————————— \r\n"
+			. "【会社情報】\r\n"
+			. "住所：〒906-0505　沖縄県宮古島市伊良部国仲615-1 \r\n"
+			. "電話番号：050-5578-2017 \r\n"
+			. "FAX：050-3606-2875 \r\n"
+			. "営業時間：平日 09:00時～19:00時 \r\n"
+			. "メール：info@werentacar.jp \r\n"
+			. "URL : https://werentacar.jp/ \r\n"
+			. "—————————————————————— \r\n"
+
 			;
-      mail($_SESSION['email'],'お問い合わせありがとうございます。',$message);
-    mail('info@werentacar.jp','ホームページからお問合せが届きました。');
-	mail('thachvu9197@gmail.com','ホームページからお問合せが届きました。');
+	$message2  = "ホームページからお問合せが届きました。 \r\n"
+			. "\r\n"
+			. "以下の内容でお問い合わせを受け付けいたしました。 \r\n"
+			. "\r\n"
+			. "□■□　お問い合わせ内容　□■□ \r\n"
+            . "名前: " . $_SESSION['first_name'] . " " . $_SESSION['last_name'] . "\r\n" 
+			. "電話番号: " . $_SESSION['telephone'] . "\r\n"
+			. "予約番号: " . $_SESSION['order'] . "\r\n"
+            . "メールアドレス: " . $_SESSION['email'] . "\r\n"
+            . "お問い合わせ内容: "
+            . preg_replace("/\r\n|\r|\n/", "\r\n", $_SESSION['comments'])
+			. "\r\n"
+			;
+      mail($_SESSION['email'],'【株式会社WE・RENTACAR】お問い合わせありがとうございます',$message1);
+    mail('info@werentacar.jp','【株式会社WE・RENTACAR】ホームページからお問合せが届きました。',$message2);
+	mail('vu@wecompany.co.jp','【株式会社WE・RENTACAR】ホームページからお問合せが届きました。',$message2);
     $_SESSION = array();
     $mode = 'send';
   } else {
@@ -307,7 +342,7 @@ else if( isset($_POST['send']) && $_POST['send'] ){
                     </tr>
                     <tr>
                         <td><span class="type">必須</span>お問い合わせ内容</td>
-                        <td colspan="2"><textarea name="comments" id="" cols="30" rows="10" required="required" placeholder="お問い合わせ内容をご入力ください" value="<?php echo $_SESSION['comments'] ?>"></textarea></td>  
+                        <td colspan="2"><textarea name="comments" id="" cols="30" rows="10" required="required" placeholder="お問い合わせ内容をご入力ください" value="<?php echo $_SESSION['comments'] ?>"></textarea></td> 
                     </tr>
                 </tbody>
             </table>
@@ -322,7 +357,7 @@ else if( isset($_POST['send']) && $_POST['send'] ){
 
   <?php } else if( $mode == 'confirm' ){ ?>
     <!-- 確認画面 -->
-	<p>ご入力内容をご確認後、送信するボタンを押してください。</p>
+	<p style="margin-bottom: 10px;">ご入力内容をご確認後、送信するボタンを押してください。</p>
     <form action="./contactform.php" method="post">
 		 <table class="person_info form-check">
                 <tbody>
