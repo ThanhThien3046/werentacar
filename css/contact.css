@@ -74,6 +74,7 @@
 	box-sizing: border-box;
 	padding: 7px;
 	outline: none;
+	font-family: "segoe UI", 'Noto Sans JP', "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Verdana, "メイリオ", Meiryo, sans-serif;
 }
 .person_info tr td:nth-child(1){
     background-color:hsla(0,0%,91%,1.00);
