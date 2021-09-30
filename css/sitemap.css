@@ -19,11 +19,10 @@
 	color:hsla(0,0%,31%,1.00);
 }
 .title_contact{
-	font-size: 110%;
 	font-weight: 600;
 	border-bottom: 1px solid #edad3e;
 	padding-bottom: 5px;
-	margin:20px 0px 30px 0px;
+	margin:20px auto;
 }
 .bar{
     background-color: #0067b6;
@@ -52,7 +51,7 @@
 .list_link li i{
 	position: absolute;
 	right: 10px;
-	top:18px;
+	top:15px;
 	font-size: 100%;
 }
 .list_link li a{
@@ -79,11 +78,19 @@
 	 .list_link li{
         background-color: #e4f1f6;
         width: 48%;
-        margin-bottom: 35px;
+        margin-bottom: 25px;
         box-sizing: border-box;
     }
 }
 @media screen and (min-width: 768px) {
+	.list_link li i{
+		top:18px;
+	}
+	.title_contact{
+		font-size: 120%;
+		margin-bottom: 35px;
+		margin-top: 30px;
+	}
     .contact-top{
         font-size: 90%;
         margin-top: 10px;

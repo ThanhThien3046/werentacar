@@ -109,14 +109,10 @@
 		margin-top: 10px;
 	}
 	.main h1{
-		font-size: 120%;
-		margin-bottom: 50px;
+		margin-bottom: 35px;
 		margin-top: 30px;
+		font-size: 120%;
 	}
-    .title_question{
-        
-        margin: 35px auto;
-    }
 	.block_collapse_content{
 		margin: 30px auto;
 	}
@@ -131,9 +127,12 @@
     }
 
     .title_question{
-        margin: 25px auto;
-        padding: 18px 0;
-        font-size: 110%;
+      	background-color: #0067b6;
+		border-left: 15px solid #edad3e;
+		display: block;
+		padding: 15px 15px;
+		box-sizing: border-box;
+		color: #fff;
     }
 
     .collapsible span:nth-child(1){
@@ -148,8 +147,7 @@
     .content_collapse_detail span:nth-child(1){
         font-size: 19px;
     }
-
-    .main h1{
-        font-size: 110%;
-    }
+	.main h1{
+		font-size: 110%;
+	}
 }
