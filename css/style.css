@@ -728,7 +728,7 @@ select{
 		margin-bottom: 10px;
 		padding-bottom: 3px;
 		border-bottom: 1px solid #edad3e;
-		font-size: 20px;
+		font-size: 110%;
 	}
 	.list-car ul li p:nth-child(3){
 		display: block;

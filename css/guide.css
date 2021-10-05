@@ -1,0 +1,133 @@
+@charset "UTF-8";
+.main{
+	width: 100%;
+	max-width: 1024px;
+	margin: 0 auto;
+	box-sizing: border-box;
+	padding: 12px;
+}
+.contact-top{
+	font-family: YuGothic, "Yu Gothic medium", "Hiragino Sans", Meiryo, "sans-serif";
+	font-size:75%;
+	margin-top: 5px;
+}
+.contact-top a{
+	text-decoration: underline;
+}
+.contact-top i{
+	margin: 0 10px;
+	color:hsla(0,0%,31%,1.00);
+}
+.title_contact{
+	font-weight: 600;
+	border-bottom: 1px solid #edad3e;
+	padding-bottom: 5px;
+	margin:20px auto;
+}
+.bar{
+    background-color: #0067b6;
+    border-left: 10px solid #edad3e;
+    display: block;
+    padding: 10px 10px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    color: #fff;
+}
+.list_link{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    font-size: 95%;
+}
+.list_link li{
+    width: 100%;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+.list_link li p{
+    background-color: #e4f1f6;
+	border: 1px solid hsla(206,36%,84%,1.00);
+	display: block;
+	padding: 10px 10px;	
+	font-weight: 600;
+}
+.list_link li span{
+	display: block;
+	margin: 5px 0;
+	margin-top: 10px;
+}
+.list_link li a{
+	display: block;
+	text-decoration: underline;
+	color: #0067b6;
+	margin-bottom: 5px;
+}
+.list_link li a:hover{
+	color: #edad3e;
+}
+.list_link li a i{
+	color: #edad3e;
+	margin-right: 5px;
+}
+
+.list_link li p.li-title:hover{
+    background: #c8f1f6 ;
+    color : #03747f ;
+    cursor: pointer;
+}
+.return-to-top i{
+    display: none;
+}
+@media screen and (min-width: 480px) {
+	.list_link{
+		display: flex;
+		justify-content:space-between;
+		flex-wrap: wrap;
+		font-size: 95%;
+	}
+
+}
+@media screen and (min-width: 768px) {
+	.list_link li i{
+		top:18px;
+	}
+	.title_contact{
+		font-size: 120%;
+		margin-bottom: 35px;
+		margin-top: 30px;
+	}
+    .contact-top{
+        font-size: 90%;
+        margin-top: 10px;
+    }
+    .bar{
+        background-color: #0067b6;
+        border-left: 15px solid #edad3e;
+        display: block;
+        padding: 15px 15px;
+        box-sizing: border-box;
+        color: #fff;
+    }
+    .list_link{
+        font-size: 100%;
+		margin-bottom: 30px;
+    }
+    .list_link li{
+        width: 30%;
+        margin-bottom: 35px;
+		margin-top: 20px;
+        box-sizing: border-box;
+    }
+	.list_link li.policy{
+		margin-right: 35%;
+	}
+	.list_link li span{
+		margin: 10px 0;
+	}
+	.list_link li a{
+		margin-bottom: 10px;
+	}
+	.list_link li:last-child{
+		margin-right: 35%;
+	}
+}
