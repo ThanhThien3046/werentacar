@@ -88,7 +88,7 @@ else if( isset($_POST['send']) && $_POST['send'] ){
 			. "—————————————————————— \r\n"
 			. "【会社情報】\r\n"
 			. "住所：〒906-0505　沖縄県宮古島市伊良部国仲615-1 \r\n"
-			. "電話番号：050-5578-2017 \r\n"
+			. "電話番号：050-5445-6581 \r\n"
 			. "FAX：050-3606-2875 \r\n"
 			. "営業時間：平日 09:00時～19:00時 \r\n"
 			. "メール：info@werentacar.jp \r\n"
@@ -105,7 +105,7 @@ else if( isset($_POST['send']) && $_POST['send'] ){
 			. "電話番号: " . $_SESSION['telephone'] . "\r\n"
 			. "予約番号: " . $_SESSION['order'] . "\r\n"
             . "メールアドレス: " . $_SESSION['email'] . "\r\n"
-            . "お問い合わせ内容: "
+            . "お問い合わせ内容: \r\n"
             . preg_replace("/\r\n|\r|\n/", "\r\n", $_SESSION['comments'])
 			. "\r\n"
 			;
@@ -161,7 +161,7 @@ else if( isset($_POST['send']) && $_POST['send'] ){
                 	<a href="index.html"><div class="logo-left"></div></a>
 				</div>
                 <div class="icon-list">
-                    <div class="iconlist_i_p"><a href="tel:050-5578-2017"><i class="fas fa-phone"></i><p>電話する</p></a></div>
+                    <div class="iconlist_i_p"><a href="tel:050-5445-6581"><i class="fas fa-phone"></i><p>電話する</p></a></div>
                     <div class="iconlist_i_p"><a href="comingsoon.html"><i class="fas fa-car"></i><p>予約する</p></a></div>
                     <div class="iconlist_i_p"><a href="contact.html"><i class="fas fa-envelope"></i><p>お問い合わせ</p></a></div>
                 </div>
@@ -205,7 +205,7 @@ else if( isset($_POST['send']) && $_POST['send'] ){
                 </div>
 				<div class="nav-bar3">
 					<p>お電話でご予約はこちら</p>
-					<p><a href="tel:050-5578-2017">050-5578-2017</a></p>
+					<p><a href="tel:050-5445-6581">050-5445-6581</a></p>
 					<p>営業時間: 09:00~19:00</p>
 				</div>
             </div>
@@ -410,7 +410,7 @@ else if( isset($_POST['send']) && $_POST['send'] ){
                 <div class="contact-title">お問い合わせ</div>
                 <p>
                     ご質問やご相談など、お電話またはメールにてお気軽にお寄せください。<br>
-                    <span>予約専用ダイヤル：050-5578-2017</span><br>
+                    <span>予約専用ダイヤル：050-5445-6581</span><br>
                     [営業時間] 09:00-19:00
                 </p>
                 <a href="contact.html" class="contact-link"><i class="far fa-envelope"></i> メールでお問い合わせ</a>
