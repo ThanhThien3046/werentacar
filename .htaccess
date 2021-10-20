@@ -1,1 +1,5 @@
-ErrorDocument 404 page404.php
+RewriteEngine On
+
+# www無しのURLに統一
+RewriteCond %{HTTP_HOST} ^www\.werentacar\.jp
+RewriteRule ^(.*) http://werentacar.jp/$1 [R=301,L]
